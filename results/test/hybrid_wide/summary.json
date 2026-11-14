@@ -1,0 +1,14 @@
+{
+  "method": "hybrid",
+  "split": "test",
+  "top_k": 6,
+  "budget_chars": 4000,
+  "answerable_n": 5,
+  "unanswerable_n": 2,
+  "hit1": 4,
+  "hit3": 4,
+  "context_hit": 5,
+  "median_ms": 41.1,
+  "service_cost_usd": 0,
+  "configuration": "hybrid_wide"
+}

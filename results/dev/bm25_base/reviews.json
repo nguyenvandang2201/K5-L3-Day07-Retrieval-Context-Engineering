@@ -1,0 +1,152 @@
+[
+  {
+    "query_id": "q01",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer and cited passage support the question."
+  },
+  {
+    "query_id": "q02",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer and cited passage support the question."
+  },
+  {
+    "query_id": "q03",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "Answer describes line continuation, not raw-string escaping."
+  },
+  {
+    "query_id": "q04",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer and cited passage support the question."
+  },
+  {
+    "query_id": "q05",
+    "answer_grade": 1,
+    "citation_support": [
+      true
+    ],
+    "reason": "The span stops before saying the endpoint is excluded from the sequence."
+  },
+  {
+    "query_id": "q06",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer and cited passage support the question."
+  },
+  {
+    "query_id": "q07",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer and cited passage support the question."
+  },
+  {
+    "query_id": "q08",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer and cited passage support the question."
+  },
+  {
+    "query_id": "q09",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "The agent abstained despite evidence about the None return value."
+  },
+  {
+    "query_id": "q10",
+    "answer_grade": 0,
+    "citation_support": [
+      false
+    ],
+    "reason": "Answer concerns list indexing/pop or None, not LIFO stack order."
+  },
+  {
+    "query_id": "q11",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer and cited passage support the question."
+  },
+  {
+    "query_id": "q12",
+    "answer_grade": 0,
+    "citation_support": [
+      false
+    ],
+    "reason": "Answer concerns key type/existence, not uniqueness of dictionary keys."
+  },
+  {
+    "query_id": "q13",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer and cited passage support the question."
+  },
+  {
+    "query_id": "q14",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "The agent abstained despite evidence about first import."
+  },
+  {
+    "query_id": "q15",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer and cited passage support the question."
+  },
+  {
+    "query_id": "q16",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer and cited passage support the question."
+  },
+  {
+    "query_id": "q17",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer and cited passage support the question."
+  },
+  {
+    "query_id": "q18",
+    "answer_grade": 1,
+    "citation_support": [
+      true
+    ],
+    "reason": "Answer omits that the file also closes if an exception is raised."
+  },
+  {
+    "query_id": "d_abs01",
+    "abstention_correct": true,
+    "citation_support": [],
+    "reason": "No matching evidence in the corpus; agent abstained."
+  },
+  {
+    "query_id": "d_abs02",
+    "abstention_correct": true,
+    "citation_support": [],
+    "reason": "No matching evidence in the corpus; agent abstained."
+  }
+]

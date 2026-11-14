@@ -1,0 +1,9 @@
+[
+  {"query_id":"t01","context_grade":2,"answer_grade":1,"citation_support":[true],"reason":"Context contains the index-error example, but 'an error' omits IndexError."},
+  {"query_id":"t02","context_grade":2,"answer_grade":2,"citation_support":[true],"reason":"The cited source says a for loop iterates over the items of a sequence."},
+  {"query_id":"t03","context_grade":2,"answer_grade":2,"citation_support":[true],"reason":"The cited source explicitly names enumerate()."},
+  {"query_id":"t04","context_grade":2,"answer_grade":2,"citation_support":[true],"reason":"The cited unit states that a module run as a script sets __name__ to __main__."},
+  {"query_id":"t05","context_grade":2,"answer_grade":0,"citation_support":[false],"reason":"The answer BaseException is from an unrelated section; the source on user-defined exceptions says Exception."},
+  {"query_id":"t_abs01","abstention_correct":true,"citation_support":[],"reason":"The corpus specifies no warranty period; agent abstained without another claim."},
+  {"query_id":"t_abs02","abstention_correct":true,"citation_support":[],"reason":"The corpus specifies no acquisition in 2025; agent abstained without another claim."}
+]

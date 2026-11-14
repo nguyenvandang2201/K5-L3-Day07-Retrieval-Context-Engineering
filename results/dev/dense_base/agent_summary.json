@@ -1,0 +1,43 @@
+{
+  "split": "dev",
+  "cases": 20,
+  "provider_errors": 0,
+  "successful": 20,
+  "tool_use": {
+    "n": 20,
+    "N": 20
+  },
+  "search_calls": {
+    "1": 16,
+    "2": 4
+  },
+  "grounded_answer": {
+    "0": 4,
+    "1": 2,
+    "2": 12,
+    "N": 18,
+    "mean_of_2": 1.4444444444444444
+  },
+  "citation_supported": {
+    "n": 14,
+    "N": 17
+  },
+  "answers_cited": {
+    "n": 17,
+    "N": 17
+  },
+  "correct_abstention": {
+    "n": 2,
+    "N": 2
+  },
+  "false_abstention": {
+    "n": 1,
+    "N": 18
+  },
+  "reader_context_evidence": {
+    "n": 15,
+    "N": 18
+  },
+  "median_elapsed_ms": 1285.44,
+  "service_cost_usd": 0
+}

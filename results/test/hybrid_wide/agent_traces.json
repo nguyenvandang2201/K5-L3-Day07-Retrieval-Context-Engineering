@@ -1,0 +1,1134 @@
+[
+  {
+    "query_id": "t01",
+    "split": "test",
+    "question": "What happens when a string index is too large?",
+    "configuration": "hybrid_wide",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "an error [b5aac77e9970ed9b7aea3965]",
+    "citations": [
+      "b5aac77e9970ed9b7aea3965"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "hybrid",
+        "query": "string index too large",
+        "model_action": "{\"action\":\"search\",\"query\":\"string index too large\"}",
+        "filter": null,
+        "top_k": 6,
+        "results": [
+          {
+            "id": "b5aac77e9970ed9b7aea3965",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 5,
+            "text": "For non-negative indices, the length of a slice is the difference of the\nindices, if both are within bounds. For example, the length of word[1:3] is\n2.\n\nAttempting to use an index that is too large will result in an error:\n\n>>> word [ 42 ] # the word only has 6 characters Traceback (most recent call last): File \"<stdin>\" , line 1 , in <module> IndexError : string index out of range\n\nHowever, out of range slice indexes are handled gracefully when used for\nslicing:\n\n>>> word [ 4 : 42 ] 'on' >>> word [ 42 :] ''\n\nPython strings cannot be changed — they are immutable .\nTherefore, assigning to an indexed position in the string results in an error:",
+            "metadata": {
+              "title": "3-informal-introduction",
+              "chapter": "introduction",
+              "python_version": "3.12"
+            },
+            "score": 0.03278688524590164,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 1,
+              "bm25": 1
+            }
+          },
+          {
+            "id": "062375a62b568fc6e72e15b6",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 4,
+            "text": "The str.rjust() method of string objects right-justifies a string in a\nfield of a given width by padding it with spaces on the left. There are\nsimilar methods str.ljust() and str.center() . These methods do\nnot write anything, they just return a new string. If the input string is too\nlong, they don’t truncate it, but return it unchanged; this will mess up your\ncolumn lay-out but that’s usually better than the alternative, which would be\nlying about a value. (If you really want truncation you can always add a\nslice operation, as in x.ljust(n)[:n] .)",
+            "metadata": {
+              "title": "7-input-and-output",
+              "chapter": "inputoutput",
+              "python_version": "3.12"
+            },
+            "score": 0.03200204813108039,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 2,
+              "bm25": 3
+            }
+          },
+          {
+            "id": "280339542cc8ae6d5ab69553",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 4,
+            "text": "In addition to indexing, slicing is also supported. While indexing is used\nto obtain individual characters, slicing allows you to obtain a substring:\n\n>>> word [ 0 : 2 ] # characters from position 0 (included) to 2 (excluded) 'Py' >>> word [ 2 : 5 ] # characters from position 2 (included) to 5 (excluded) 'tho'\n\nSlice indices have useful defaults; an omitted first index defaults to zero, an\nomitted second index defaults to the size of the string being sliced.",
+            "metadata": {
+              "title": "3-informal-introduction",
+              "chapter": "introduction",
+              "python_version": "3.12"
+            },
+            "score": 0.03149801587301587,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 3,
+              "bm25": 4
+            }
+          },
+          {
+            "id": "01ef0ff90a0d01ff1a353191",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 5,
+            "text": "Strings are examples of sequence types , and support the common\noperations supported by such types.\n\nStrings support a large number of methods for\nbasic transformations and searching.\n\nString literals that have embedded expressions.\n\nInformation about string formatting with str.format() .\n\nThe old formatting operations invoked when strings are\nthe left operand of the % operator are described in more detail here.",
+            "metadata": {
+              "title": "3-informal-introduction",
+              "chapter": "introduction",
+              "python_version": "3.12"
+            },
+            "score": 0.031054405392392875,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 7,
+              "bm25": 2
+            }
+          },
+          {
+            "id": "b49d40d35d5d938a3c39480e",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 5,
+            "text": "One way to remember how slices work is to think of the indices as pointing between characters, with the left edge of the first character numbered 0.\nThen the right edge of the last character of a string of n characters has\nindex n , for example:\n\n+---+---+---+---+---+---+ | P | y | t | h | o | n | +---+---+---+---+---+---+ 0 1 2 3 4 5 6 - 6 - 5 - 4 - 3 - 2 - 1\n\nThe first row of numbers gives the position of the indices 0…6 in the string;\nthe second row gives the corresponding negative indices. The slice from i to j consists of all characters between the edges labeled i and j ,\nrespectively.",
+            "metadata": {
+              "title": "3-informal-introduction",
+              "chapter": "introduction",
+              "python_version": "3.12"
+            },
+            "score": 0.030776515151515152,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 4,
+              "bm25": 6
+            }
+          },
+          {
+            "id": "88e4d670c54e51f307340637",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 6,
+            "text": "To read a file’s contents, call f.read(size) , which reads some quantity of\ndata and returns it as a string (in text mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\nentire contents of the file will be read and returned; it’s your problem if the\nfile is twice as large as your machine’s memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned.\nIf the end of the file has been reached, f.read() will return an empty\nstring ( '' ).\n\n>>> f . read () 'This is the entire file.\\n' >>> f . read () ''",
+            "metadata": {
+              "title": "7-input-and-output",
+              "chapter": "inputoutput",
+              "python_version": "3.12"
+            },
+            "score": 0.03076923076923077,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 5,
+              "bm25": 5
+            }
+          }
+        ],
+        "context": "[b5aac77e9970ed9b7aea3965 | https://docs.python.org/3.12/tutorial/introduction.html | unit 5]\nFor non-negative indices, the length of a slice is the difference of the\nindices, if both are within bounds. For example, the length of word[1:3] is\n2.\n\nAttempting to use an index that is too large will result in an error:\n\n>>> word [ 42 ] # the word only has 6 characters Traceback (most recent call last): File \"<stdin>\" , line 1 , in <module> IndexError : string index out of range\n\nHowever, out of range slice indexes are handled gracefully when used for\nslicing:\n\n>>> word [ 4 : 42 ] 'on' >>> word [ 42 :] ''\n\nPython strings cannot be changed — they are immutable .\nTherefore, assigning to an indexed position in the string results in an error:\n\n[062375a62b568fc6e72e15b6 | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 4]\nThe str.rjust() method of string objects right-justifies a string in a\nfield of a given width by padding it with spaces on the left. There are\nsimilar methods str.ljust() and str.center() . These methods do\nnot write anything, they just return a new string. If the input string is too\nlong, they don’t truncate it, but return it unchanged; this will mess up your\ncolumn lay-out but that’s usually better than the alternative, which would be\nlying about a value. (If you really want truncation you can always add a\nslice operation, as in x.ljust(n)[:n] .)\n\n[280339542cc8ae6d5ab69553 | https://docs.python.org/3.12/tutorial/introduction.html | unit 4]\nIn addition to indexing, slicing is also supported. While indexing is used\nto obtain individual characters, slicing allows you to obtain a substring:\n\n>>> word [ 0 : 2 ] # characters from position 0 (included) to 2 (excluded) 'Py' >>> word [ 2 : 5 ] # characters from position 2 (included) to 5 (excluded) 'tho'\n\nSlice indices have useful defaults; an omitted first index defaults to zero, an\nomitted second index defaults to the size of the string being sliced.\n\n[01ef0ff90a0d01ff1a353191 | https://docs.python.org/3.12/tutorial/introduction.html | unit 5]\nStrings are examples of sequence types , and support the common\noperations supported by such types.\n\nStrings support a large number of methods for\nbasic transformations and searching.\n\nString literals that have embedded expressions.\n\nInformation about string formatting with str.format() .\n\nThe old formatting operations invoked when strings are\nthe left operand of the % operator are described in more detail here.\n\n[b49d40d35d5d938a3c39480e | https://docs.python.org/3.12/tutorial/introduction.html | unit 5]\nOne way to remember how slices work is to think of the indices as pointing between characters, with the left edge of the first character numbered 0.\nThen the right edge of the last character of a string of n characters has\nindex n , for example:\n\n+---+---+---+---+---+---+ | P | y | t | h | o | n | +---+---+---+---+---+---+ 0 1 2 3 4 5 6 - 6 - 5 - 4 - 3 - 2 - 1\n\nThe first row of numbers gives the position of the indices 0…6 in the string;\nthe second row gives the corresponding negative indices. The slice from i to j consists of all characters between the edges labeled i and j ,\nrespectively.\n\n[88e4d670c54e51f307340637 | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 6]\nTo read a file’s contents, call f.read(size) , which reads some quantity of\ndata and returns it as a string (in text mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\nentire contents of the file will be read and returned; it’s your problem if the\nfile is twice as large as your machine’s memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned.\nIf the end of the file has been reached, f.read() will return an empty\nstring ( '' ).\n\n>>> f . read () 'This is the entire file.\\n' >>> f . read () ''",
+        "context_ids": [
+          "b5aac77e9970ed9b7aea3965",
+          "062375a62b568fc6e72e15b6",
+          "280339542cc8ae6d5ab69553",
+          "01ef0ff90a0d01ff1a353191",
+          "b49d40d35d5d938a3c39480e",
+          "88e4d670c54e51f307340637"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "b5aac77e9970ed9b7aea3965",
+          "062375a62b568fc6e72e15b6",
+          "280339542cc8ae6d5ab69553",
+          "01ef0ff90a0d01ff1a353191",
+          "b49d40d35d5d938a3c39480e",
+          "88e4d670c54e51f307340637"
+        ],
+        "proposal": {
+          "margin": 0.31903839111328125,
+          "start": 213,
+          "end": 221,
+          "chunk_id": "b5aac77e9970ed9b7aea3965",
+          "answer": "an error"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "an error"
+      }
+    ],
+    "elapsed_ms": 1561.63
+  },
+  {
+    "query_id": "t02",
+    "split": "test",
+    "question": "What does a Python for statement iterate over?",
+    "configuration": "hybrid_wide",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "the items of any sequence [0d97129d5c6c7682bd0cb0a3]",
+    "citations": [
+      "0d97129d5c6c7682bd0cb0a3"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "hybrid",
+        "query": "Python for statement",
+        "model_action": "{\"action\": \"search\", \"query\": \"Python for statement\"}",
+        "filter": null,
+        "top_k": 6,
+        "results": [
+          {
+            "id": "0d97129d5c6c7682bd0cb0a3",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 1,
+            "text": "The for statement in Python differs a bit from what you may be used\nto in C or Pascal. Rather than always iterating over an arithmetic progression\nof numbers (like in Pascal), or giving the user the ability to define both the\niteration step and halting condition (as C), Python’s for statement\niterates over the items of any sequence (a list or a string), in the order that\nthey appear in the sequence. For example (no pun intended):\n\n>>> # Measure some strings: >>> words = [ 'cat' , 'window' , 'defenestrate' ] >>> for w in words : ... print ( w , len ( w )) ... cat 3 window 6 defenestrate 12",
+            "metadata": {
+              "title": "4-control-flow",
+              "chapter": "controlflow",
+              "python_version": "3.12"
+            },
+            "score": 0.03278688524590164,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 1,
+              "bm25": 1
+            }
+          },
+          {
+            "id": "97228ffba594e0a21b55eeb4",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 7,
+            "text": "The body of the loop is indented : indentation is Python’s way of grouping\nstatements. At the interactive prompt, you have to type a tab or space(s) for\neach indented line. In practice you will prepare more complicated input\nfor Python with a text editor; all decent text editors have an auto-indent\nfacility. When a compound statement is entered interactively, it must be\nfollowed by a blank line to indicate completion (since the parser cannot\nguess when you have typed the last line). Note that each line within a basic\nblock must be indented by the same amount.",
+            "metadata": {
+              "title": "3-informal-introduction",
+              "chapter": "introduction",
+              "python_version": "3.12"
+            },
+            "score": 0.03200204813108039,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 2,
+              "bm25": 3
+            }
+          },
+          {
+            "id": "1f335455d7f231eefc0f1bde",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 1,
+            "text": "4. More Control Flow Tools ¶\n\nAs well as the while statement just introduced, Python uses a few more\nthat we will encounter in this chapter.\n\n4.1. if Statements ¶\n\nPerhaps the most well-known statement type is the if statement. For\nexample:\n\n>>> x = int ( input ( \"Please enter an integer: \" )) Please enter an integer: 42 >>> if x < 0 : ... x = 0 ... print ( 'Negative changed to zero' ) ... elif x == 0 : ... print ( 'Zero' ) ... elif x == 1 : ... print ( 'Single' ) ... else : ... print ( 'More' ) ... More",
+            "metadata": {
+              "title": "4-control-flow",
+              "chapter": "controlflow",
+              "python_version": "3.12"
+            },
+            "score": 0.031754032258064516,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 4,
+              "bm25": 2
+            }
+          },
+          {
+            "id": "b402f9802149400acaa73b69",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 1,
+            "text": "Even if a statement or expression is syntactically correct, it may cause an\nerror when an attempt is made to execute it. Errors detected during execution\nare called exceptions and are not unconditionally fatal: you will soon learn\nhow to handle them in Python programs. Most exceptions are not handled by\nprograms, however, and result in error messages as shown here:",
+            "metadata": {
+              "title": "8-errors-and-exceptions",
+              "chapter": "errors",
+              "python_version": "3.12"
+            },
+            "score": 0.03076923076923077,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 5,
+              "bm25": 5
+            }
+          },
+          {
+            "id": "eaa89ecf6a9f894e9784d777",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 1,
+            "text": "There can be zero or more elif parts, and the else part is\noptional. The keyword ‘ elif ’ is short for ‘else if’, and is useful\nto avoid excessive indentation. An if … elif … elif … sequence is a substitute for the switch or case statements found in other languages.\n\nIf you’re comparing the same value to several constants, or checking for specific types or\nattributes, you may also find the match statement useful. For more\ndetails see match Statements .\n\n4.2. for Statements ¶",
+            "metadata": {
+              "title": "4-control-flow",
+              "chapter": "controlflow",
+              "python_version": "3.12"
+            },
+            "score": 0.027650648360030512,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 9,
+              "bm25": 16
+            }
+          },
+          {
+            "id": "0bbbf2149b58d82a65bddd04",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 3,
+            "text": ">>> for n in range ( 2 , 10 ): ... for x in range ( 2 , n ): ... if n % x == 0 : ... print ( n , 'equals' , x , '*' , n // x ) ... break ... else : ... # loop fell through without finding a factor ... print ( n , 'is a prime number' ) ... 2 is a prime number 3 is a prime number 4 equals 2 * 2 5 is a prime number 6 equals 2 * 3 7 is a prime number 8 equals 2 * 4 9 equals 3 * 3\n\n(Yes, this is the correct code. Look closely: the else clause belongs to\nthe for loop, not the if statement.)",
+            "metadata": {
+              "title": "4-control-flow",
+              "chapter": "controlflow",
+              "python_version": "3.12"
+            },
+            "score": 0.0266900790166813,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 7,
+              "bm25": 25
+            }
+          }
+        ],
+        "context": "[0d97129d5c6c7682bd0cb0a3 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 1]\nThe for statement in Python differs a bit from what you may be used\nto in C or Pascal. Rather than always iterating over an arithmetic progression\nof numbers (like in Pascal), or giving the user the ability to define both the\niteration step and halting condition (as C), Python’s for statement\niterates over the items of any sequence (a list or a string), in the order that\nthey appear in the sequence. For example (no pun intended):\n\n>>> # Measure some strings: >>> words = [ 'cat' , 'window' , 'defenestrate' ] >>> for w in words : ... print ( w , len ( w )) ... cat 3 window 6 defenestrate 12\n\n[97228ffba594e0a21b55eeb4 | https://docs.python.org/3.12/tutorial/introduction.html | unit 7]\nThe body of the loop is indented : indentation is Python’s way of grouping\nstatements. At the interactive prompt, you have to type a tab or space(s) for\neach indented line. In practice you will prepare more complicated input\nfor Python with a text editor; all decent text editors have an auto-indent\nfacility. When a compound statement is entered interactively, it must be\nfollowed by a blank line to indicate completion (since the parser cannot\nguess when you have typed the last line). Note that each line within a basic\nblock must be indented by the same amount.\n\n[1f335455d7f231eefc0f1bde | https://docs.python.org/3.12/tutorial/controlflow.html | unit 1]\n4. More Control Flow Tools ¶\n\nAs well as the while statement just introduced, Python uses a few more\nthat we will encounter in this chapter.\n\n4.1. if Statements ¶\n\nPerhaps the most well-known statement type is the if statement. For\nexample:\n\n>>> x = int ( input ( \"Please enter an integer: \" )) Please enter an integer: 42 >>> if x < 0 : ... x = 0 ... print ( 'Negative changed to zero' ) ... elif x == 0 : ... print ( 'Zero' ) ... elif x == 1 : ... print ( 'Single' ) ... else : ... print ( 'More' ) ... More\n\n[b402f9802149400acaa73b69 | https://docs.python.org/3.12/tutorial/errors.html | unit 1]\nEven if a statement or expression is syntactically correct, it may cause an\nerror when an attempt is made to execute it. Errors detected during execution\nare called exceptions and are not unconditionally fatal: you will soon learn\nhow to handle them in Python programs. Most exceptions are not handled by\nprograms, however, and result in error messages as shown here:\n\n[eaa89ecf6a9f894e9784d777 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 1]\nThere can be zero or more elif parts, and the else part is\noptional. The keyword ‘ elif ’ is short for ‘else if’, and is useful\nto avoid excessive indentation. An if … elif … elif … sequence is a substitute for the switch or case statements found in other languages.\n\nIf you’re comparing the same value to several constants, or checking for specific types or\nattributes, you may also find the match statement useful. For more\ndetails see match Statements .\n\n4.2. for Statements ¶\n\n[0bbbf2149b58d82a65bddd04 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 3]\n>>> for n in range ( 2 , 10 ): ... for x in range ( 2 , n ): ... if n % x == 0 : ... print ( n , 'equals' , x , '*' , n // x ) ... break ... else : ... # loop fell through without finding a factor ... print ( n , 'is a prime number' ) ... 2 is a prime number 3 is a prime number 4 equals 2 * 2 5 is a prime number 6 equals 2 * 3 7 is a prime number 8 equals 2 * 4 9 equals 3 * 3\n\n(Yes, this is the correct code. Look closely: the else clause belongs to\nthe for loop, not the if statement.)",
+        "context_ids": [
+          "0d97129d5c6c7682bd0cb0a3",
+          "97228ffba594e0a21b55eeb4",
+          "1f335455d7f231eefc0f1bde",
+          "b402f9802149400acaa73b69",
+          "eaa89ecf6a9f894e9784d777",
+          "0bbbf2149b58d82a65bddd04"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "0d97129d5c6c7682bd0cb0a3"
+        ],
+        "proposal": {
+          "margin": 9.689897537231445,
+          "start": 308,
+          "end": 333,
+          "chunk_id": "0d97129d5c6c7682bd0cb0a3",
+          "answer": "the items of any sequence"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "the items of any sequence"
+      }
+    ],
+    "elapsed_ms": 1066.63
+  },
+  {
+    "query_id": "t03",
+    "split": "test",
+    "question": "Which function returns both an index and value when looping through a sequence?",
+    "configuration": "hybrid_wide",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "enumerate() [1feaeb669f3b767170257594]",
+    "citations": [
+      "1feaeb669f3b767170257594"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "hybrid",
+        "query": "returning both index and value in loop",
+        "model_action": "{\"action\": \"search\", \"query\": \"returning both index and value in loop\"}",
+        "filter": null,
+        "top_k": 6,
+        "results": [
+          {
+            "id": "1feaeb669f3b767170257594",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 8,
+            "text": "When looping through a sequence, the position index and corresponding value can\nbe retrieved at the same time using the enumerate() function.\n\n>>> for i , v in enumerate ([ 'tic' , 'tac' , 'toe' ]): ... print ( i , v ) ... 0 tic 1 tac 2 toe\n\nTo loop over two or more sequences at the same time, the entries can be paired\nwith the zip() function.",
+            "metadata": {
+              "title": "5-data-structures",
+              "chapter": "datastructures",
+              "python_version": "3.12"
+            },
+            "score": 0.03278688524590164,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 1,
+              "bm25": 1
+            }
+          },
+          {
+            "id": "4ba6f596d5c96f1d7f1373c1",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 1,
+            "text": "Remove the first item from the list whose value is equal to x . It raises a ValueError if there is no such item.\n\nRemove the item at the given position in the list, and return it. If no index\nis specified, a.pop() removes and returns the last item in the list.\nIt raises an IndexError if the list is empty or the index is\noutside the list range.\n\nRemove all items from the list. Similar to del a[:] .\n\nReturn zero-based index in the list of the first item whose value is equal to x .\nRaises a ValueError if there is no such item.",
+            "metadata": {
+              "title": "5-data-structures",
+              "chapter": "datastructures",
+              "python_version": "3.12"
+            },
+            "score": 0.031746031746031744,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 3,
+              "bm25": 3
+            }
+          },
+          {
+            "id": "12c14e73c6f24559ddf2af9f",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 3,
+            "text": "In a for loop, the else clause is executed\nafter the loop finishes its final iteration, that is, if no break occurred.\n\nIn a while loop, it’s executed after the loop’s condition becomes false.\n\nIn either kind of loop, the else clause is not executed if the\nloop was terminated by a break . Of course, other ways of ending the\nloop early, such as a return or a raised exception, will also skip\nexecution of the else clause.\n\nThis is exemplified in the following for loop,\nwhich searches for prime numbers:",
+            "metadata": {
+              "title": "4-control-flow",
+              "chapter": "controlflow",
+              "python_version": "3.12"
+            },
+            "score": 0.029877369007803793,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 9,
+              "bm25": 5
+            }
+          },
+          {
+            "id": "9fa3e927255ba20a4adef1d5",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 4,
+            "text": "There is a way to remove an item from a list given its index instead of its\nvalue: the del statement. This differs from the pop() method\nwhich returns a value. The del statement can also be used to remove\nslices from a list or clear the entire list (which we did earlier by assignment\nof an empty list to the slice). For example:\n\n>>> a = [ - 1 , 1 , 66.25 , 333 , 333 , 1234.5 ] >>> del a [ 0 ] >>> a [1, 66.25, 333, 333, 1234.5] >>> del a [ 2 : 4 ] >>> a [1, 66.25, 1234.5] >>> del a [:] >>> a []",
+            "metadata": {
+              "title": "5-data-structures",
+              "chapter": "datastructures",
+              "python_version": "3.12"
+            },
+            "score": 0.028991596638655463,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 8,
+              "bm25": 10
+            }
+          },
+          {
+            "id": "1730a62ba5e6f98b35418a8a",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 3,
+            "text": "The continue statement continues with the next\niteration of the loop:\n\n>>> for num in range ( 2 , 10 ): ... if num % 2 == 0 : ... print ( f \"Found an even number { num } \" ) ... continue ... print ( f \"Found an odd number { num } \" ) ... Found an even number 2 Found an odd number 3 Found an even number 4 Found an odd number 5 Found an even number 6 Found an odd number 7 Found an even number 8 Found an odd number 9\n\n4.5. else Clauses on Loops ¶\n\nIn a for or while loop the break statement\nmay be paired with an else clause. If the loop finishes without\nexecuting the break , the else clause executes.",
+            "metadata": {
+              "title": "4-control-flow",
+              "chapter": "controlflow",
+              "python_version": "3.12"
+            },
+            "score": 0.028814262023217248,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 7,
+              "bm25": 12
+            }
+          },
+          {
+            "id": "48aaaed520ad8957720a6370",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 8,
+            "text": "To loop over a sequence in sorted order, use the sorted() function which\nreturns a new sorted list while leaving the source unaltered.\n\n>>> basket = [ 'apple' , 'orange' , 'apple' , 'pear' , 'orange' , 'banana' ] >>> for i in sorted ( basket ): ... print ( i ) ... apple apple banana orange orange pear\n\nUsing set() on a sequence eliminates duplicate elements. The use of sorted() in combination with set() over a sequence is an idiomatic\nway to loop over unique elements of the sequence in sorted order.",
+            "metadata": {
+              "title": "5-data-structures",
+              "chapter": "datastructures",
+              "python_version": "3.12"
+            },
+            "score": 0.027783137179239824,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 11,
+              "bm25": 13
+            }
+          }
+        ],
+        "context": "[1feaeb669f3b767170257594 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 8]\nWhen looping through a sequence, the position index and corresponding value can\nbe retrieved at the same time using the enumerate() function.\n\n>>> for i , v in enumerate ([ 'tic' , 'tac' , 'toe' ]): ... print ( i , v ) ... 0 tic 1 tac 2 toe\n\nTo loop over two or more sequences at the same time, the entries can be paired\nwith the zip() function.\n\n[4ba6f596d5c96f1d7f1373c1 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 1]\nRemove the first item from the list whose value is equal to x . It raises a ValueError if there is no such item.\n\nRemove the item at the given position in the list, and return it. If no index\nis specified, a.pop() removes and returns the last item in the list.\nIt raises an IndexError if the list is empty or the index is\noutside the list range.\n\nRemove all items from the list. Similar to del a[:] .\n\nReturn zero-based index in the list of the first item whose value is equal to x .\nRaises a ValueError if there is no such item.\n\n[12c14e73c6f24559ddf2af9f | https://docs.python.org/3.12/tutorial/controlflow.html | unit 3]\nIn a for loop, the else clause is executed\nafter the loop finishes its final iteration, that is, if no break occurred.\n\nIn a while loop, it’s executed after the loop’s condition becomes false.\n\nIn either kind of loop, the else clause is not executed if the\nloop was terminated by a break . Of course, other ways of ending the\nloop early, such as a return or a raised exception, will also skip\nexecution of the else clause.\n\nThis is exemplified in the following for loop,\nwhich searches for prime numbers:\n\n[9fa3e927255ba20a4adef1d5 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 4]\nThere is a way to remove an item from a list given its index instead of its\nvalue: the del statement. This differs from the pop() method\nwhich returns a value. The del statement can also be used to remove\nslices from a list or clear the entire list (which we did earlier by assignment\nof an empty list to the slice). For example:\n\n>>> a = [ - 1 , 1 , 66.25 , 333 , 333 , 1234.5 ] >>> del a [ 0 ] >>> a [1, 66.25, 333, 333, 1234.5] >>> del a [ 2 : 4 ] >>> a [1, 66.25, 1234.5] >>> del a [:] >>> a []\n\n[1730a62ba5e6f98b35418a8a | https://docs.python.org/3.12/tutorial/controlflow.html | unit 3]\nThe continue statement continues with the next\niteration of the loop:\n\n>>> for num in range ( 2 , 10 ): ... if num % 2 == 0 : ... print ( f \"Found an even number { num } \" ) ... continue ... print ( f \"Found an odd number { num } \" ) ... Found an even number 2 Found an odd number 3 Found an even number 4 Found an odd number 5 Found an even number 6 Found an odd number 7 Found an even number 8 Found an odd number 9\n\n4.5. else Clauses on Loops ¶\n\nIn a for or while loop the break statement\nmay be paired with an else clause. If the loop finishes without\nexecuting the break , the else clause executes.\n\n[48aaaed520ad8957720a6370 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 8]\nTo loop over a sequence in sorted order, use the sorted() function which\nreturns a new sorted list while leaving the source unaltered.\n\n>>> basket = [ 'apple' , 'orange' , 'apple' , 'pear' , 'orange' , 'banana' ] >>> for i in sorted ( basket ): ... print ( i ) ... apple apple banana orange orange pear\n\nUsing set() on a sequence eliminates duplicate elements. The use of sorted() in combination with set() over a sequence is an idiomatic\nway to loop over unique elements of the sequence in sorted order.",
+        "context_ids": [
+          "1feaeb669f3b767170257594",
+          "4ba6f596d5c96f1d7f1373c1",
+          "12c14e73c6f24559ddf2af9f",
+          "9fa3e927255ba20a4adef1d5",
+          "1730a62ba5e6f98b35418a8a",
+          "48aaaed520ad8957720a6370"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "1feaeb669f3b767170257594",
+          "4ba6f596d5c96f1d7f1373c1",
+          "9fa3e927255ba20a4adef1d5",
+          "48aaaed520ad8957720a6370"
+        ],
+        "proposal": {
+          "margin": 8.134644031524658,
+          "start": 120,
+          "end": 131,
+          "chunk_id": "1feaeb669f3b767170257594",
+          "answer": "enumerate()"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "enumerate()"
+      }
+    ],
+    "elapsed_ms": 1763.66
+  },
+  {
+    "query_id": "t04",
+    "split": "test",
+    "question": "What name does __name__ have when a module is run as a script?",
+    "configuration": "hybrid_wide",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "__main__ [1bd3e0641bb9bd212411bb22]",
+    "citations": [
+      "1bd3e0641bb9bd212411bb22"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "hybrid",
+        "query": "module.__name__",
+        "model_action": "{\"action\":\"search\",\"query\":\"module.__name__\"}",
+        "filter": null,
+        "top_k": 6,
+        "results": [
+          {
+            "id": "5e63d2cf6e12d6faaa45a2bb",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 1,
+            "text": "A module is a file containing Python definitions and statements. The file name\nis the module name with the suffix .py appended. Within a module, the\nmodule’s name (as a string) is available as the value of the global variable __name__ . For instance, use your favorite text editor to create a file\ncalled fibo.py in the current directory with the following contents:",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.03252247488101534,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 1,
+              "bm25": 2
+            }
+          },
+          {
+            "id": "fada12db48249c27be011024",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 7,
+            "text": "Packages are a way of structuring Python’s module namespace by using “dotted\nmodule names”. For example, the module name A.B designates a submodule\nnamed B in a package named A . Just like the use of modules saves the\nauthors of different modules from having to worry about each other’s global\nvariable names, the use of dotted module names saves the authors of multi-module\npackages like NumPy or Pillow from having to worry about\neach other’s module names.",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.030834914611005692,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 2,
+              "bm25": 8
+            }
+          },
+          {
+            "id": "ec69886789764b02ba0f44ef",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 2,
+            "text": "Each module has its own private namespace, which is used as the global namespace\nby all functions defined in the module. Thus, the author of a module can\nuse global variables in the module without worrying about accidental clashes\nwith a user’s global variables. On the other hand, if you know what you are\ndoing you can touch a module’s global variables with the same notation used to\nrefer to its functions, modname.itemname .",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.030158730158730156,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 3,
+              "bm25": 10
+            }
+          },
+          {
+            "id": "1bd3e0641bb9bd212411bb22",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 3,
+            "text": "For efficiency reasons, each module is only imported once per interpreter\nsession. Therefore, if you change your modules, you must restart the\ninterpreter – or, if it’s just one module you want to test interactively,\nuse importlib.reload() , e.g. import importlib; importlib.reload(modulename) .\n\n6.1.1. Executing modules as scripts ¶\n\nWhen you run a Python module with\n\npython fibo . py < arguments >\n\nthe code in the module will be executed, just as if you imported it, but with\nthe __name__ set to \"__main__\" . That means that by adding this code at\nthe end of your module:\n\nif __name__ == \"__main__\" : import sys fib ( int ( sys . argv [ 1 ]))",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.02921395544346364,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 18,
+              "bm25": 1
+            }
+          },
+          {
+            "id": "4851251b991324841a6d9379",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 2,
+            "text": "Modules can import other modules. It is customary but not required to place all import statements at the beginning of a module (or script, for that\nmatter). The imported module names, if placed at the top level of a module\n(outside any functions or classes), are added to the module’s global namespace.\n\nThere is a variant of the import statement that imports names from a\nmodule directly into the importing module’s namespace. For example:\n\n>>> from fibo import fib , fib2 >>> fib ( 500 ) 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.02900988017658188,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 7,
+              "bm25": 11
+            }
+          },
+          {
+            "id": "2bdb6d996256c3fcdcb92b69",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 10,
+            "text": "While this feature is not often needed, it can be used to extend the set of\nmodules found in a package.\n\nIn fact function definitions are also ‘statements’ that are ‘executed’; the\nexecution of a module-level function definition adds the function name to\nthe module’s global namespace.",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.02844551282051282,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 4,
+              "bm25": 18
+            }
+          }
+        ],
+        "context": "[5e63d2cf6e12d6faaa45a2bb | https://docs.python.org/3.12/tutorial/modules.html | unit 1]\nA module is a file containing Python definitions and statements. The file name\nis the module name with the suffix .py appended. Within a module, the\nmodule’s name (as a string) is available as the value of the global variable __name__ . For instance, use your favorite text editor to create a file\ncalled fibo.py in the current directory with the following contents:\n\n[fada12db48249c27be011024 | https://docs.python.org/3.12/tutorial/modules.html | unit 7]\nPackages are a way of structuring Python’s module namespace by using “dotted\nmodule names”. For example, the module name A.B designates a submodule\nnamed B in a package named A . Just like the use of modules saves the\nauthors of different modules from having to worry about each other’s global\nvariable names, the use of dotted module names saves the authors of multi-module\npackages like NumPy or Pillow from having to worry about\neach other’s module names.\n\n[ec69886789764b02ba0f44ef | https://docs.python.org/3.12/tutorial/modules.html | unit 2]\nEach module has its own private namespace, which is used as the global namespace\nby all functions defined in the module. Thus, the author of a module can\nuse global variables in the module without worrying about accidental clashes\nwith a user’s global variables. On the other hand, if you know what you are\ndoing you can touch a module’s global variables with the same notation used to\nrefer to its functions, modname.itemname .\n\n[1bd3e0641bb9bd212411bb22 | https://docs.python.org/3.12/tutorial/modules.html | unit 3]\nFor efficiency reasons, each module is only imported once per interpreter\nsession. Therefore, if you change your modules, you must restart the\ninterpreter – or, if it’s just one module you want to test interactively,\nuse importlib.reload() , e.g. import importlib; importlib.reload(modulename) .\n\n6.1.1. Executing modules as scripts ¶\n\nWhen you run a Python module with\n\npython fibo . py < arguments >\n\nthe code in the module will be executed, just as if you imported it, but with\nthe __name__ set to \"__main__\" . That means that by adding this code at\nthe end of your module:\n\nif __name__ == \"__main__\" : import sys fib ( int ( sys . argv [ 1 ]))\n\n[4851251b991324841a6d9379 | https://docs.python.org/3.12/tutorial/modules.html | unit 2]\nModules can import other modules. It is customary but not required to place all import statements at the beginning of a module (or script, for that\nmatter). The imported module names, if placed at the top level of a module\n(outside any functions or classes), are added to the module’s global namespace.\n\nThere is a variant of the import statement that imports names from a\nmodule directly into the importing module’s namespace. For example:\n\n>>> from fibo import fib , fib2 >>> fib ( 500 ) 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n[2bdb6d996256c3fcdcb92b69 | https://docs.python.org/3.12/tutorial/modules.html | unit 10]\nWhile this feature is not often needed, it can be used to extend the set of\nmodules found in a package.\n\nIn fact function definitions are also ‘statements’ that are ‘executed’; the\nexecution of a module-level function definition adds the function name to\nthe module’s global namespace.",
+        "context_ids": [
+          "5e63d2cf6e12d6faaa45a2bb",
+          "fada12db48249c27be011024",
+          "ec69886789764b02ba0f44ef",
+          "1bd3e0641bb9bd212411bb22",
+          "4851251b991324841a6d9379",
+          "2bdb6d996256c3fcdcb92b69"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "5e63d2cf6e12d6faaa45a2bb",
+          "fada12db48249c27be011024",
+          "1bd3e0641bb9bd212411bb22",
+          "4851251b991324841a6d9379",
+          "2bdb6d996256c3fcdcb92b69"
+        ],
+        "proposal": {
+          "margin": -1.2274293899536133,
+          "start": 502,
+          "end": 510,
+          "chunk_id": "1bd3e0641bb9bd212411bb22",
+          "answer": "__main__"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "__main__"
+      }
+    ],
+    "elapsed_ms": 1318.44
+  },
+  {
+    "query_id": "t05",
+    "split": "test",
+    "question": "Which class should user-defined exceptions typically derive from?",
+    "configuration": "hybrid_wide",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "BaseException [d47fd4390dc960ad3dafec4d]",
+    "citations": [
+      "d47fd4390dc960ad3dafec4d"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "hybrid",
+        "query": "class which exception should user defined classes typically derive from",
+        "model_action": "{\"action\":\"search\",\"query\":\"class which exception should user defined classes typically derive from\"}",
+        "filter": null,
+        "top_k": 6,
+        "results": [
+          {
+            "id": "881c9443c2b8dfdf3b83070f",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 6,
+            "text": "8.6. User-defined Exceptions ¶\n\nPrograms may name their own exceptions by creating a new exception class (see Classes for more about Python classes). Exceptions should typically\nbe derived from the Exception class, either directly or indirectly.\n\nException classes can be defined which do anything any other class can do, but\nare usually kept simple, often only offering a number of attributes that allow\ninformation about the error to be extracted by handlers for the exception.\n\nMost exceptions are defined with names that end in “Error”, similar to the\nnaming of the standard exceptions.",
+            "metadata": {
+              "title": "8-errors-and-exceptions",
+              "chapter": "errors",
+              "python_version": "3.12"
+            },
+            "score": 0.03278688524590164,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 1,
+              "bm25": 1
+            }
+          },
+          {
+            "id": "569194ff2f1404aa0a26ee7e",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 3,
+            "text": "BaseException is the common base class of all exceptions. One of its\nsubclasses, Exception , is the base class of all the non-fatal exceptions.\nExceptions which are not subclasses of Exception are not typically\nhandled, because they are used to indicate that the program should terminate.\nThey include SystemExit which is raised by sys.exit() and KeyboardInterrupt which is raised when a user wishes to interrupt\nthe program.",
+            "metadata": {
+              "title": "8-errors-and-exceptions",
+              "chapter": "errors",
+              "python_version": "3.12"
+            },
+            "score": 0.03225806451612903,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 2,
+              "bm25": 2
+            }
+          },
+          {
+            "id": "d47fd4390dc960ad3dafec4d",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 4,
+            "text": "The sole argument to raise indicates the exception to be raised.\nThis must be either an exception instance or an exception class (a class that\nderives from BaseException , such as Exception or one of its\nsubclasses). If an exception class is passed, it will be implicitly\ninstantiated by calling its constructor with no arguments:",
+            "metadata": {
+              "title": "8-errors-and-exceptions",
+              "chapter": "errors",
+              "python_version": "3.12"
+            },
+            "score": 0.03125763125763126,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 3,
+              "bm25": 5
+            }
+          },
+          {
+            "id": "bbd9fadd6f3920c0c4f6e44b",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 3,
+            "text": "A class in an except clause matches exceptions which are instances of the\nclass itself or one of its derived classes (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\nFor example, the following code will print B, C, D in that order:\n\nclass B ( Exception ): pass class C ( B ): pass class D ( C ): pass for cls in [ B , C , D ]: try : raise cls () except D : print ( \"D\" ) except C : print ( \"C\" ) except B : print ( \"B\" )\n\nNote that if the except clauses were reversed (with except B first), it\nwould have printed B, B, B — the first matching except clause is triggered.",
+            "metadata": {
+              "title": "8-errors-and-exceptions",
+              "chapter": "errors",
+              "python_version": "3.12"
+            },
+            "score": 0.031009615384615385,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 5,
+              "bm25": 4
+            }
+          },
+          {
+            "id": "9e2ebf14e0b6de74a99b2491",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 3,
+            "text": "When an exception occurs, it may have associated values, also known as the\nexception’s arguments . The presence and types of the arguments depend on the\nexception type.\n\nThe except clause may specify a variable after the exception name. The\nvariable is bound to the exception instance which typically has an args attribute that stores the arguments. For convenience, builtin exception\ntypes define __str__() to print all the arguments without explicitly\naccessing .args .",
+            "metadata": {
+              "title": "8-errors-and-exceptions",
+              "chapter": "errors",
+              "python_version": "3.12"
+            },
+            "score": 0.03007688828584351,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 7,
+              "bm25": 6
+            }
+          },
+          {
+            "id": "bf87216f109472577bbbd26b",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 1,
+            "text": "The last line of the error message indicates what happened. Exceptions come in\ndifferent types, and the type is printed as part of the message: the types in\nthe example are ZeroDivisionError , NameError and TypeError .\nThe string printed as the exception type is the name of the built-in exception\nthat occurred. This is true for all built-in exceptions, but need not be true\nfor user-defined exceptions (although it is a useful convention). Standard\nexception names are built-in identifiers (not reserved keywords).",
+            "metadata": {
+              "title": "8-errors-and-exceptions",
+              "chapter": "errors",
+              "python_version": "3.12"
+            },
+            "score": 0.02964426877470356,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 6,
+              "bm25": 9
+            }
+          }
+        ],
+        "context": "[881c9443c2b8dfdf3b83070f | https://docs.python.org/3.12/tutorial/errors.html | unit 6]\n8.6. User-defined Exceptions ¶\n\nPrograms may name their own exceptions by creating a new exception class (see Classes for more about Python classes). Exceptions should typically\nbe derived from the Exception class, either directly or indirectly.\n\nException classes can be defined which do anything any other class can do, but\nare usually kept simple, often only offering a number of attributes that allow\ninformation about the error to be extracted by handlers for the exception.\n\nMost exceptions are defined with names that end in “Error”, similar to the\nnaming of the standard exceptions.\n\n[569194ff2f1404aa0a26ee7e | https://docs.python.org/3.12/tutorial/errors.html | unit 3]\nBaseException is the common base class of all exceptions. One of its\nsubclasses, Exception , is the base class of all the non-fatal exceptions.\nExceptions which are not subclasses of Exception are not typically\nhandled, because they are used to indicate that the program should terminate.\nThey include SystemExit which is raised by sys.exit() and KeyboardInterrupt which is raised when a user wishes to interrupt\nthe program.\n\n[d47fd4390dc960ad3dafec4d | https://docs.python.org/3.12/tutorial/errors.html | unit 4]\nThe sole argument to raise indicates the exception to be raised.\nThis must be either an exception instance or an exception class (a class that\nderives from BaseException , such as Exception or one of its\nsubclasses). If an exception class is passed, it will be implicitly\ninstantiated by calling its constructor with no arguments:\n\n[bbd9fadd6f3920c0c4f6e44b | https://docs.python.org/3.12/tutorial/errors.html | unit 3]\nA class in an except clause matches exceptions which are instances of the\nclass itself or one of its derived classes (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\nFor example, the following code will print B, C, D in that order:\n\nclass B ( Exception ): pass class C ( B ): pass class D ( C ): pass for cls in [ B , C , D ]: try : raise cls () except D : print ( \"D\" ) except C : print ( \"C\" ) except B : print ( \"B\" )\n\nNote that if the except clauses were reversed (with except B first), it\nwould have printed B, B, B — the first matching except clause is triggered.\n\n[9e2ebf14e0b6de74a99b2491 | https://docs.python.org/3.12/tutorial/errors.html | unit 3]\nWhen an exception occurs, it may have associated values, also known as the\nexception’s arguments . The presence and types of the arguments depend on the\nexception type.\n\nThe except clause may specify a variable after the exception name. The\nvariable is bound to the exception instance which typically has an args attribute that stores the arguments. For convenience, builtin exception\ntypes define __str__() to print all the arguments without explicitly\naccessing .args .\n\n[bf87216f109472577bbbd26b | https://docs.python.org/3.12/tutorial/errors.html | unit 1]\nThe last line of the error message indicates what happened. Exceptions come in\ndifferent types, and the type is printed as part of the message: the types in\nthe example are ZeroDivisionError , NameError and TypeError .\nThe string printed as the exception type is the name of the built-in exception\nthat occurred. This is true for all built-in exceptions, but need not be true\nfor user-defined exceptions (although it is a useful convention). Standard\nexception names are built-in identifiers (not reserved keywords).",
+        "context_ids": [
+          "881c9443c2b8dfdf3b83070f",
+          "569194ff2f1404aa0a26ee7e",
+          "d47fd4390dc960ad3dafec4d",
+          "bbd9fadd6f3920c0c4f6e44b",
+          "9e2ebf14e0b6de74a99b2491",
+          "bf87216f109472577bbbd26b"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "881c9443c2b8dfdf3b83070f",
+          "569194ff2f1404aa0a26ee7e",
+          "d47fd4390dc960ad3dafec4d",
+          "bbd9fadd6f3920c0c4f6e44b",
+          "9e2ebf14e0b6de74a99b2491",
+          "bf87216f109472577bbbd26b"
+        ],
+        "proposal": {
+          "margin": 8.449697017669678,
+          "start": 156,
+          "end": 169,
+          "chunk_id": "d47fd4390dc960ad3dafec4d",
+          "answer": "BaseException"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "BaseException"
+      }
+    ],
+    "elapsed_ms": 1705.35
+  },
+  {
+    "query_id": "t_abs01",
+    "split": "test",
+    "question": "What is the warranty period for the Python interpreter?",
+    "configuration": "hybrid_wide",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "method": "hybrid",
+        "query": "Python interpreter warranty",
+        "model_action": "{\"action\":\"search\",\"query\":\"Python interpreter warranty\"}",
+        "filter": null,
+        "top_k": 6,
+        "results": [
+          {
+            "id": "e54ec65ff541ba8c6429a76d",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 1,
+            "text": "If you quit from the Python interpreter and enter it again, the definitions you\nhave made (functions and variables) are lost. Therefore, if you want to write a\nsomewhat longer program, you are better off using a text editor to prepare the\ninput for the interpreter and running it with that file as input instead. This\nis known as creating a script . As your program gets longer, you may want to\nsplit it into several files for easier maintenance. You may also want to use a\nhandy function that you’ve written in several programs without copying its\ndefinition into each program.",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.03200204813108039,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 2,
+              "bm25": 3
+            }
+          },
+          {
+            "id": "6e2a5fdc18f6b64c65b10258",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 5,
+            "text": "Python comes with a library of standard modules, described in a separate\ndocument, the Python Library Reference (“Library Reference” hereafter). Some\nmodules are built into the interpreter; these provide access to operations that\nare not part of the core of the language but are nevertheless built in, either\nfor efficiency or to provide access to operating system primitives such as\nsystem calls. The set of such modules is a configuration option which also\ndepends on the underlying platform. For example, the winreg module is only\nprovided on Windows systems. One particular module deserves some attention: sys , which is built into every Python",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.03149801587301587,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 3,
+              "bm25": 4
+            }
+          },
+          {
+            "id": "8e237871eec238637edaee9e",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 5,
+            "text": "interpreter. The variables sys.ps1 and sys.ps2 define the strings used as primary and secondary\nprompts:\n\n>>> import sys >>> sys . ps1 '>>> ' >>> sys . ps2 '... ' >>> sys . ps1 = 'C> ' C> print('Yuck!') Yuck! C>\n\nThese two variables are only defined if the interpreter is in interactive mode.\n\nThe variable sys.path is a list of strings that determines the interpreter’s\nsearch path for modules. It is initialized to a default path taken from the\nenvironment variable PYTHONPATH , or from a built-in default if PYTHONPATH is not set. You can modify it using standard list\noperations:",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.030330882352941176,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 4,
+              "bm25": 8
+            }
+          },
+          {
+            "id": "1bd3e0641bb9bd212411bb22",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 3,
+            "text": "For efficiency reasons, each module is only imported once per interpreter\nsession. Therefore, if you change your modules, you must restart the\ninterpreter – or, if it’s just one module you want to test interactively,\nuse importlib.reload() , e.g. import importlib; importlib.reload(modulename) .\n\n6.1.1. Executing modules as scripts ¶\n\nWhen you run a Python module with\n\npython fibo . py < arguments >\n\nthe code in the module will be executed, just as if you imported it, but with\nthe __name__ set to \"__main__\" . That means that by adding this code at\nthe end of your module:\n\nif __name__ == \"__main__\" : import sys fib ( int ( sys . argv [ 1 ]))",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.02946236559139785,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 15,
+              "bm25": 2
+            }
+          },
+          {
+            "id": "67623e6bf2d60998dfa3084f",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 3,
+            "text": "When a module named spam is imported, the interpreter first searches for\na built-in module with that name. These module names are listed in sys.builtin_module_names . If not found, it then searches for a file\nnamed spam.py in a list of directories given by the variable sys.path . sys.path is initialized from these locations:\n\nThe directory containing the input script (or the current directory when no\nfile is specified).\n\nPYTHONPATH (a list of directory names, with the same syntax as the\nshell variable PATH ).",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.02821939586645469,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 8,
+              "bm25": 14
+            }
+          },
+          {
+            "id": "af9f4743c9eee8e5175d096b",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 4,
+            "text": "Python checks the modification date of the source against the compiled version\nto see if it’s out of date and needs to be recompiled. This is a completely\nautomatic process. Also, the compiled modules are platform-independent, so the\nsame library can be shared among systems with different architectures.",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.027629397679130595,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 1,
+              "bm25": 29
+            }
+          }
+        ],
+        "context": "[e54ec65ff541ba8c6429a76d | https://docs.python.org/3.12/tutorial/modules.html | unit 1]\nIf you quit from the Python interpreter and enter it again, the definitions you\nhave made (functions and variables) are lost. Therefore, if you want to write a\nsomewhat longer program, you are better off using a text editor to prepare the\ninput for the interpreter and running it with that file as input instead. This\nis known as creating a script . As your program gets longer, you may want to\nsplit it into several files for easier maintenance. You may also want to use a\nhandy function that you’ve written in several programs without copying its\ndefinition into each program.\n\n[6e2a5fdc18f6b64c65b10258 | https://docs.python.org/3.12/tutorial/modules.html | unit 5]\nPython comes with a library of standard modules, described in a separate\ndocument, the Python Library Reference (“Library Reference” hereafter). Some\nmodules are built into the interpreter; these provide access to operations that\nare not part of the core of the language but are nevertheless built in, either\nfor efficiency or to provide access to operating system primitives such as\nsystem calls. The set of such modules is a configuration option which also\ndepends on the underlying platform. For example, the winreg module is only\nprovided on Windows systems. One particular module deserves some attention: sys , which is built into every Python\n\n[8e237871eec238637edaee9e | https://docs.python.org/3.12/tutorial/modules.html | unit 5]\ninterpreter. The variables sys.ps1 and sys.ps2 define the strings used as primary and secondary\nprompts:\n\n>>> import sys >>> sys . ps1 '>>> ' >>> sys . ps2 '... ' >>> sys . ps1 = 'C> ' C> print('Yuck!') Yuck! C>\n\nThese two variables are only defined if the interpreter is in interactive mode.\n\nThe variable sys.path is a list of strings that determines the interpreter’s\nsearch path for modules. It is initialized to a default path taken from the\nenvironment variable PYTHONPATH , or from a built-in default if PYTHONPATH is not set. You can modify it using standard list\noperations:\n\n[1bd3e0641bb9bd212411bb22 | https://docs.python.org/3.12/tutorial/modules.html | unit 3]\nFor efficiency reasons, each module is only imported once per interpreter\nsession. Therefore, if you change your modules, you must restart the\ninterpreter – or, if it’s just one module you want to test interactively,\nuse importlib.reload() , e.g. import importlib; importlib.reload(modulename) .\n\n6.1.1. Executing modules as scripts ¶\n\nWhen you run a Python module with\n\npython fibo . py < arguments >\n\nthe code in the module will be executed, just as if you imported it, but with\nthe __name__ set to \"__main__\" . That means that by adding this code at\nthe end of your module:\n\nif __name__ == \"__main__\" : import sys fib ( int ( sys . argv [ 1 ]))\n\n[67623e6bf2d60998dfa3084f | https://docs.python.org/3.12/tutorial/modules.html | unit 3]\nWhen a module named spam is imported, the interpreter first searches for\na built-in module with that name. These module names are listed in sys.builtin_module_names . If not found, it then searches for a file\nnamed spam.py in a list of directories given by the variable sys.path . sys.path is initialized from these locations:\n\nThe directory containing the input script (or the current directory when no\nfile is specified).\n\nPYTHONPATH (a list of directory names, with the same syntax as the\nshell variable PATH ).\n\n[af9f4743c9eee8e5175d096b | https://docs.python.org/3.12/tutorial/modules.html | unit 4]\nPython checks the modification date of the source against the compiled version\nto see if it’s out of date and needs to be recompiled. This is a completely\nautomatic process. Also, the compiled modules are platform-independent, so the\nsame library can be shared among systems with different architectures.",
+        "context_ids": [
+          "e54ec65ff541ba8c6429a76d",
+          "6e2a5fdc18f6b64c65b10258",
+          "8e237871eec238637edaee9e",
+          "1bd3e0641bb9bd212411bb22",
+          "67623e6bf2d60998dfa3084f",
+          "af9f4743c9eee8e5175d096b"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [],
+        "proposal": null
+      },
+      {
+        "event": "duplicate_query_stop",
+        "query": "Python interpreter warranty"
+      },
+      {
+        "event": "abstain",
+        "raw": ""
+      }
+    ],
+    "elapsed_ms": 1621.91
+  },
+  {
+    "query_id": "t_abs02",
+    "split": "test",
+    "question": "Which company acquired Python in 2025?",
+    "configuration": "hybrid_wide",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "method": "hybrid",
+        "query": "acquired Python 2025",
+        "model_action": "{\"action\":\"search\",\"query\":\"acquired Python 2025\"}",
+        "filter": null,
+        "top_k": 6,
+        "results": [
+          {
+            "id": "6e2a5fdc18f6b64c65b10258",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 5,
+            "text": "Python comes with a library of standard modules, described in a separate\ndocument, the Python Library Reference (“Library Reference” hereafter). Some\nmodules are built into the interpreter; these provide access to operations that\nare not part of the core of the language but are nevertheless built in, either\nfor efficiency or to provide access to operating system primitives such as\nsystem calls. The set of such modules is a configuration option which also\ndepends on the underlying platform. For example, the winreg module is only\nprovided on Windows systems. One particular module deserves some attention: sys , which is built into every Python",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.03252247488101534,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 1,
+              "bm25": 2
+            }
+          },
+          {
+            "id": "3abd15625f39dac297fa0f0d",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 16,
+            "text": "4.10. Intermezzo: Coding Style ¶\n\nNow that you are about to write longer, more complex pieces of Python, it is a\ngood time to talk about coding style . Most languages can be written (or more\nconcise, formatted ) in different styles; some are more readable than others.\nMaking it easy for others to read your code is always a good idea, and adopting\na nice coding style helps tremendously for that.\n\nFor Python, PEP 8 has emerged as the style guide that most projects adhere to;\nit promotes a very readable and eye-pleasing coding style. Every Python\ndeveloper should read it at some point; here are the most important points\nextracted for you:",
+            "metadata": {
+              "title": "4-control-flow",
+              "chapter": "controlflow",
+              "python_version": "3.12"
+            },
+            "score": 0.030776515151515152,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 6,
+              "bm25": 4
+            }
+          },
+          {
+            "id": "14c7808f5de2c3437867d816",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 4,
+            "text": ">>> word [: 2 ] # character from the beginning to position 2 (excluded) 'Py' >>> word [ 4 :] # characters from position 4 (included) to the end 'on' >>> word [ - 2 :] # characters from the second-last (included) to the end 'on'\n\nNote how the start is always included, and the end always excluded. This\nmakes sure that s[:i] + s[i:] is always equal to s :\n\n>>> word [: 2 ] + word [ 2 :] 'Python' >>> word [: 4 ] + word [ 4 :] 'Python'",
+            "metadata": {
+              "title": "3-informal-introduction",
+              "chapter": "introduction",
+              "python_version": "3.12"
+            },
+            "score": 0.02967032967032967,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 10,
+              "bm25": 5
+            }
+          },
+          {
+            "id": "b5aa4f6122c957d4feb42d6c",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 1,
+            "text": "3.1. Using Python as a Calculator ¶\n\nLet’s try some simple Python commands. Start the interpreter and wait for the\nprimary prompt, >>> . (It shouldn’t take long.)\n\nThe interpreter acts as a simple calculator: you can type an expression at it\nand it will write the value. Expression syntax is straightforward: the\noperators + , - , * and / can be used to perform\narithmetic; parentheses ( () ) can be used for grouping.\nFor example:\n\n>>> 2 + 2 4 >>> 50 - 5 * 6 20 >>> ( 50 - 5 * 6 ) / 4 5.0 >>> 8 / 5 # division always returns a floating-point number 1.6",
+            "metadata": {
+              "title": "3-informal-introduction",
+              "chapter": "introduction",
+              "python_version": "3.12"
+            },
+            "score": 0.029411764705882353,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 8,
+              "bm25": 8
+            }
+          },
+          {
+            "id": "0a6d7a46c0078e7b4d67cf25",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 4,
+            "text": "To speed up loading modules, Python caches the compiled version of each module\nin the __pycache__ directory under the name module. version .pyc ,\nwhere the version encodes the format of the compiled file; it generally contains\nthe Python version number. For example, in CPython release 3.3 the compiled\nversion of spam.py would be cached as __pycache__/spam.cpython-33.pyc . This\nnaming convention allows compiled modules from different releases and different\nversions of Python to coexist.",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.02938045560996381,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 17,
+              "bm25": 1
+            }
+          },
+          {
+            "id": "bb952b9a02bfad866a6a0582",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 5,
+            "text": ">>> import sys >>> sys . path . append ( '/ufs/guido/lib/python' )\n\n6.3. The dir() Function ¶\n\nThe built-in function dir() is used to find out which names a module\ndefines. It returns a sorted list of strings:",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.028577260665441927,
+            "strategy": "hybrid",
+            "ranks": {
+              "dense": 11,
+              "bm25": 9
+            }
+          }
+        ],
+        "context": "[6e2a5fdc18f6b64c65b10258 | https://docs.python.org/3.12/tutorial/modules.html | unit 5]\nPython comes with a library of standard modules, described in a separate\ndocument, the Python Library Reference (“Library Reference” hereafter). Some\nmodules are built into the interpreter; these provide access to operations that\nare not part of the core of the language but are nevertheless built in, either\nfor efficiency or to provide access to operating system primitives such as\nsystem calls. The set of such modules is a configuration option which also\ndepends on the underlying platform. For example, the winreg module is only\nprovided on Windows systems. One particular module deserves some attention: sys , which is built into every Python\n\n[3abd15625f39dac297fa0f0d | https://docs.python.org/3.12/tutorial/controlflow.html | unit 16]\n4.10. Intermezzo: Coding Style ¶\n\nNow that you are about to write longer, more complex pieces of Python, it is a\ngood time to talk about coding style . Most languages can be written (or more\nconcise, formatted ) in different styles; some are more readable than others.\nMaking it easy for others to read your code is always a good idea, and adopting\na nice coding style helps tremendously for that.\n\nFor Python, PEP 8 has emerged as the style guide that most projects adhere to;\nit promotes a very readable and eye-pleasing coding style. Every Python\ndeveloper should read it at some point; here are the most important points\nextracted for you:\n\n[14c7808f5de2c3437867d816 | https://docs.python.org/3.12/tutorial/introduction.html | unit 4]\n>>> word [: 2 ] # character from the beginning to position 2 (excluded) 'Py' >>> word [ 4 :] # characters from position 4 (included) to the end 'on' >>> word [ - 2 :] # characters from the second-last (included) to the end 'on'\n\nNote how the start is always included, and the end always excluded. This\nmakes sure that s[:i] + s[i:] is always equal to s :\n\n>>> word [: 2 ] + word [ 2 :] 'Python' >>> word [: 4 ] + word [ 4 :] 'Python'\n\n[b5aa4f6122c957d4feb42d6c | https://docs.python.org/3.12/tutorial/introduction.html | unit 1]\n3.1. Using Python as a Calculator ¶\n\nLet’s try some simple Python commands. Start the interpreter and wait for the\nprimary prompt, >>> . (It shouldn’t take long.)\n\nThe interpreter acts as a simple calculator: you can type an expression at it\nand it will write the value. Expression syntax is straightforward: the\noperators + , - , * and / can be used to perform\narithmetic; parentheses ( () ) can be used for grouping.\nFor example:\n\n>>> 2 + 2 4 >>> 50 - 5 * 6 20 >>> ( 50 - 5 * 6 ) / 4 5.0 >>> 8 / 5 # division always returns a floating-point number 1.6\n\n[0a6d7a46c0078e7b4d67cf25 | https://docs.python.org/3.12/tutorial/modules.html | unit 4]\nTo speed up loading modules, Python caches the compiled version of each module\nin the __pycache__ directory under the name module. version .pyc ,\nwhere the version encodes the format of the compiled file; it generally contains\nthe Python version number. For example, in CPython release 3.3 the compiled\nversion of spam.py would be cached as __pycache__/spam.cpython-33.pyc . This\nnaming convention allows compiled modules from different releases and different\nversions of Python to coexist.\n\n[bb952b9a02bfad866a6a0582 | https://docs.python.org/3.12/tutorial/modules.html | unit 5]\n>>> import sys >>> sys . path . append ( '/ufs/guido/lib/python' )\n\n6.3. The dir() Function ¶\n\nThe built-in function dir() is used to find out which names a module\ndefines. It returns a sorted list of strings:",
+        "context_ids": [
+          "6e2a5fdc18f6b64c65b10258",
+          "3abd15625f39dac297fa0f0d",
+          "14c7808f5de2c3437867d816",
+          "b5aa4f6122c957d4feb42d6c",
+          "0a6d7a46c0078e7b4d67cf25",
+          "bb952b9a02bfad866a6a0582"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [],
+        "proposal": null
+      },
+      {
+        "event": "duplicate_query_stop",
+        "query": "acquired Python 2025"
+      },
+      {
+        "event": "abstain",
+        "raw": ""
+      }
+    ],
+    "elapsed_ms": 2286.3
+  }
+]

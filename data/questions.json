@@ -1,0 +1,370 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "Which character begins a Python comment?",
+    "expected_answer": "Dấu #.",
+    "gold": [
+      {
+        "source_id": "introduction",
+        "page": 1,
+        "evidence": "Comments in Python start with the hash character"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "Which operator performs floor division?",
+    "expected_answer": "//.",
+    "gold": [
+      {
+        "source_id": "introduction",
+        "page": 2,
+        "evidence": "17 // 3 # floor division discards the fractional part"
+      }
+    ],
+    "filter": {
+      "chapter": "introduction"
+    }
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "How can a string keep backslashes from being interpreted as escape characters?",
+    "expected_answer": "Thêm tiền tố r để tạo raw string.",
+    "gold": [
+      {
+        "source_id": "introduction",
+        "page": 3,
+        "evidence": "you can use raw strings by adding an r before the first quote"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "Are Python lists mutable?",
+    "expected_answer": "Có, list là kiểu mutable.",
+    "gold": [
+      {
+        "source_id": "introduction",
+        "page": 6,
+        "evidence": "lists are a mutable type"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "Is the endpoint of range() included in the generated sequence?",
+    "expected_answer": "Không.",
+    "gold": [
+      {
+        "source_id": "controlflow",
+        "page": 2,
+        "evidence": "The given end point is never part of the generated sequence"
+      }
+    ],
+    "filter": {
+      "chapter": "controlflow"
+    }
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "When does a loop's else clause execute?",
+    "expected_answer": "Khi vòng lặp kết thúc mà không gặp break.",
+    "gold": [
+      {
+        "source_id": "controlflow",
+        "page": 3,
+        "evidence": "If the loop finishes without executing the break , the else clause executes"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "What does the pass statement do?",
+    "expected_answer": "Không làm gì.",
+    "gold": [
+      {
+        "source_id": "controlflow",
+        "page": 4,
+        "evidence": "The pass statement does nothing"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "Which keyword introduces a function definition?",
+    "expected_answer": "def.",
+    "gold": [
+      {
+        "source_id": "controlflow",
+        "page": 7,
+        "evidence": "The keyword def introduces a function definition"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "What do list methods that only modify the list in place return?",
+    "expected_answer": "None.",
+    "gold": [
+      {
+        "source_id": "datastructures",
+        "page": 2,
+        "evidence": "only modify the list have no return value printed"
+      }
+    ],
+    "filter": {
+      "chapter": "datastructures"
+    }
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "question": "Does a list used as a stack follow last-in, first-out order?",
+    "expected_answer": "LIFO, vào sau ra trước.",
+    "gold": [
+      {
+        "source_id": "datastructures",
+        "page": 2,
+        "evidence": "last-in, first-out"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "Can a set contain duplicate elements?",
+    "expected_answer": "Không.",
+    "gold": [
+      {
+        "source_id": "datastructures",
+        "page": 6,
+        "evidence": "A set is an unordered collection with no duplicate elements"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "Must dictionary keys be unique within one dictionary?",
+    "expected_answer": "Không, khóa phải duy nhất.",
+    "gold": [
+      {
+        "source_id": "datastructures",
+        "page": 7,
+        "evidence": "the keys are unique (within one dictionary)"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "What is a Python module?",
+    "expected_answer": "File chứa định nghĩa và câu lệnh Python, có đuôi .py.",
+    "gold": [
+      {
+        "source_id": "modules",
+        "page": 1,
+        "evidence": "A module is a file containing Python definitions and statements"
+      }
+    ],
+    "filter": {
+      "chapter": "modules"
+    }
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "question": "When are initialization statements in a module executed during import?",
+    "expected_answer": "Chỉ lần đầu tên module được gặp trong câu lệnh import.",
+    "gold": [
+      {
+        "source_id": "modules",
+        "page": 2,
+        "evidence": "They are executed only the first time the module name is encountered in an import statement"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "Does reading a .pyc file make the program run faster?",
+    "expected_answer": "Không, chỉ tốc độ nạp nhanh hơn.",
+    "gold": [
+      {
+        "source_id": "modules",
+        "page": 5,
+        "evidence": "A program doesn’t run any faster when it is read from a .pyc file"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q16",
+    "split": "dev",
+    "question": "How do packages structure Python's module namespace?",
+    "expected_answer": "Tên module có dấu chấm.",
+    "gold": [
+      {
+        "source_id": "modules",
+        "page": 7,
+        "evidence": "dotted module names"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q17",
+    "split": "dev",
+    "question": "How are expressions inserted into an f-string?",
+    "expected_answer": "Tiền tố f/F và biểu thức trong dấu ngoặc nhọn.",
+    "gold": [
+      {
+        "source_id": "inputoutput",
+        "page": 2,
+        "evidence": "prefixing the string with f or F and writing expressions as {expression}"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "q18",
+    "split": "dev",
+    "question": "Why is the with keyword recommended when working with files?",
+    "expected_answer": "File được đóng kể cả khi phát sinh exception.",
+    "gold": [
+      {
+        "source_id": "inputoutput",
+        "page": 6,
+        "evidence": "properly closed after its suite finishes, even if an exception is raised"
+      }
+    ],
+    "filter": {
+      "chapter": "inputoutput"
+    }
+  },
+  {
+    "id": "t01",
+    "split": "test",
+    "question": "What happens when a string index is too large?",
+    "expected_answer": "An IndexError is raised.",
+    "gold": [
+      {
+        "source_id": "introduction",
+        "page": 5,
+        "evidence": "Attempting to use an index that is too large will result in an error"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "t02",
+    "split": "test",
+    "question": "What does a Python for statement iterate over?",
+    "expected_answer": "The items of any sequence, in order.",
+    "gold": [
+      {
+        "source_id": "controlflow",
+        "page": 1,
+        "evidence": "iterates over the items of any sequence"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "t03",
+    "split": "test",
+    "question": "Which function returns both an index and value when looping through a sequence?",
+    "expected_answer": "enumerate().",
+    "gold": [
+      {
+        "source_id": "datastructures",
+        "page": 8,
+        "evidence": "using the enumerate() function"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "t04",
+    "split": "test",
+    "question": "What name does __name__ have when a module is run as a script?",
+    "expected_answer": "__main__.",
+    "gold": [
+      {
+        "source_id": "modules",
+        "page": 3,
+        "evidence": "with the __name__ set to \"__main__\""
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "t05",
+    "split": "test",
+    "question": "Which class should user-defined exceptions typically derive from?",
+    "expected_answer": "Exception, directly or indirectly.",
+    "gold": [
+      {
+        "source_id": "errors",
+        "page": 6,
+        "evidence": "Exceptions should typically be derived from the Exception class"
+      }
+    ],
+    "filter": null
+  },
+  {
+    "id": "d_abs01",
+    "split": "dev",
+    "question": "What exact memory limit does the tutorial set for every Python list?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The corpus gives no universal memory limit for lists.",
+    "filter": null
+  },
+  {
+    "id": "d_abs02",
+    "split": "dev",
+    "question": "What guaranteed speedup does Python 3.12 give every program?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "No universal speedup guarantee appears in the six chapters.",
+    "filter": null
+  },
+  {
+    "id": "t_abs01",
+    "split": "test",
+    "question": "What is the warranty period for the Python interpreter?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The corpus has no warranty period for the interpreter.",
+    "filter": null
+  },
+  {
+    "id": "t_abs02",
+    "split": "test",
+    "question": "Which company acquired Python in 2025?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The corpus does not state such an acquisition.",
+    "filter": null
+  }
+]

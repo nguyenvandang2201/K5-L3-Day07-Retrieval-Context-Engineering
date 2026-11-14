@@ -1,0 +1,637 @@
+[
+  {
+    "query_id": "t01",
+    "split": "test",
+    "question": "What happens when a string index is too large?",
+    "configuration": "dense_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "an error [b5aac77e9970ed9b7aea3965]",
+    "citations": [
+      "b5aac77e9970ed9b7aea3965"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "dense",
+        "query": "string index too large",
+        "model_action": "{\"action\":\"search\",\"query\":\"string index too large\"}",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "b5aac77e9970ed9b7aea3965",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 5,
+            "text": "For non-negative indices, the length of a slice is the difference of the\nindices, if both are within bounds. For example, the length of word[1:3] is\n2.\n\nAttempting to use an index that is too large will result in an error:\n\n>>> word [ 42 ] # the word only has 6 characters Traceback (most recent call last): File \"<stdin>\" , line 1 , in <module> IndexError : string index out of range\n\nHowever, out of range slice indexes are handled gracefully when used for\nslicing:\n\n>>> word [ 4 : 42 ] 'on' >>> word [ 42 :] ''\n\nPython strings cannot be changed — they are immutable .\nTherefore, assigning to an indexed position in the string results in an error:",
+            "metadata": {
+              "title": "3-informal-introduction",
+              "chapter": "introduction",
+              "python_version": "3.12"
+            },
+            "score": 0.5037409362947392,
+            "strategy": "dense"
+          },
+          {
+            "id": "062375a62b568fc6e72e15b6",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 4,
+            "text": "The str.rjust() method of string objects right-justifies a string in a\nfield of a given width by padding it with spaces on the left. There are\nsimilar methods str.ljust() and str.center() . These methods do\nnot write anything, they just return a new string. If the input string is too\nlong, they don’t truncate it, but return it unchanged; this will mess up your\ncolumn lay-out but that’s usually better than the alternative, which would be\nlying about a value. (If you really want truncation you can always add a\nslice operation, as in x.ljust(n)[:n] .)",
+            "metadata": {
+              "title": "7-input-and-output",
+              "chapter": "inputoutput",
+              "python_version": "3.12"
+            },
+            "score": 0.4127470008881695,
+            "strategy": "dense"
+          },
+          {
+            "id": "280339542cc8ae6d5ab69553",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 4,
+            "text": "In addition to indexing, slicing is also supported. While indexing is used\nto obtain individual characters, slicing allows you to obtain a substring:\n\n>>> word [ 0 : 2 ] # characters from position 0 (included) to 2 (excluded) 'Py' >>> word [ 2 : 5 ] # characters from position 2 (included) to 5 (excluded) 'tho'\n\nSlice indices have useful defaults; an omitted first index defaults to zero, an\nomitted second index defaults to the size of the string being sliced.",
+            "metadata": {
+              "title": "3-informal-introduction",
+              "chapter": "introduction",
+              "python_version": "3.12"
+            },
+            "score": 0.398707777261734,
+            "strategy": "dense"
+          }
+        ],
+        "context": "[b5aac77e9970ed9b7aea3965 | https://docs.python.org/3.12/tutorial/introduction.html | unit 5]\nFor non-negative indices, the length of a slice is the difference of the\nindices, if both are within bounds. For example, the length of word[1:3] is\n2.\n\nAttempting to use an index that is too large will result in an error:\n\n>>> word [ 42 ] # the word only has 6 characters Traceback (most recent call last): File \"<stdin>\" , line 1 , in <module> IndexError : string index out of range\n\nHowever, out of range slice indexes are handled gracefully when used for\nslicing:\n\n>>> word [ 4 : 42 ] 'on' >>> word [ 42 :] ''\n\nPython strings cannot be changed — they are immutable .\nTherefore, assigning to an indexed position in the string results in an error:\n\n[062375a62b568fc6e72e15b6 | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 4]\nThe str.rjust() method of string objects right-justifies a string in a\nfield of a given width by padding it with spaces on the left. There are\nsimilar methods str.ljust() and str.center() . These methods do\nnot write anything, they just return a new string. If the input string is too\nlong, they don’t truncate it, but return it unchanged; this will mess up your\ncolumn lay-out but that’s usually better than the alternative, which would be\nlying about a value. (If you really want truncation you can always add a\nslice operation, as in x.ljust(n)[:n] .)\n\n[280339542cc8ae6d5ab69553 | https://docs.python.org/3.12/tutorial/introduction.html | unit 4]\nIn addition to indexing, slicing is also supported. While indexing is used\nto obtain individual characters, slicing allows you to obtain a substring:\n\n>>> word [ 0 : 2 ] # characters from position 0 (included) to 2 (excluded) 'Py' >>> word [ 2 : 5 ] # characters from position 2 (included) to 5 (excluded) 'tho'\n\nSlice indices have useful defaults; an omitted first index defaults to zero, an\nomitted second index defaults to the size of the string being sliced.",
+        "context_ids": [
+          "b5aac77e9970ed9b7aea3965",
+          "062375a62b568fc6e72e15b6",
+          "280339542cc8ae6d5ab69553"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "b5aac77e9970ed9b7aea3965",
+          "062375a62b568fc6e72e15b6",
+          "280339542cc8ae6d5ab69553"
+        ],
+        "proposal": {
+          "margin": 0.31903839111328125,
+          "start": 213,
+          "end": 221,
+          "chunk_id": "b5aac77e9970ed9b7aea3965",
+          "answer": "an error"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "an error"
+      }
+    ],
+    "elapsed_ms": 1251.66
+  },
+  {
+    "query_id": "t02",
+    "split": "test",
+    "question": "What does a Python for statement iterate over?",
+    "configuration": "dense_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "the items of any sequence [0d97129d5c6c7682bd0cb0a3]",
+    "citations": [
+      "0d97129d5c6c7682bd0cb0a3"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "dense",
+        "query": "Python for statement",
+        "model_action": "{\"action\": \"search\", \"query\": \"Python for statement\"}",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "0d97129d5c6c7682bd0cb0a3",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 1,
+            "text": "The for statement in Python differs a bit from what you may be used\nto in C or Pascal. Rather than always iterating over an arithmetic progression\nof numbers (like in Pascal), or giving the user the ability to define both the\niteration step and halting condition (as C), Python’s for statement\niterates over the items of any sequence (a list or a string), in the order that\nthey appear in the sequence. For example (no pun intended):\n\n>>> # Measure some strings: >>> words = [ 'cat' , 'window' , 'defenestrate' ] >>> for w in words : ... print ( w , len ( w )) ... cat 3 window 6 defenestrate 12",
+            "metadata": {
+              "title": "4-control-flow",
+              "chapter": "controlflow",
+              "python_version": "3.12"
+            },
+            "score": 0.6162539536877313,
+            "strategy": "dense"
+          },
+          {
+            "id": "97228ffba594e0a21b55eeb4",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 7,
+            "text": "The body of the loop is indented : indentation is Python’s way of grouping\nstatements. At the interactive prompt, you have to type a tab or space(s) for\neach indented line. In practice you will prepare more complicated input\nfor Python with a text editor; all decent text editors have an auto-indent\nfacility. When a compound statement is entered interactively, it must be\nfollowed by a blank line to indicate completion (since the parser cannot\nguess when you have typed the last line). Note that each line within a basic\nblock must be indented by the same amount.",
+            "metadata": {
+              "title": "3-informal-introduction",
+              "chapter": "introduction",
+              "python_version": "3.12"
+            },
+            "score": 0.553006854474137,
+            "strategy": "dense"
+          },
+          {
+            "id": "53586a05fd7b031596f77412",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 3,
+            "text": "A list comprehension consists of brackets containing an expression followed\nby a for clause, then zero or more for or if clauses. The result will be a new list resulting from evaluating the expression\nin the context of the for and if clauses which follow it.\nFor example, this listcomp combines the elements of two lists if they are not\nequal:\n\n>>> [( x , y ) for x in [ 1 , 2 , 3 ] for y in [ 3 , 1 , 4 ] if x != y ] [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\nand it’s equivalent to:",
+            "metadata": {
+              "title": "5-data-structures",
+              "chapter": "datastructures",
+              "python_version": "3.12"
+            },
+            "score": 0.5425943085438837,
+            "strategy": "dense"
+          }
+        ],
+        "context": "[0d97129d5c6c7682bd0cb0a3 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 1]\nThe for statement in Python differs a bit from what you may be used\nto in C or Pascal. Rather than always iterating over an arithmetic progression\nof numbers (like in Pascal), or giving the user the ability to define both the\niteration step and halting condition (as C), Python’s for statement\niterates over the items of any sequence (a list or a string), in the order that\nthey appear in the sequence. For example (no pun intended):\n\n>>> # Measure some strings: >>> words = [ 'cat' , 'window' , 'defenestrate' ] >>> for w in words : ... print ( w , len ( w )) ... cat 3 window 6 defenestrate 12\n\n[97228ffba594e0a21b55eeb4 | https://docs.python.org/3.12/tutorial/introduction.html | unit 7]\nThe body of the loop is indented : indentation is Python’s way of grouping\nstatements. At the interactive prompt, you have to type a tab or space(s) for\neach indented line. In practice you will prepare more complicated input\nfor Python with a text editor; all decent text editors have an auto-indent\nfacility. When a compound statement is entered interactively, it must be\nfollowed by a blank line to indicate completion (since the parser cannot\nguess when you have typed the last line). Note that each line within a basic\nblock must be indented by the same amount.\n\n[53586a05fd7b031596f77412 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 3]\nA list comprehension consists of brackets containing an expression followed\nby a for clause, then zero or more for or if clauses. The result will be a new list resulting from evaluating the expression\nin the context of the for and if clauses which follow it.\nFor example, this listcomp combines the elements of two lists if they are not\nequal:\n\n>>> [( x , y ) for x in [ 1 , 2 , 3 ] for y in [ 3 , 1 , 4 ] if x != y ] [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\nand it’s equivalent to:",
+        "context_ids": [
+          "0d97129d5c6c7682bd0cb0a3",
+          "97228ffba594e0a21b55eeb4",
+          "53586a05fd7b031596f77412"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "0d97129d5c6c7682bd0cb0a3"
+        ],
+        "proposal": {
+          "margin": 9.689897537231445,
+          "start": 308,
+          "end": 333,
+          "chunk_id": "0d97129d5c6c7682bd0cb0a3",
+          "answer": "the items of any sequence"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "the items of any sequence"
+      }
+    ],
+    "elapsed_ms": 1250.19
+  },
+  {
+    "query_id": "t03",
+    "split": "test",
+    "question": "Which function returns both an index and value when looping through a sequence?",
+    "configuration": "dense_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "enumerate() [1feaeb669f3b767170257594]",
+    "citations": [
+      "1feaeb669f3b767170257594"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "dense",
+        "query": "returning both index and value in loop",
+        "model_action": "{\"action\": \"search\", \"query\": \"returning both index and value in loop\"}",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "1feaeb669f3b767170257594",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 8,
+            "text": "When looping through a sequence, the position index and corresponding value can\nbe retrieved at the same time using the enumerate() function.\n\n>>> for i , v in enumerate ([ 'tic' , 'tac' , 'toe' ]): ... print ( i , v ) ... 0 tic 1 tac 2 toe\n\nTo loop over two or more sequences at the same time, the entries can be paired\nwith the zip() function.",
+            "metadata": {
+              "title": "5-data-structures",
+              "chapter": "datastructures",
+              "python_version": "3.12"
+            },
+            "score": 0.495123506464332,
+            "strategy": "dense"
+          },
+          {
+            "id": "e78f8771a95dc6b61cdea6e9",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 8,
+            "text": ">>> questions = [ 'name' , 'quest' , 'favorite color' ] >>> answers = [ 'lancelot' , 'the holy grail' , 'blue' ] >>> for q , a in zip ( questions , answers ): ... print ( 'What is your {0} ? It is {1} .' . format ( q , a )) ... What is your name? It is lancelot. What is your quest? It is the holy grail. What is your favorite color? It is blue.\n\nTo loop over a sequence in reverse, first specify the sequence in a forward\ndirection and then call the reversed() function.\n\n>>> for i in reversed ( range ( 1 , 10 , 2 )): ... print ( i ) ... 9 7 5 3 1",
+            "metadata": {
+              "title": "5-data-structures",
+              "chapter": "datastructures",
+              "python_version": "3.12"
+            },
+            "score": 0.3863693082864337,
+            "strategy": "dense"
+          },
+          {
+            "id": "4ba6f596d5c96f1d7f1373c1",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 1,
+            "text": "Remove the first item from the list whose value is equal to x . It raises a ValueError if there is no such item.\n\nRemove the item at the given position in the list, and return it. If no index\nis specified, a.pop() removes and returns the last item in the list.\nIt raises an IndexError if the list is empty or the index is\noutside the list range.\n\nRemove all items from the list. Similar to del a[:] .\n\nReturn zero-based index in the list of the first item whose value is equal to x .\nRaises a ValueError if there is no such item.",
+            "metadata": {
+              "title": "5-data-structures",
+              "chapter": "datastructures",
+              "python_version": "3.12"
+            },
+            "score": 0.37883121497445615,
+            "strategy": "dense"
+          }
+        ],
+        "context": "[1feaeb669f3b767170257594 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 8]\nWhen looping through a sequence, the position index and corresponding value can\nbe retrieved at the same time using the enumerate() function.\n\n>>> for i , v in enumerate ([ 'tic' , 'tac' , 'toe' ]): ... print ( i , v ) ... 0 tic 1 tac 2 toe\n\nTo loop over two or more sequences at the same time, the entries can be paired\nwith the zip() function.\n\n[e78f8771a95dc6b61cdea6e9 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 8]\n>>> questions = [ 'name' , 'quest' , 'favorite color' ] >>> answers = [ 'lancelot' , 'the holy grail' , 'blue' ] >>> for q , a in zip ( questions , answers ): ... print ( 'What is your {0} ? It is {1} .' . format ( q , a )) ... What is your name? It is lancelot. What is your quest? It is the holy grail. What is your favorite color? It is blue.\n\nTo loop over a sequence in reverse, first specify the sequence in a forward\ndirection and then call the reversed() function.\n\n>>> for i in reversed ( range ( 1 , 10 , 2 )): ... print ( i ) ... 9 7 5 3 1\n\n[4ba6f596d5c96f1d7f1373c1 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 1]\nRemove the first item from the list whose value is equal to x . It raises a ValueError if there is no such item.\n\nRemove the item at the given position in the list, and return it. If no index\nis specified, a.pop() removes and returns the last item in the list.\nIt raises an IndexError if the list is empty or the index is\noutside the list range.\n\nRemove all items from the list. Similar to del a[:] .\n\nReturn zero-based index in the list of the first item whose value is equal to x .\nRaises a ValueError if there is no such item.",
+        "context_ids": [
+          "1feaeb669f3b767170257594",
+          "e78f8771a95dc6b61cdea6e9",
+          "4ba6f596d5c96f1d7f1373c1"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "1feaeb669f3b767170257594",
+          "e78f8771a95dc6b61cdea6e9",
+          "4ba6f596d5c96f1d7f1373c1"
+        ],
+        "proposal": {
+          "margin": 8.134644031524658,
+          "start": 120,
+          "end": 131,
+          "chunk_id": "1feaeb669f3b767170257594",
+          "answer": "enumerate()"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "enumerate()"
+      }
+    ],
+    "elapsed_ms": 1520.18
+  },
+  {
+    "query_id": "t04",
+    "split": "test",
+    "question": "What name does __name__ have when a module is run as a script?",
+    "configuration": "dense_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "method": "dense",
+        "query": "module.__name__",
+        "model_action": "{\"action\":\"search\",\"query\":\"module.__name__\"}",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "5e63d2cf6e12d6faaa45a2bb",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 1,
+            "text": "A module is a file containing Python definitions and statements. The file name\nis the module name with the suffix .py appended. Within a module, the\nmodule’s name (as a string) is available as the value of the global variable __name__ . For instance, use your favorite text editor to create a file\ncalled fibo.py in the current directory with the following contents:",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.667213221407331,
+            "strategy": "dense"
+          },
+          {
+            "id": "fada12db48249c27be011024",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 7,
+            "text": "Packages are a way of structuring Python’s module namespace by using “dotted\nmodule names”. For example, the module name A.B designates a submodule\nnamed B in a package named A . Just like the use of modules saves the\nauthors of different modules from having to worry about each other’s global\nvariable names, the use of dotted module names saves the authors of multi-module\npackages like NumPy or Pillow from having to worry about\neach other’s module names.",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.48993465304374695,
+            "strategy": "dense"
+          },
+          {
+            "id": "ec69886789764b02ba0f44ef",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 2,
+            "text": "Each module has its own private namespace, which is used as the global namespace\nby all functions defined in the module. Thus, the author of a module can\nuse global variables in the module without worrying about accidental clashes\nwith a user’s global variables. On the other hand, if you know what you are\ndoing you can touch a module’s global variables with the same notation used to\nrefer to its functions, modname.itemname .",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.4861211486982624,
+            "strategy": "dense"
+          }
+        ],
+        "context": "[5e63d2cf6e12d6faaa45a2bb | https://docs.python.org/3.12/tutorial/modules.html | unit 1]\nA module is a file containing Python definitions and statements. The file name\nis the module name with the suffix .py appended. Within a module, the\nmodule’s name (as a string) is available as the value of the global variable __name__ . For instance, use your favorite text editor to create a file\ncalled fibo.py in the current directory with the following contents:\n\n[fada12db48249c27be011024 | https://docs.python.org/3.12/tutorial/modules.html | unit 7]\nPackages are a way of structuring Python’s module namespace by using “dotted\nmodule names”. For example, the module name A.B designates a submodule\nnamed B in a package named A . Just like the use of modules saves the\nauthors of different modules from having to worry about each other’s global\nvariable names, the use of dotted module names saves the authors of multi-module\npackages like NumPy or Pillow from having to worry about\neach other’s module names.\n\n[ec69886789764b02ba0f44ef | https://docs.python.org/3.12/tutorial/modules.html | unit 2]\nEach module has its own private namespace, which is used as the global namespace\nby all functions defined in the module. Thus, the author of a module can\nuse global variables in the module without worrying about accidental clashes\nwith a user’s global variables. On the other hand, if you know what you are\ndoing you can touch a module’s global variables with the same notation used to\nrefer to its functions, modname.itemname .",
+        "context_ids": [
+          "5e63d2cf6e12d6faaa45a2bb",
+          "fada12db48249c27be011024",
+          "ec69886789764b02ba0f44ef"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "5e63d2cf6e12d6faaa45a2bb",
+          "fada12db48249c27be011024"
+        ],
+        "proposal": null
+      },
+      {
+        "event": "duplicate_query_stop",
+        "query": "module.__name__"
+      },
+      {
+        "event": "abstain",
+        "raw": ""
+      }
+    ],
+    "elapsed_ms": 2084.12
+  },
+  {
+    "query_id": "t05",
+    "split": "test",
+    "question": "Which class should user-defined exceptions typically derive from?",
+    "configuration": "dense_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "BaseException [d47fd4390dc960ad3dafec4d]",
+    "citations": [
+      "d47fd4390dc960ad3dafec4d"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "dense",
+        "query": "class which exception should user defined classes typically derive from",
+        "model_action": "{\"action\":\"search\",\"query\":\"class which exception should user defined classes typically derive from\"}",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "881c9443c2b8dfdf3b83070f",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 6,
+            "text": "8.6. User-defined Exceptions ¶\n\nPrograms may name their own exceptions by creating a new exception class (see Classes for more about Python classes). Exceptions should typically\nbe derived from the Exception class, either directly or indirectly.\n\nException classes can be defined which do anything any other class can do, but\nare usually kept simple, often only offering a number of attributes that allow\ninformation about the error to be extracted by handlers for the exception.\n\nMost exceptions are defined with names that end in “Error”, similar to the\nnaming of the standard exceptions.",
+            "metadata": {
+              "title": "8-errors-and-exceptions",
+              "chapter": "errors",
+              "python_version": "3.12"
+            },
+            "score": 0.6203978061676025,
+            "strategy": "dense"
+          },
+          {
+            "id": "569194ff2f1404aa0a26ee7e",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 3,
+            "text": "BaseException is the common base class of all exceptions. One of its\nsubclasses, Exception , is the base class of all the non-fatal exceptions.\nExceptions which are not subclasses of Exception are not typically\nhandled, because they are used to indicate that the program should terminate.\nThey include SystemExit which is raised by sys.exit() and KeyboardInterrupt which is raised when a user wishes to interrupt\nthe program.",
+            "metadata": {
+              "title": "8-errors-and-exceptions",
+              "chapter": "errors",
+              "python_version": "3.12"
+            },
+            "score": 0.5939342975616455,
+            "strategy": "dense"
+          },
+          {
+            "id": "d47fd4390dc960ad3dafec4d",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 4,
+            "text": "The sole argument to raise indicates the exception to be raised.\nThis must be either an exception instance or an exception class (a class that\nderives from BaseException , such as Exception or one of its\nsubclasses). If an exception class is passed, it will be implicitly\ninstantiated by calling its constructor with no arguments:",
+            "metadata": {
+              "title": "8-errors-and-exceptions",
+              "chapter": "errors",
+              "python_version": "3.12"
+            },
+            "score": 0.5837140083312988,
+            "strategy": "dense"
+          }
+        ],
+        "context": "[881c9443c2b8dfdf3b83070f | https://docs.python.org/3.12/tutorial/errors.html | unit 6]\n8.6. User-defined Exceptions ¶\n\nPrograms may name their own exceptions by creating a new exception class (see Classes for more about Python classes). Exceptions should typically\nbe derived from the Exception class, either directly or indirectly.\n\nException classes can be defined which do anything any other class can do, but\nare usually kept simple, often only offering a number of attributes that allow\ninformation about the error to be extracted by handlers for the exception.\n\nMost exceptions are defined with names that end in “Error”, similar to the\nnaming of the standard exceptions.\n\n[569194ff2f1404aa0a26ee7e | https://docs.python.org/3.12/tutorial/errors.html | unit 3]\nBaseException is the common base class of all exceptions. One of its\nsubclasses, Exception , is the base class of all the non-fatal exceptions.\nExceptions which are not subclasses of Exception are not typically\nhandled, because they are used to indicate that the program should terminate.\nThey include SystemExit which is raised by sys.exit() and KeyboardInterrupt which is raised when a user wishes to interrupt\nthe program.\n\n[d47fd4390dc960ad3dafec4d | https://docs.python.org/3.12/tutorial/errors.html | unit 4]\nThe sole argument to raise indicates the exception to be raised.\nThis must be either an exception instance or an exception class (a class that\nderives from BaseException , such as Exception or one of its\nsubclasses). If an exception class is passed, it will be implicitly\ninstantiated by calling its constructor with no arguments:",
+        "context_ids": [
+          "881c9443c2b8dfdf3b83070f",
+          "569194ff2f1404aa0a26ee7e",
+          "d47fd4390dc960ad3dafec4d"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "881c9443c2b8dfdf3b83070f",
+          "569194ff2f1404aa0a26ee7e",
+          "d47fd4390dc960ad3dafec4d"
+        ],
+        "proposal": {
+          "margin": 8.449697017669678,
+          "start": 156,
+          "end": 169,
+          "chunk_id": "d47fd4390dc960ad3dafec4d",
+          "answer": "BaseException"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "BaseException"
+      }
+    ],
+    "elapsed_ms": 1441.41
+  },
+  {
+    "query_id": "t_abs01",
+    "split": "test",
+    "question": "What is the warranty period for the Python interpreter?",
+    "configuration": "dense_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "method": "dense",
+        "query": "Python interpreter warranty",
+        "model_action": "{\"action\":\"search\",\"query\":\"Python interpreter warranty\"}",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "af9f4743c9eee8e5175d096b",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 4,
+            "text": "Python checks the modification date of the source against the compiled version\nto see if it’s out of date and needs to be recompiled. This is a completely\nautomatic process. Also, the compiled modules are platform-independent, so the\nsame library can be shared among systems with different architectures.",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.5161184956956816,
+            "strategy": "dense"
+          },
+          {
+            "id": "e54ec65ff541ba8c6429a76d",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 1,
+            "text": "If you quit from the Python interpreter and enter it again, the definitions you\nhave made (functions and variables) are lost. Therefore, if you want to write a\nsomewhat longer program, you are better off using a text editor to prepare the\ninput for the interpreter and running it with that file as input instead. This\nis known as creating a script . As your program gets longer, you may want to\nsplit it into several files for easier maintenance. You may also want to use a\nhandy function that you’ve written in several programs without copying its\ndefinition into each program.",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.49926745891571045,
+            "strategy": "dense"
+          },
+          {
+            "id": "6e2a5fdc18f6b64c65b10258",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 5,
+            "text": "Python comes with a library of standard modules, described in a separate\ndocument, the Python Library Reference (“Library Reference” hereafter). Some\nmodules are built into the interpreter; these provide access to operations that\nare not part of the core of the language but are nevertheless built in, either\nfor efficiency or to provide access to operating system primitives such as\nsystem calls. The set of such modules is a configuration option which also\ndepends on the underlying platform. For example, the winreg module is only\nprovided on Windows systems. One particular module deserves some attention: sys , which is built into every Python",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.47739365831651426,
+            "strategy": "dense"
+          }
+        ],
+        "context": "[af9f4743c9eee8e5175d096b | https://docs.python.org/3.12/tutorial/modules.html | unit 4]\nPython checks the modification date of the source against the compiled version\nto see if it’s out of date and needs to be recompiled. This is a completely\nautomatic process. Also, the compiled modules are platform-independent, so the\nsame library can be shared among systems with different architectures.\n\n[e54ec65ff541ba8c6429a76d | https://docs.python.org/3.12/tutorial/modules.html | unit 1]\nIf you quit from the Python interpreter and enter it again, the definitions you\nhave made (functions and variables) are lost. Therefore, if you want to write a\nsomewhat longer program, you are better off using a text editor to prepare the\ninput for the interpreter and running it with that file as input instead. This\nis known as creating a script . As your program gets longer, you may want to\nsplit it into several files for easier maintenance. You may also want to use a\nhandy function that you’ve written in several programs without copying its\ndefinition into each program.\n\n[6e2a5fdc18f6b64c65b10258 | https://docs.python.org/3.12/tutorial/modules.html | unit 5]\nPython comes with a library of standard modules, described in a separate\ndocument, the Python Library Reference (“Library Reference” hereafter). Some\nmodules are built into the interpreter; these provide access to operations that\nare not part of the core of the language but are nevertheless built in, either\nfor efficiency or to provide access to operating system primitives such as\nsystem calls. The set of such modules is a configuration option which also\ndepends on the underlying platform. For example, the winreg module is only\nprovided on Windows systems. One particular module deserves some attention: sys , which is built into every Python",
+        "context_ids": [
+          "af9f4743c9eee8e5175d096b",
+          "e54ec65ff541ba8c6429a76d",
+          "6e2a5fdc18f6b64c65b10258"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [],
+        "proposal": null
+      },
+      {
+        "event": "duplicate_query_stop",
+        "query": "Python interpreter warranty"
+      },
+      {
+        "event": "abstain",
+        "raw": ""
+      }
+    ],
+    "elapsed_ms": 1564.01
+  },
+  {
+    "query_id": "t_abs02",
+    "split": "test",
+    "question": "Which company acquired Python in 2025?",
+    "configuration": "dense_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "method": "dense",
+        "query": "acquired Python 2025",
+        "model_action": "{\"action\":\"search\",\"query\":\"acquired Python 2025\"}",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "6e2a5fdc18f6b64c65b10258",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 5,
+            "text": "Python comes with a library of standard modules, described in a separate\ndocument, the Python Library Reference (“Library Reference” hereafter). Some\nmodules are built into the interpreter; these provide access to operations that\nare not part of the core of the language but are nevertheless built in, either\nfor efficiency or to provide access to operating system primitives such as\nsystem calls. The set of such modules is a configuration option which also\ndepends on the underlying platform. For example, the winreg module is only\nprovided on Windows systems. One particular module deserves some attention: sys , which is built into every Python",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.4442825052569812,
+            "strategy": "dense"
+          },
+          {
+            "id": "8e237871eec238637edaee9e",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 5,
+            "text": "interpreter. The variables sys.ps1 and sys.ps2 define the strings used as primary and secondary\nprompts:\n\n>>> import sys >>> sys . ps1 '>>> ' >>> sys . ps2 '... ' >>> sys . ps1 = 'C> ' C> print('Yuck!') Yuck! C>\n\nThese two variables are only defined if the interpreter is in interactive mode.\n\nThe variable sys.path is a list of strings that determines the interpreter’s\nsearch path for modules. It is initialized to a default path taken from the\nenvironment variable PYTHONPATH , or from a built-in default if PYTHONPATH is not set. You can modify it using standard list\noperations:",
+            "metadata": {
+              "title": "6-modules",
+              "chapter": "modules",
+              "python_version": "3.12"
+            },
+            "score": 0.4144861102104187,
+            "strategy": "dense"
+          },
+          {
+            "id": "067e9a0ae81870a949ff1fa3",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 2,
+            "text": ">>> s = 'Hello, world.' >>> str ( s ) 'Hello, world.' >>> repr ( s ) \"'Hello, world.'\" >>> str ( 1 / 7 ) '0.14285714285714285' >>> x = 10 * 3.25 >>> y = 200 * 200 >>> s = 'The value of x is ' + repr ( x ) + ', and y is ' + repr ( y ) + '...' >>> print ( s ) The value of x is 32.5, and y is 40000... >>> # The repr() of a string adds string quotes and backslashes: >>> hello = 'hello, world \\n ' >>> hellos = repr ( hello ) >>> print ( hellos ) 'hello, world\\n' >>> # The argument to repr() may be any Python object: >>> repr (( x , y , ( 'spam' , 'eggs' ))) \"(32.5, 40000, ('spam', 'eggs'))\"",
+            "metadata": {
+              "title": "7-input-and-output",
+              "chapter": "inputoutput",
+              "python_version": "3.12"
+            },
+            "score": 0.39298928421799706,
+            "strategy": "dense"
+          }
+        ],
+        "context": "[6e2a5fdc18f6b64c65b10258 | https://docs.python.org/3.12/tutorial/modules.html | unit 5]\nPython comes with a library of standard modules, described in a separate\ndocument, the Python Library Reference (“Library Reference” hereafter). Some\nmodules are built into the interpreter; these provide access to operations that\nare not part of the core of the language but are nevertheless built in, either\nfor efficiency or to provide access to operating system primitives such as\nsystem calls. The set of such modules is a configuration option which also\ndepends on the underlying platform. For example, the winreg module is only\nprovided on Windows systems. One particular module deserves some attention: sys , which is built into every Python\n\n[8e237871eec238637edaee9e | https://docs.python.org/3.12/tutorial/modules.html | unit 5]\ninterpreter. The variables sys.ps1 and sys.ps2 define the strings used as primary and secondary\nprompts:\n\n>>> import sys >>> sys . ps1 '>>> ' >>> sys . ps2 '... ' >>> sys . ps1 = 'C> ' C> print('Yuck!') Yuck! C>\n\nThese two variables are only defined if the interpreter is in interactive mode.\n\nThe variable sys.path is a list of strings that determines the interpreter’s\nsearch path for modules. It is initialized to a default path taken from the\nenvironment variable PYTHONPATH , or from a built-in default if PYTHONPATH is not set. You can modify it using standard list\noperations:\n\n[067e9a0ae81870a949ff1fa3 | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 2]\n>>> s = 'Hello, world.' >>> str ( s ) 'Hello, world.' >>> repr ( s ) \"'Hello, world.'\" >>> str ( 1 / 7 ) '0.14285714285714285' >>> x = 10 * 3.25 >>> y = 200 * 200 >>> s = 'The value of x is ' + repr ( x ) + ', and y is ' + repr ( y ) + '...' >>> print ( s ) The value of x is 32.5, and y is 40000... >>> # The repr() of a string adds string quotes and backslashes: >>> hello = 'hello, world \\n ' >>> hellos = repr ( hello ) >>> print ( hellos ) 'hello, world\\n' >>> # The argument to repr() may be any Python object: >>> repr (( x , y , ( 'spam' , 'eggs' ))) \"(32.5, 40000, ('spam', 'eggs'))\"",
+        "context_ids": [
+          "6e2a5fdc18f6b64c65b10258",
+          "8e237871eec238637edaee9e",
+          "067e9a0ae81870a949ff1fa3"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [],
+        "proposal": null
+      },
+      {
+        "event": "duplicate_query_stop",
+        "query": "acquired Python 2025"
+      },
+      {
+        "event": "abstain",
+        "raw": ""
+      }
+    ],
+    "elapsed_ms": 2070.8
+  }
+]

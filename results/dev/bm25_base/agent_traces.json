@@ -1,0 +1,2286 @@
+[
+  {
+    "query_id": "q01",
+    "split": "dev",
+    "question": "Which character begins a Python comment?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "hash [099d82c67177a18694e6408f]",
+    "citations": [
+      "099d82c67177a18694e6408f"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "Python comment",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "099d82c67177a18694e6408f",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 1,
+            "text": "Many of the examples in this manual, even those entered at the interactive\nprompt, include comments. Comments in Python start with the hash character, # , and extend to the end of the physical line. A comment may appear at the\nstart of a line or following whitespace or code, but not within a string\nliteral. A hash character within a string literal is just a hash character.\nSince comments are to clarify code and are not interpreted by Python, they may\nbe omitted when typing in examples.\n\n# this is the first comment spam = 1 # and this is the second comment # ... and now a third! text = \"# This is not a comment because it's inside quotes.\"",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 10.151197460607772,
+            "strategy": "bm25"
+          },
+          {
+            "id": "0a6d7a46c0078e7b4d67cf25",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 4,
+            "text": "To speed up loading modules, Python caches the compiled version of each module\nin the __pycache__ directory under the name module. version .pyc ,\nwhere the version encodes the format of the compiled file; it generally contains\nthe Python version number. For example, in CPython release 3.3 the compiled\nversion of spam.py would be cached as __pycache__/spam.cpython-33.pyc . This\nnaming convention allows compiled modules from different releases and different\nversions of Python to coexist.",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 2.498738868146007,
+            "strategy": "bm25"
+          },
+          {
+            "id": "6e2a5fdc18f6b64c65b10258",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 5,
+            "text": "Python comes with a library of standard modules, described in a separate\ndocument, the Python Library Reference (“Library Reference” hereafter). Some\nmodules are built into the interpreter; these provide access to operations that\nare not part of the core of the language but are nevertheless built in, either\nfor efficiency or to provide access to operating system primitives such as\nsystem calls. The set of such modules is a configuration option which also\ndepends on the underlying platform. For example, the winreg module is only\nprovided on Windows systems. One particular module deserves some attention: sys , which is built into every Python",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 2.346725742561533,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[099d82c67177a18694e6408f | https://docs.python.org/3.12/tutorial/introduction.html | unit 1]\nMany of the examples in this manual, even those entered at the interactive\nprompt, include comments. Comments in Python start with the hash character, # , and extend to the end of the physical line. A comment may appear at the\nstart of a line or following whitespace or code, but not within a string\nliteral. A hash character within a string literal is just a hash character.\nSince comments are to clarify code and are not interpreted by Python, they may\nbe omitted when typing in examples.\n\n# this is the first comment spam = 1 # and this is the second comment # ... and now a third! text = \"# This is not a comment because it's inside quotes.\"\n\n[0a6d7a46c0078e7b4d67cf25 | https://docs.python.org/3.12/tutorial/modules.html | unit 4]\nTo speed up loading modules, Python caches the compiled version of each module\nin the __pycache__ directory under the name module. version .pyc ,\nwhere the version encodes the format of the compiled file; it generally contains\nthe Python version number. For example, in CPython release 3.3 the compiled\nversion of spam.py would be cached as __pycache__/spam.cpython-33.pyc . This\nnaming convention allows compiled modules from different releases and different\nversions of Python to coexist.\n\n[6e2a5fdc18f6b64c65b10258 | https://docs.python.org/3.12/tutorial/modules.html | unit 5]\nPython comes with a library of standard modules, described in a separate\ndocument, the Python Library Reference (“Library Reference” hereafter). Some\nmodules are built into the interpreter; these provide access to operations that\nare not part of the core of the language but are nevertheless built in, either\nfor efficiency or to provide access to operating system primitives such as\nsystem calls. The set of such modules is a configuration option which also\ndepends on the underlying platform. For example, the winreg module is only\nprovided on Windows systems. One particular module deserves some attention: sys , which is built into every Python",
+        "context_ids": [
+          "099d82c67177a18694e6408f",
+          "0a6d7a46c0078e7b4d67cf25",
+          "6e2a5fdc18f6b64c65b10258"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "099d82c67177a18694e6408f"
+        ],
+        "proposal": {
+          "margin": 8.573932647705078,
+          "start": 135,
+          "end": 139,
+          "chunk_id": "099d82c67177a18694e6408f",
+          "answer": "hash"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "hash"
+      }
+    ],
+    "elapsed_ms": 954.61
+  },
+  {
+    "query_id": "q02",
+    "split": "dev",
+    "question": "Which operator performs floor division?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "// [8f445bd7addd7c205a43a9e0]",
+    "citations": [
+      "8f445bd7addd7c205a43a9e0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "floor division",
+        "filter": {
+          "chapter": "introduction"
+        },
+        "top_k": 3,
+        "results": [
+          {
+            "id": "8f445bd7addd7c205a43a9e0",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 1,
+            "text": "The integer numbers (e.g. 2 , 4 , 20 ) have type int ,\nthe ones with a fractional part (e.g. 5.0 , 1.6 ) have type float . We will see more about numeric types later in the tutorial.\n\nDivision ( / ) always returns a float. To do floor division and\nget an integer result you can use the // operator; to calculate\nthe remainder you can use % :",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 10.615849519520566,
+            "strategy": "bm25"
+          },
+          {
+            "id": "16f10c7a8d3d8f2486aa8bbc",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 2,
+            "text": ">>> 17 / 3 # classic division returns a float 5.666666666666667 >>> >>> 17 // 3 # floor division discards the fractional part 5 >>> 17 % 3 # the % operator returns the remainder of the division 2 >>> 5 * 3 + 2 # floored quotient * divisor + remainder 17\n\nWith Python, it is possible to use the ** operator to calculate powers [ 1 ] :\n\n>>> 5 ** 2 # 5 squared 25 >>> 2 ** 7 # 2 to the power of 7 128\n\nThe equal sign ( = ) is used to assign a value to a variable. Afterwards, no\nresult is displayed before the next interactive prompt:\n\n>>> width = 20 >>> height = 5 * 9 >>> width * height 900",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 10.049216490382927,
+            "strategy": "bm25"
+          },
+          {
+            "id": "b5aa4f6122c957d4feb42d6c",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 1,
+            "text": "3.1. Using Python as a Calculator ¶\n\nLet’s try some simple Python commands. Start the interpreter and wait for the\nprimary prompt, >>> . (It shouldn’t take long.)\n\nThe interpreter acts as a simple calculator: you can type an expression at it\nand it will write the value. Expression syntax is straightforward: the\noperators + , - , * and / can be used to perform\narithmetic; parentheses ( () ) can be used for grouping.\nFor example:\n\n>>> 2 + 2 4 >>> 50 - 5 * 6 20 >>> ( 50 - 5 * 6 ) / 4 5.0 >>> 8 / 5 # division always returns a floating-point number 1.6",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 3.507095874408522,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[8f445bd7addd7c205a43a9e0 | https://docs.python.org/3.12/tutorial/introduction.html | unit 1]\nThe integer numbers (e.g. 2 , 4 , 20 ) have type int ,\nthe ones with a fractional part (e.g. 5.0 , 1.6 ) have type float . We will see more about numeric types later in the tutorial.\n\nDivision ( / ) always returns a float. To do floor division and\nget an integer result you can use the // operator; to calculate\nthe remainder you can use % :\n\n[16f10c7a8d3d8f2486aa8bbc | https://docs.python.org/3.12/tutorial/introduction.html | unit 2]\n>>> 17 / 3 # classic division returns a float 5.666666666666667 >>> >>> 17 // 3 # floor division discards the fractional part 5 >>> 17 % 3 # the % operator returns the remainder of the division 2 >>> 5 * 3 + 2 # floored quotient * divisor + remainder 17\n\nWith Python, it is possible to use the ** operator to calculate powers [ 1 ] :\n\n>>> 5 ** 2 # 5 squared 25 >>> 2 ** 7 # 2 to the power of 7 128\n\nThe equal sign ( = ) is used to assign a value to a variable. Afterwards, no\nresult is displayed before the next interactive prompt:\n\n>>> width = 20 >>> height = 5 * 9 >>> width * height 900\n\n[b5aa4f6122c957d4feb42d6c | https://docs.python.org/3.12/tutorial/introduction.html | unit 1]\n3.1. Using Python as a Calculator ¶\n\nLet’s try some simple Python commands. Start the interpreter and wait for the\nprimary prompt, >>> . (It shouldn’t take long.)\n\nThe interpreter acts as a simple calculator: you can type an expression at it\nand it will write the value. Expression syntax is straightforward: the\noperators + , - , * and / can be used to perform\narithmetic; parentheses ( () ) can be used for grouping.\nFor example:\n\n>>> 2 + 2 4 >>> 50 - 5 * 6 20 >>> ( 50 - 5 * 6 ) / 4 5.0 >>> 8 / 5 # division always returns a floating-point number 1.6",
+        "context_ids": [
+          "8f445bd7addd7c205a43a9e0",
+          "16f10c7a8d3d8f2486aa8bbc",
+          "b5aa4f6122c957d4feb42d6c"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "8f445bd7addd7c205a43a9e0",
+          "16f10c7a8d3d8f2486aa8bbc",
+          "b5aa4f6122c957d4feb42d6c"
+        ],
+        "proposal": {
+          "margin": 4.963165283203125,
+          "start": 286,
+          "end": 288,
+          "chunk_id": "8f445bd7addd7c205a43a9e0",
+          "answer": "//"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "//"
+      }
+    ],
+    "elapsed_ms": 1040.1
+  },
+  {
+    "query_id": "q03",
+    "split": "dev",
+    "question": "How can a string keep backslashes from being interpreted as escape characters?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "string escape backslash",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "ed4540ffc0333c5c7fafd9d0",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 3,
+            "text": "To quote a quote, we need to “escape” it, by preceding it with \\ .\nAlternatively, we can use the other type of quotation marks:\n\n>>> 'doesn \\' t' # use \\' to escape the single quote... \"doesn't\" >>> \"doesn't\" # ...or use double quotes instead \"doesn't\" >>> '\"Yes,\" they said.' '\"Yes,\" they said.' >>> \" \\\" Yes, \\\" they said.\" '\"Yes,\" they said.' >>> '\"Isn \\' t,\" they said.' '\"Isn\\'t,\" they said.'\n\nIn the Python shell, the string definition and output string can look\ndifferent. The print() function produces a more readable output, by\nomitting the enclosing quotes and by printing escaped and special characters:",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 8.57056974650127,
+            "strategy": "bm25"
+          },
+          {
+            "id": "fdd9d1c2b3511f3fabe2ad73",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 7,
+            "text": ">>> a , b = 0 , 1 >>> while a < 1000 : ... print ( a , end = ',' ) ... a , b = b , a + b ... 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,\n\nSince ** has higher precedence than - , -3**2 will be\ninterpreted as -(3**2) and thus result in -9 . To avoid this\nand get 9 , you can use (-3)**2 .\n\nUnlike other languages, special characters such as \\n have the\nsame meaning with both single ( '...' ) and double ( \"...\" ) quotes.\nThe only difference between the two is that within single quotes you don’t\nneed to escape \" (but you have to escape \\' ) and vice versa.",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 5.954568363933505,
+            "strategy": "bm25"
+          },
+          {
+            "id": "5841c75e5db0327d52a76a35",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 2,
+            "text": "The string module contains a Template class that offers\nyet another way to substitute values into strings, using placeholders like $x and replacing them with values from a dictionary, but offers much less\ncontrol of the formatting.\n\n7.1.1. Formatted String Literals ¶\n\nFormatted string literals (also called f-strings for\nshort) let you include the value of Python expressions inside a string by\nprefixing the string with f or F and writing expressions as {expression} .",
+            "metadata": {
+              "chapter": "inputoutput",
+              "title": "7-input-and-output",
+              "python_version": "3.12"
+            },
+            "score": 3.335799717452455,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[ed4540ffc0333c5c7fafd9d0 | https://docs.python.org/3.12/tutorial/introduction.html | unit 3]\nTo quote a quote, we need to “escape” it, by preceding it with \\ .\nAlternatively, we can use the other type of quotation marks:\n\n>>> 'doesn \\' t' # use \\' to escape the single quote... \"doesn't\" >>> \"doesn't\" # ...or use double quotes instead \"doesn't\" >>> '\"Yes,\" they said.' '\"Yes,\" they said.' >>> \" \\\" Yes, \\\" they said.\" '\"Yes,\" they said.' >>> '\"Isn \\' t,\" they said.' '\"Isn\\'t,\" they said.'\n\nIn the Python shell, the string definition and output string can look\ndifferent. The print() function produces a more readable output, by\nomitting the enclosing quotes and by printing escaped and special characters:\n\n[fdd9d1c2b3511f3fabe2ad73 | https://docs.python.org/3.12/tutorial/introduction.html | unit 7]\n>>> a , b = 0 , 1 >>> while a < 1000 : ... print ( a , end = ',' ) ... a , b = b , a + b ... 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,\n\nSince ** has higher precedence than - , -3**2 will be\ninterpreted as -(3**2) and thus result in -9 . To avoid this\nand get 9 , you can use (-3)**2 .\n\nUnlike other languages, special characters such as \\n have the\nsame meaning with both single ( '...' ) and double ( \"...\" ) quotes.\nThe only difference between the two is that within single quotes you don’t\nneed to escape \" (but you have to escape \\' ) and vice versa.\n\n[5841c75e5db0327d52a76a35 | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 2]\nThe string module contains a Template class that offers\nyet another way to substitute values into strings, using placeholders like $x and replacing them with values from a dictionary, but offers much less\ncontrol of the formatting.\n\n7.1.1. Formatted String Literals ¶\n\nFormatted string literals (also called f-strings for\nshort) let you include the value of Python expressions inside a string by\nprefixing the string with f or F and writing expressions as {expression} .",
+        "context_ids": [
+          "ed4540ffc0333c5c7fafd9d0",
+          "fdd9d1c2b3511f3fabe2ad73",
+          "5841c75e5db0327d52a76a35"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "ed4540ffc0333c5c7fafd9d0",
+          "fdd9d1c2b3511f3fabe2ad73"
+        ],
+        "proposal": null
+      },
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "string escape character",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "8c7b60f95a67ad039db2e63b",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 4,
+            "text": "If you want to concatenate variables or a variable and a literal, use + :\n\n>>> prefix + 'thon' 'Python'\n\nStrings can be indexed (subscripted), with the first character having index 0.\nThere is no separate character type; a character is simply a string of size\none:\n\n>>> word = 'Python' >>> word [ 0 ] # character in position 0 'P' >>> word [ 5 ] # character in position 5 'n'\n\nIndices may also be negative numbers, to start counting from the right:\n\n>>> word [ - 1 ] # last character 'n' >>> word [ - 2 ] # second-last character 'o' >>> word [ - 6 ] 'P'\n\nNote that since -0 is the same as 0, negative indices start from -1.",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 8.857320248393513,
+            "strategy": "bm25"
+          },
+          {
+            "id": "ed4540ffc0333c5c7fafd9d0",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 3,
+            "text": "To quote a quote, we need to “escape” it, by preceding it with \\ .\nAlternatively, we can use the other type of quotation marks:\n\n>>> 'doesn \\' t' # use \\' to escape the single quote... \"doesn't\" >>> \"doesn't\" # ...or use double quotes instead \"doesn't\" >>> '\"Yes,\" they said.' '\"Yes,\" they said.' >>> \" \\\" Yes, \\\" they said.\" '\"Yes,\" they said.' >>> '\"Isn \\' t,\" they said.' '\"Isn\\'t,\" they said.'\n\nIn the Python shell, the string definition and output string can look\ndifferent. The print() function produces a more readable output, by\nomitting the enclosing quotes and by printing escaped and special characters:",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 8.57056974650127,
+            "strategy": "bm25"
+          },
+          {
+            "id": "099d82c67177a18694e6408f",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 1,
+            "text": "Many of the examples in this manual, even those entered at the interactive\nprompt, include comments. Comments in Python start with the hash character, # , and extend to the end of the physical line. A comment may appear at the\nstart of a line or following whitespace or code, but not within a string\nliteral. A hash character within a string literal is just a hash character.\nSince comments are to clarify code and are not interpreted by Python, they may\nbe omitted when typing in examples.\n\n# this is the first comment spam = 1 # and this is the second comment # ... and now a third! text = \"# This is not a comment because it's inside quotes.\"",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 7.920905448156455,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[8c7b60f95a67ad039db2e63b | https://docs.python.org/3.12/tutorial/introduction.html | unit 4]\nIf you want to concatenate variables or a variable and a literal, use + :\n\n>>> prefix + 'thon' 'Python'\n\nStrings can be indexed (subscripted), with the first character having index 0.\nThere is no separate character type; a character is simply a string of size\none:\n\n>>> word = 'Python' >>> word [ 0 ] # character in position 0 'P' >>> word [ 5 ] # character in position 5 'n'\n\nIndices may also be negative numbers, to start counting from the right:\n\n>>> word [ - 1 ] # last character 'n' >>> word [ - 2 ] # second-last character 'o' >>> word [ - 6 ] 'P'\n\nNote that since -0 is the same as 0, negative indices start from -1.\n\n[ed4540ffc0333c5c7fafd9d0 | https://docs.python.org/3.12/tutorial/introduction.html | unit 3]\nTo quote a quote, we need to “escape” it, by preceding it with \\ .\nAlternatively, we can use the other type of quotation marks:\n\n>>> 'doesn \\' t' # use \\' to escape the single quote... \"doesn't\" >>> \"doesn't\" # ...or use double quotes instead \"doesn't\" >>> '\"Yes,\" they said.' '\"Yes,\" they said.' >>> \" \\\" Yes, \\\" they said.\" '\"Yes,\" they said.' >>> '\"Isn \\' t,\" they said.' '\"Isn\\'t,\" they said.'\n\nIn the Python shell, the string definition and output string can look\ndifferent. The print() function produces a more readable output, by\nomitting the enclosing quotes and by printing escaped and special characters:\n\n[099d82c67177a18694e6408f | https://docs.python.org/3.12/tutorial/introduction.html | unit 1]\nMany of the examples in this manual, even those entered at the interactive\nprompt, include comments. Comments in Python start with the hash character, # , and extend to the end of the physical line. A comment may appear at the\nstart of a line or following whitespace or code, but not within a string\nliteral. A hash character within a string literal is just a hash character.\nSince comments are to clarify code and are not interpreted by Python, they may\nbe omitted when typing in examples.\n\n# this is the first comment spam = 1 # and this is the second comment # ... and now a third! text = \"# This is not a comment because it's inside quotes.\"",
+        "context_ids": [
+          "8c7b60f95a67ad039db2e63b",
+          "ed4540ffc0333c5c7fafd9d0",
+          "099d82c67177a18694e6408f"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "8c7b60f95a67ad039db2e63b",
+          "ed4540ffc0333c5c7fafd9d0",
+          "099d82c67177a18694e6408f"
+        ],
+        "proposal": null
+      },
+      {
+        "event": "abstain",
+        "raw": ""
+      }
+    ],
+    "elapsed_ms": 2633.67
+  },
+  {
+    "query_id": "q04",
+    "split": "dev",
+    "question": "Are Python lists mutable?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "Lists are mutable [985bfe968a3c3af42c0f0a5e]",
+    "citations": [
+      "985bfe968a3c3af42c0f0a5e"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "mutable python list",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "2e2cffeaf5400dfa0c8b95de",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 2,
+            "text": "You might have noticed that methods like insert , remove or sort that\nonly modify the list have no return value printed – they return the default None . [ 1 ] This is a design principle for all mutable data structures in\nPython.\n\nAnother thing you might notice is that not all data can be sorted or\ncompared. For instance, [None, 'hello', 10] doesn’t sort because\nintegers can’t be compared to strings and None can’t be compared to\nother types. Also, there are some types that don’t have a defined\nordering relation. For example, 3+4j < 5+7j isn’t a valid\ncomparison.\n\n5.1.1. Using Lists as Stacks ¶",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 5.705631028854821,
+            "strategy": "bm25"
+          },
+          {
+            "id": "3c81d5b9d9904febd95d2cf7",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 16,
+            "text": "Likewise, don’t use non-ASCII characters in identifiers if there is only the\nslightest chance people speaking a different language will read or maintain\nthe code.\n\nActually, call by object reference would be a better description,\nsince if a mutable object is passed, the caller will see any changes the\ncallee makes to it (items inserted into a list).",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 5.572572133768015,
+            "strategy": "bm25"
+          },
+          {
+            "id": "985bfe968a3c3af42c0f0a5e",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 5,
+            "text": "Though tuples may seem similar to lists, they are often used in different\nsituations and for different purposes.\nTuples are immutable , and usually contain a heterogeneous sequence of\nelements that are accessed via unpacking (see later in this section) or indexing\n(or even by attribute in the case of namedtuples ).\nLists are mutable , and their elements are usually homogeneous and are\naccessed by iterating over the list.",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 5.3585114358822725,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[2e2cffeaf5400dfa0c8b95de | https://docs.python.org/3.12/tutorial/datastructures.html | unit 2]\nYou might have noticed that methods like insert , remove or sort that\nonly modify the list have no return value printed – they return the default None . [ 1 ] This is a design principle for all mutable data structures in\nPython.\n\nAnother thing you might notice is that not all data can be sorted or\ncompared. For instance, [None, 'hello', 10] doesn’t sort because\nintegers can’t be compared to strings and None can’t be compared to\nother types. Also, there are some types that don’t have a defined\nordering relation. For example, 3+4j < 5+7j isn’t a valid\ncomparison.\n\n5.1.1. Using Lists as Stacks ¶\n\n[3c81d5b9d9904febd95d2cf7 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 16]\nLikewise, don’t use non-ASCII characters in identifiers if there is only the\nslightest chance people speaking a different language will read or maintain\nthe code.\n\nActually, call by object reference would be a better description,\nsince if a mutable object is passed, the caller will see any changes the\ncallee makes to it (items inserted into a list).\n\n[985bfe968a3c3af42c0f0a5e | https://docs.python.org/3.12/tutorial/datastructures.html | unit 5]\nThough tuples may seem similar to lists, they are often used in different\nsituations and for different purposes.\nTuples are immutable , and usually contain a heterogeneous sequence of\nelements that are accessed via unpacking (see later in this section) or indexing\n(or even by attribute in the case of namedtuples ).\nLists are mutable , and their elements are usually homogeneous and are\naccessed by iterating over the list.",
+        "context_ids": [
+          "2e2cffeaf5400dfa0c8b95de",
+          "3c81d5b9d9904febd95d2cf7",
+          "985bfe968a3c3af42c0f0a5e"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "2e2cffeaf5400dfa0c8b95de",
+          "3c81d5b9d9904febd95d2cf7",
+          "985bfe968a3c3af42c0f0a5e"
+        ],
+        "proposal": {
+          "margin": 5.172985553741455,
+          "start": 317,
+          "end": 334,
+          "chunk_id": "985bfe968a3c3af42c0f0a5e",
+          "answer": "Lists are mutable"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "Lists are mutable"
+      }
+    ],
+    "elapsed_ms": 1191.73
+  },
+  {
+    "query_id": "q05",
+    "split": "dev",
+    "question": "Is the endpoint of range() included in the generated sequence?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "The given end point is never [71676bb8398f93d9dec21ea4]",
+    "citations": [
+      "71676bb8398f93d9dec21ea4"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "range()",
+        "filter": {
+          "chapter": "controlflow"
+        },
+        "top_k": 3,
+        "results": [
+          {
+            "id": "1fcb6422d48faee1f7271861",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 2,
+            "text": ">>> list ( range ( 5 , 10 )) [5, 6, 7, 8, 9] >>> list ( range ( 0 , 10 , 3 )) [0, 3, 6, 9] >>> list ( range ( - 10 , - 100 , - 30 )) [-10, -40, -70]\n\nTo iterate over the indices of a sequence, you can combine range() and len() as follows:\n\n>>> a = [ 'Mary' , 'had' , 'a' , 'little' , 'lamb' ] >>> for i in range ( len ( a )): ... print ( i , a [ i ]) ... 0 Mary 1 had 2 a 3 little 4 lamb\n\nIn most such cases, however, it is convenient to use the enumerate() function, see Looping Techniques .\n\nA strange thing happens if you just print a range:\n\n>>> range ( 10 ) range(0, 10)",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 4.597258321102276,
+            "strategy": "bm25"
+          },
+          {
+            "id": "71676bb8398f93d9dec21ea4",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 2,
+            "text": "4.3. The range() Function ¶\n\nIf you do need to iterate over a sequence of numbers, the built-in function range() comes in handy. It generates arithmetic progressions:\n\n>>> for i in range ( 5 ): ... print ( i ) ... 0 1 2 3 4\n\nThe given end point is never part of the generated sequence; range(10) generates\n10 values, the legal indices for items of a sequence of length 10. It\nis possible to let the range start at another number, or to specify a different\nincrement (even negative; sometimes this is called the ‘step’):",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 4.269130902462376,
+            "strategy": "bm25"
+          },
+          {
+            "id": "b605eeaed271f16ff74a055c",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 14,
+            "text": ">>> list ( range ( 3 , 6 )) # normal call with separate arguments [3, 4, 5] >>> args = [ 3 , 6 ] >>> list ( range ( * args )) # call with arguments unpacked from a list [3, 4, 5]\n\nIn the same fashion, dictionaries can deliver keyword arguments with the ** -operator:",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 3.933807194326753,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[1fcb6422d48faee1f7271861 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 2]\n>>> list ( range ( 5 , 10 )) [5, 6, 7, 8, 9] >>> list ( range ( 0 , 10 , 3 )) [0, 3, 6, 9] >>> list ( range ( - 10 , - 100 , - 30 )) [-10, -40, -70]\n\nTo iterate over the indices of a sequence, you can combine range() and len() as follows:\n\n>>> a = [ 'Mary' , 'had' , 'a' , 'little' , 'lamb' ] >>> for i in range ( len ( a )): ... print ( i , a [ i ]) ... 0 Mary 1 had 2 a 3 little 4 lamb\n\nIn most such cases, however, it is convenient to use the enumerate() function, see Looping Techniques .\n\nA strange thing happens if you just print a range:\n\n>>> range ( 10 ) range(0, 10)\n\n[71676bb8398f93d9dec21ea4 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 2]\n4.3. The range() Function ¶\n\nIf you do need to iterate over a sequence of numbers, the built-in function range() comes in handy. It generates arithmetic progressions:\n\n>>> for i in range ( 5 ): ... print ( i ) ... 0 1 2 3 4\n\nThe given end point is never part of the generated sequence; range(10) generates\n10 values, the legal indices for items of a sequence of length 10. It\nis possible to let the range start at another number, or to specify a different\nincrement (even negative; sometimes this is called the ‘step’):\n\n[b605eeaed271f16ff74a055c | https://docs.python.org/3.12/tutorial/controlflow.html | unit 14]\n>>> list ( range ( 3 , 6 )) # normal call with separate arguments [3, 4, 5] >>> args = [ 3 , 6 ] >>> list ( range ( * args )) # call with arguments unpacked from a list [3, 4, 5]\n\nIn the same fashion, dictionaries can deliver keyword arguments with the ** -operator:",
+        "context_ids": [
+          "1fcb6422d48faee1f7271861",
+          "71676bb8398f93d9dec21ea4",
+          "b605eeaed271f16ff74a055c"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "1fcb6422d48faee1f7271861",
+          "71676bb8398f93d9dec21ea4"
+        ],
+        "proposal": {
+          "margin": 8.313127517700195,
+          "start": 225,
+          "end": 253,
+          "chunk_id": "71676bb8398f93d9dec21ea4",
+          "answer": "The given end point is never"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "The given end point is never"
+      }
+    ],
+    "elapsed_ms": 1228.39
+  },
+  {
+    "query_id": "q06",
+    "split": "dev",
+    "question": "When does a loop's else clause execute?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "when no break occurs [9f3a6b9f3a5f1d4d1dbddbdb]",
+    "citations": [
+      "9f3a6b9f3a5f1d4d1dbddbdb"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "loop else",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "12c14e73c6f24559ddf2af9f",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 3,
+            "text": "In a for loop, the else clause is executed\nafter the loop finishes its final iteration, that is, if no break occurred.\n\nIn a while loop, it’s executed after the loop’s condition becomes false.\n\nIn either kind of loop, the else clause is not executed if the\nloop was terminated by a break . Of course, other ways of ending the\nloop early, such as a return or a raised exception, will also skip\nexecution of the else clause.\n\nThis is exemplified in the following for loop,\nwhich searches for prime numbers:",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 10.11342914694896,
+            "strategy": "bm25"
+          },
+          {
+            "id": "443763b4422093eded56fb0b",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 3,
+            "text": "One way to think of the else clause is to imagine it paired with the if inside the loop. As the loop executes, it will run a sequence like\nif/if/if/else. The if is inside the loop, encountered a number of times. If\nthe condition is ever true, a break will happen. If the condition is never\ntrue, the else clause outside the loop will execute.",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 10.001463606547793,
+            "strategy": "bm25"
+          },
+          {
+            "id": "9f3a6b9f3a5f1d4d1dbddbdb",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 3,
+            "text": "When used with a loop, the else clause has more in common with the else clause of a try statement than it does with that of if statements: a try statement’s else clause runs when no exception\noccurs, and a loop’s else clause runs when no break occurs. For more on\nthe try statement and exceptions, see Handling Exceptions .",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 9.65022984545341,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[12c14e73c6f24559ddf2af9f | https://docs.python.org/3.12/tutorial/controlflow.html | unit 3]\nIn a for loop, the else clause is executed\nafter the loop finishes its final iteration, that is, if no break occurred.\n\nIn a while loop, it’s executed after the loop’s condition becomes false.\n\nIn either kind of loop, the else clause is not executed if the\nloop was terminated by a break . Of course, other ways of ending the\nloop early, such as a return or a raised exception, will also skip\nexecution of the else clause.\n\nThis is exemplified in the following for loop,\nwhich searches for prime numbers:\n\n[443763b4422093eded56fb0b | https://docs.python.org/3.12/tutorial/controlflow.html | unit 3]\nOne way to think of the else clause is to imagine it paired with the if inside the loop. As the loop executes, it will run a sequence like\nif/if/if/else. The if is inside the loop, encountered a number of times. If\nthe condition is ever true, a break will happen. If the condition is never\ntrue, the else clause outside the loop will execute.\n\n[9f3a6b9f3a5f1d4d1dbddbdb | https://docs.python.org/3.12/tutorial/controlflow.html | unit 3]\nWhen used with a loop, the else clause has more in common with the else clause of a try statement than it does with that of if statements: a try statement’s else clause runs when no exception\noccurs, and a loop’s else clause runs when no break occurs. For more on\nthe try statement and exceptions, see Handling Exceptions .",
+        "context_ids": [
+          "12c14e73c6f24559ddf2af9f",
+          "443763b4422093eded56fb0b",
+          "9f3a6b9f3a5f1d4d1dbddbdb"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "12c14e73c6f24559ddf2af9f",
+          "443763b4422093eded56fb0b",
+          "9f3a6b9f3a5f1d4d1dbddbdb"
+        ],
+        "proposal": {
+          "margin": 6.133776664733887,
+          "start": 230,
+          "end": 250,
+          "chunk_id": "9f3a6b9f3a5f1d4d1dbddbdb",
+          "answer": "when no break occurs"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "when no break occurs"
+      }
+    ],
+    "elapsed_ms": 1269.39
+  },
+  {
+    "query_id": "q07",
+    "split": "dev",
+    "question": "What does the pass statement do?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "nothing [3b300b8db2139ffe8e4928a2]",
+    "citations": [
+      "3b300b8db2139ffe8e4928a2"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "pass statement",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "3b300b8db2139ffe8e4928a2",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 4,
+            "text": "4.6. pass Statements ¶\n\nThe pass statement does nothing. It can be used when a statement is\nrequired syntactically but the program requires no action. For example:\n\n>>> while True : ... pass # Busy-wait for keyboard interrupt (Ctrl+C) ...\n\nThis is commonly used for creating minimal classes:\n\n>>> class MyEmptyClass : ... pass ...\n\nAnother place pass can be used is as a place-holder for a function or\nconditional body when you are working on new code, allowing you to keep thinking\nat a more abstract level. The pass is silently ignored:\n\n>>> def initlog ( * args ): ... pass # Remember to implement this! ...\n\n4.7. match Statements ¶",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 9.197272645973733,
+            "strategy": "bm25"
+          },
+          {
+            "id": "7e11989c4859d30730f89995",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 2,
+            "text": "If an exception occurs which does not match the exception named in the except\nclause , it is passed on to outer try statements; if no handler is\nfound, it is an unhandled exception and execution stops with an error message.\n\nA try statement may have more than one except clause , to specify\nhandlers for different exceptions. At most one handler will be executed.\nHandlers only handle exceptions that occur in the corresponding try clause ,\nnot in other handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, for example:\n\n... except ( RuntimeError , TypeError , NameError ): ... pass",
+            "metadata": {
+              "chapter": "errors",
+              "title": "8-errors-and-exceptions",
+              "python_version": "3.12"
+            },
+            "score": 5.707244413864096,
+            "strategy": "bm25"
+          },
+          {
+            "id": "bbd9fadd6f3920c0c4f6e44b",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 3,
+            "text": "A class in an except clause matches exceptions which are instances of the\nclass itself or one of its derived classes (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\nFor example, the following code will print B, C, D in that order:\n\nclass B ( Exception ): pass class C ( B ): pass class D ( C ): pass for cls in [ B , C , D ]: try : raise cls () except D : print ( \"D\" ) except C : print ( \"C\" ) except B : print ( \"B\" )\n\nNote that if the except clauses were reversed (with except B first), it\nwould have printed B, B, B — the first matching except clause is triggered.",
+            "metadata": {
+              "chapter": "errors",
+              "title": "8-errors-and-exceptions",
+              "python_version": "3.12"
+            },
+            "score": 5.389457526775065,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[3b300b8db2139ffe8e4928a2 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 4]\n4.6. pass Statements ¶\n\nThe pass statement does nothing. It can be used when a statement is\nrequired syntactically but the program requires no action. For example:\n\n>>> while True : ... pass # Busy-wait for keyboard interrupt (Ctrl+C) ...\n\nThis is commonly used for creating minimal classes:\n\n>>> class MyEmptyClass : ... pass ...\n\nAnother place pass can be used is as a place-holder for a function or\nconditional body when you are working on new code, allowing you to keep thinking\nat a more abstract level. The pass is silently ignored:\n\n>>> def initlog ( * args ): ... pass # Remember to implement this! ...\n\n4.7. match Statements ¶\n\n[7e11989c4859d30730f89995 | https://docs.python.org/3.12/tutorial/errors.html | unit 2]\nIf an exception occurs which does not match the exception named in the except\nclause , it is passed on to outer try statements; if no handler is\nfound, it is an unhandled exception and execution stops with an error message.\n\nA try statement may have more than one except clause , to specify\nhandlers for different exceptions. At most one handler will be executed.\nHandlers only handle exceptions that occur in the corresponding try clause ,\nnot in other handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, for example:\n\n... except ( RuntimeError , TypeError , NameError ): ... pass\n\n[bbd9fadd6f3920c0c4f6e44b | https://docs.python.org/3.12/tutorial/errors.html | unit 3]\nA class in an except clause matches exceptions which are instances of the\nclass itself or one of its derived classes (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\nFor example, the following code will print B, C, D in that order:\n\nclass B ( Exception ): pass class C ( B ): pass class D ( C ): pass for cls in [ B , C , D ]: try : raise cls () except D : print ( \"D\" ) except C : print ( \"C\" ) except B : print ( \"B\" )\n\nNote that if the except clauses were reversed (with except B first), it\nwould have printed B, B, B — the first matching except clause is triggered.",
+        "context_ids": [
+          "3b300b8db2139ffe8e4928a2",
+          "7e11989c4859d30730f89995",
+          "bbd9fadd6f3920c0c4f6e44b"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "3b300b8db2139ffe8e4928a2",
+          "7e11989c4859d30730f89995"
+        ],
+        "proposal": {
+          "margin": -2.8196635246276855,
+          "start": 48,
+          "end": 55,
+          "chunk_id": "3b300b8db2139ffe8e4928a2",
+          "answer": "nothing"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "nothing"
+      }
+    ],
+    "elapsed_ms": 882.69
+  },
+  {
+    "query_id": "q08",
+    "split": "dev",
+    "question": "Which keyword introduces a function definition?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "def [bc6b0850c489600e1c6553db]",
+    "citations": [
+      "bc6b0850c489600e1c6553db"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "function keyword",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "f5d135e5fe3b7ba00d16f214",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 11,
+            "text": "def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):\n----------- ---------- ----------\n| | |\n| Positional or keyword |\n| - Keyword only\n-- Positional only\n\nwhere / and * are optional. If used, these symbols indicate the kind of\nparameter by how the arguments may be passed to the function:\npositional-only, positional-or-keyword, and keyword-only. Keyword parameters\nare also referred to as named parameters.\n\nIf / and * are not present in the function definition, arguments may\nbe passed to a function by position or by keyword.",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 6.360853209839564,
+            "strategy": "bm25"
+          },
+          {
+            "id": "8916e455b0a7ae3eb12c617a",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 11,
+            "text": "Note that the order in which the keyword arguments are printed is guaranteed\nto match the order in which they were provided in the function call.\n\n4.9.3. Special parameters ¶\n\nBy default, arguments may be passed to a Python function either by position\nor explicitly by keyword. For readability and performance, it makes sense to\nrestrict the way arguments can be passed so that a developer need only look\nat the function definition to determine if items are passed by position, by\nposition or keyword, or by keyword.\n\nA function definition may look like:",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 5.976753749880505,
+            "strategy": "bm25"
+          },
+          {
+            "id": "726deee2faa380f064cc448e",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 10,
+            "text": "In a function call, keyword arguments must follow positional arguments.\nAll the keyword arguments passed must match one of the arguments\naccepted by the function (e.g. actor is not a valid argument for the parrot function), and their order is not important. This also includes\nnon-optional arguments (e.g. parrot(voltage=1000) is valid too).\nNo argument may receive a value more than once.\nHere’s an example that fails due to this restriction:\n\n>>> def function ( a ): ... pass ... >>> function ( 0 , a = 0 ) Traceback (most recent call last): File \"<stdin>\" , line 1 , in <module> TypeError : function() got multiple values for argument 'a'",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 5.374716524453865,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[f5d135e5fe3b7ba00d16f214 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 11]\ndef f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):\n----------- ---------- ----------\n| | |\n| Positional or keyword |\n| - Keyword only\n-- Positional only\n\nwhere / and * are optional. If used, these symbols indicate the kind of\nparameter by how the arguments may be passed to the function:\npositional-only, positional-or-keyword, and keyword-only. Keyword parameters\nare also referred to as named parameters.\n\nIf / and * are not present in the function definition, arguments may\nbe passed to a function by position or by keyword.\n\n[8916e455b0a7ae3eb12c617a | https://docs.python.org/3.12/tutorial/controlflow.html | unit 11]\nNote that the order in which the keyword arguments are printed is guaranteed\nto match the order in which they were provided in the function call.\n\n4.9.3. Special parameters ¶\n\nBy default, arguments may be passed to a Python function either by position\nor explicitly by keyword. For readability and performance, it makes sense to\nrestrict the way arguments can be passed so that a developer need only look\nat the function definition to determine if items are passed by position, by\nposition or keyword, or by keyword.\n\nA function definition may look like:\n\n[726deee2faa380f064cc448e | https://docs.python.org/3.12/tutorial/controlflow.html | unit 10]\nIn a function call, keyword arguments must follow positional arguments.\nAll the keyword arguments passed must match one of the arguments\naccepted by the function (e.g. actor is not a valid argument for the parrot function), and their order is not important. This also includes\nnon-optional arguments (e.g. parrot(voltage=1000) is valid too).\nNo argument may receive a value more than once.\nHere’s an example that fails due to this restriction:\n\n>>> def function ( a ): ... pass ... >>> function ( 0 , a = 0 ) Traceback (most recent call last): File \"<stdin>\" , line 1 , in <module> TypeError : function() got multiple values for argument 'a'",
+        "context_ids": [
+          "f5d135e5fe3b7ba00d16f214",
+          "8916e455b0a7ae3eb12c617a",
+          "726deee2faa380f064cc448e"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "f5d135e5fe3b7ba00d16f214",
+          "8916e455b0a7ae3eb12c617a",
+          "726deee2faa380f064cc448e"
+        ],
+        "proposal": null
+      },
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "function",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "ecfece8233a8eabfd7e4a463",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 7,
+            "text": "A function definition associates the function name with the function object in\nthe current symbol table. The interpreter recognizes the object pointed to by\nthat name as a user-defined function. Other names can also point to that same\nfunction object and can also be used to access the function:\n\n>>> fib <function fib at 10042ed0> >>> f = fib >>> f ( 100 ) 0 1 1 2 3 5 8 13 21 34 55 89",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 2.8165246095093024,
+            "strategy": "bm25"
+          },
+          {
+            "id": "726deee2faa380f064cc448e",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 10,
+            "text": "In a function call, keyword arguments must follow positional arguments.\nAll the keyword arguments passed must match one of the arguments\naccepted by the function (e.g. actor is not a valid argument for the parrot function), and their order is not important. This also includes\nnon-optional arguments (e.g. parrot(voltage=1000) is valid too).\nNo argument may receive a value more than once.\nHere’s an example that fails due to this restriction:\n\n>>> def function ( a ): ... pass ... >>> function ( 0 , a = 0 ) Traceback (most recent call last): File \"<stdin>\" , line 1 , in <module> TypeError : function() got multiple values for argument 'a'",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 2.6208903157770806,
+            "strategy": "bm25"
+          },
+          {
+            "id": "bc6b0850c489600e1c6553db",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 7,
+            "text": "The keyword def introduces a function definition . It must be\nfollowed by the function name and the parenthesized list of formal parameters.\nThe statements that form the body of the function start at the next line, and\nmust be indented.",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 2.6067367140893505,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[ecfece8233a8eabfd7e4a463 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 7]\nA function definition associates the function name with the function object in\nthe current symbol table. The interpreter recognizes the object pointed to by\nthat name as a user-defined function. Other names can also point to that same\nfunction object and can also be used to access the function:\n\n>>> fib <function fib at 10042ed0> >>> f = fib >>> f ( 100 ) 0 1 1 2 3 5 8 13 21 34 55 89\n\n[726deee2faa380f064cc448e | https://docs.python.org/3.12/tutorial/controlflow.html | unit 10]\nIn a function call, keyword arguments must follow positional arguments.\nAll the keyword arguments passed must match one of the arguments\naccepted by the function (e.g. actor is not a valid argument for the parrot function), and their order is not important. This also includes\nnon-optional arguments (e.g. parrot(voltage=1000) is valid too).\nNo argument may receive a value more than once.\nHere’s an example that fails due to this restriction:\n\n>>> def function ( a ): ... pass ... >>> function ( 0 , a = 0 ) Traceback (most recent call last): File \"<stdin>\" , line 1 , in <module> TypeError : function() got multiple values for argument 'a'\n\n[bc6b0850c489600e1c6553db | https://docs.python.org/3.12/tutorial/controlflow.html | unit 7]\nThe keyword def introduces a function definition . It must be\nfollowed by the function name and the parenthesized list of formal parameters.\nThe statements that form the body of the function start at the next line, and\nmust be indented.\n\n[f5d135e5fe3b7ba00d16f214 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 11]\ndef f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):\n----------- ---------- ----------\n| | |\n| Positional or keyword |\n| - Keyword only\n-- Positional only\n\nwhere / and * are optional. If used, these symbols indicate the kind of\nparameter by how the arguments may be passed to the function:\npositional-only, positional-or-keyword, and keyword-only. Keyword parameters\nare also referred to as named parameters.\n\nIf / and * are not present in the function definition, arguments may\nbe passed to a function by position or by keyword.",
+        "context_ids": [
+          "ecfece8233a8eabfd7e4a463",
+          "726deee2faa380f064cc448e",
+          "bc6b0850c489600e1c6553db",
+          "f5d135e5fe3b7ba00d16f214"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "ecfece8233a8eabfd7e4a463",
+          "726deee2faa380f064cc448e",
+          "bc6b0850c489600e1c6553db",
+          "f5d135e5fe3b7ba00d16f214"
+        ],
+        "proposal": {
+          "margin": 7.9884138107299805,
+          "start": 12,
+          "end": 15,
+          "chunk_id": "bc6b0850c489600e1c6553db",
+          "answer": "def"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "def"
+      }
+    ],
+    "elapsed_ms": 2287.27
+  },
+  {
+    "query_id": "q09",
+    "split": "dev",
+    "question": "What do list methods that only modify the list in place return?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "list method in-place",
+        "filter": {
+          "chapter": "datastructures"
+        },
+        "top_k": 3,
+        "results": [
+          {
+            "id": "440cfa01280fe304345b53ea",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 1,
+            "text": "The optional arguments start and end are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the start argument.\n\nReturn the number of times x appears in the list.\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted() for their explanation).\n\nReverse the elements of the list in place.\n\nReturn a shallow copy of the list. Similar to a[:] .\n\nAn example that uses most of the list methods:",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 7.868658747365111,
+            "strategy": "bm25"
+          },
+          {
+            "id": "4958a4faea48060106af53aa",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 3,
+            "text": ">>> vec = [ - 4 , - 2 , 0 , 2 , 4 ] >>> # create a new list with the values doubled >>> [ x * 2 for x in vec ] [-8, -4, 0, 4, 8] >>> # filter the list to exclude negative numbers >>> [ x for x in vec if x >= 0 ] [0, 2, 4] >>> # apply a function to all the elements >>> [ abs ( x ) for x in vec ] [4, 2, 0, 2, 4] >>> # call a method on each element >>> freshfruit = [ ' banana' , ' loganberry ' , 'passion fruit ' ] >>> [ weapon . strip () for weapon in freshfruit ] ['banana', 'loganberry', 'passion fruit'] >>> # create a list of 2-tuples like (number, square) >>> [( x , x ** 2 ) for x in range ( 6 )] [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5,",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 5.323441308245517,
+            "strategy": "bm25"
+          },
+          {
+            "id": "9fa3e927255ba20a4adef1d5",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 4,
+            "text": "There is a way to remove an item from a list given its index instead of its\nvalue: the del statement. This differs from the pop() method\nwhich returns a value. The del statement can also be used to remove\nslices from a list or clear the entire list (which we did earlier by assignment\nof an empty list to the slice). For example:\n\n>>> a = [ - 1 , 1 , 66.25 , 333 , 333 , 1234.5 ] >>> del a [ 0 ] >>> a [1, 66.25, 333, 333, 1234.5] >>> del a [ 2 : 4 ] >>> a [1, 66.25, 1234.5] >>> del a [:] >>> a []",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 5.139739740219322,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[440cfa01280fe304345b53ea | https://docs.python.org/3.12/tutorial/datastructures.html | unit 1]\nThe optional arguments start and end are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the start argument.\n\nReturn the number of times x appears in the list.\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted() for their explanation).\n\nReverse the elements of the list in place.\n\nReturn a shallow copy of the list. Similar to a[:] .\n\nAn example that uses most of the list methods:\n\n[4958a4faea48060106af53aa | https://docs.python.org/3.12/tutorial/datastructures.html | unit 3]\n>>> vec = [ - 4 , - 2 , 0 , 2 , 4 ] >>> # create a new list with the values doubled >>> [ x * 2 for x in vec ] [-8, -4, 0, 4, 8] >>> # filter the list to exclude negative numbers >>> [ x for x in vec if x >= 0 ] [0, 2, 4] >>> # apply a function to all the elements >>> [ abs ( x ) for x in vec ] [4, 2, 0, 2, 4] >>> # call a method on each element >>> freshfruit = [ ' banana' , ' loganberry ' , 'passion fruit ' ] >>> [ weapon . strip () for weapon in freshfruit ] ['banana', 'loganberry', 'passion fruit'] >>> # create a list of 2-tuples like (number, square) >>> [( x , x ** 2 ) for x in range ( 6 )] [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5,\n\n[9fa3e927255ba20a4adef1d5 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 4]\nThere is a way to remove an item from a list given its index instead of its\nvalue: the del statement. This differs from the pop() method\nwhich returns a value. The del statement can also be used to remove\nslices from a list or clear the entire list (which we did earlier by assignment\nof an empty list to the slice). For example:\n\n>>> a = [ - 1 , 1 , 66.25 , 333 , 333 , 1234.5 ] >>> del a [ 0 ] >>> a [1, 66.25, 333, 333, 1234.5] >>> del a [ 2 : 4 ] >>> a [1, 66.25, 1234.5] >>> del a [:] >>> a []",
+        "context_ids": [
+          "440cfa01280fe304345b53ea",
+          "4958a4faea48060106af53aa",
+          "9fa3e927255ba20a4adef1d5"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "440cfa01280fe304345b53ea",
+          "4958a4faea48060106af53aa",
+          "9fa3e927255ba20a4adef1d5"
+        ],
+        "proposal": null
+      },
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "list methods in-place",
+        "filter": {
+          "chapter": "datastructures"
+        },
+        "top_k": 3,
+        "results": [
+          {
+            "id": "440cfa01280fe304345b53ea",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 1,
+            "text": "The optional arguments start and end are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the start argument.\n\nReturn the number of times x appears in the list.\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted() for their explanation).\n\nReverse the elements of the list in place.\n\nReturn a shallow copy of the list. Similar to a[:] .\n\nAn example that uses most of the list methods:",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 10.498095249356888,
+            "strategy": "bm25"
+          },
+          {
+            "id": "c285c572161bd68e715f5e5a",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 1,
+            "text": "5. Data Structures ¶\n\nThis chapter describes some things you’ve learned about already in more detail,\nand adds some new things as well.\n\n5.1. More on Lists ¶\n\nThe list data type has some more methods. Here are all of the methods of list\nobjects:\n\nAdd an item to the end of the list. Similar to a[len(a):] = [x] .\n\nExtend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable .\n\nInsert an item at a given position. The first argument is the index of the\nelement before which to insert, so a.insert(0, x) inserts at the front of\nthe list, and a.insert(len(a), x) is equivalent to a.append(x) .",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 6.3577744077089875,
+            "strategy": "bm25"
+          },
+          {
+            "id": "f7c68154d7f16823807d57a4",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 2,
+            "text": "The list methods make it very easy to use a list as a stack, where the last\nelement added is the first element retrieved (“last-in, first-out”). To add an\nitem to the top of the stack, use append() . To retrieve an item from the\ntop of the stack, use pop() without an explicit index. For example:\n\n>>> stack = [ 3 , 4 , 5 ] >>> stack . append ( 6 ) >>> stack . append ( 7 ) >>> stack [3, 4, 5, 6, 7] >>> stack . pop () 7 >>> stack [3, 4, 5, 6] >>> stack . pop () 6 >>> stack . pop () 5 >>> stack [3, 4]\n\n5.1.2. Using Lists as Queues ¶",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 4.999799760512008,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[440cfa01280fe304345b53ea | https://docs.python.org/3.12/tutorial/datastructures.html | unit 1]\nThe optional arguments start and end are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the start argument.\n\nReturn the number of times x appears in the list.\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted() for their explanation).\n\nReverse the elements of the list in place.\n\nReturn a shallow copy of the list. Similar to a[:] .\n\nAn example that uses most of the list methods:\n\n[c285c572161bd68e715f5e5a | https://docs.python.org/3.12/tutorial/datastructures.html | unit 1]\n5. Data Structures ¶\n\nThis chapter describes some things you’ve learned about already in more detail,\nand adds some new things as well.\n\n5.1. More on Lists ¶\n\nThe list data type has some more methods. Here are all of the methods of list\nobjects:\n\nAdd an item to the end of the list. Similar to a[len(a):] = [x] .\n\nExtend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable .\n\nInsert an item at a given position. The first argument is the index of the\nelement before which to insert, so a.insert(0, x) inserts at the front of\nthe list, and a.insert(len(a), x) is equivalent to a.append(x) .\n\n[f7c68154d7f16823807d57a4 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 2]\nThe list methods make it very easy to use a list as a stack, where the last\nelement added is the first element retrieved (“last-in, first-out”). To add an\nitem to the top of the stack, use append() . To retrieve an item from the\ntop of the stack, use pop() without an explicit index. For example:\n\n>>> stack = [ 3 , 4 , 5 ] >>> stack . append ( 6 ) >>> stack . append ( 7 ) >>> stack [3, 4, 5, 6, 7] >>> stack . pop () 7 >>> stack [3, 4, 5, 6] >>> stack . pop () 6 >>> stack . pop () 5 >>> stack [3, 4]\n\n5.1.2. Using Lists as Queues ¶",
+        "context_ids": [
+          "440cfa01280fe304345b53ea",
+          "c285c572161bd68e715f5e5a",
+          "f7c68154d7f16823807d57a4"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "440cfa01280fe304345b53ea",
+          "c285c572161bd68e715f5e5a",
+          "f7c68154d7f16823807d57a4"
+        ],
+        "proposal": null
+      },
+      {
+        "event": "abstain",
+        "raw": ""
+      }
+    ],
+    "elapsed_ms": 2520.14
+  },
+  {
+    "query_id": "q10",
+    "split": "dev",
+    "question": "Does a list used as a stack follow last-in, first-out order?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "If no index is specified [4ba6f596d5c96f1d7f1373c1]",
+    "citations": [
+      "4ba6f596d5c96f1d7f1373c1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "list",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "4ba6f596d5c96f1d7f1373c1",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 1,
+            "text": "Remove the first item from the list whose value is equal to x . It raises a ValueError if there is no such item.\n\nRemove the item at the given position in the list, and return it. If no index\nis specified, a.pop() removes and returns the last item in the list.\nIt raises an IndexError if the list is empty or the index is\noutside the list range.\n\nRemove all items from the list. Similar to del a[:] .\n\nReturn zero-based index in the list of the first item whose value is equal to x .\nRaises a ValueError if there is no such item.",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 2.778473706816633,
+            "strategy": "bm25"
+          },
+          {
+            "id": "0b7accbd02f6a04d9f215563",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 4,
+            "text": "List comprehensions can contain complex expressions and nested functions:\n\n>>> from math import pi >>> [ str ( round ( pi , i )) for i in range ( 1 , 6 )] ['3.1', '3.14', '3.142', '3.1416', '3.14159']\n\n5.1.4. Nested List Comprehensions ¶\n\nThe initial expression in a list comprehension can be any arbitrary expression,\nincluding another list comprehension.\n\nConsider the following example of a 3x4 matrix implemented as a list of\n3 lists of length 4:\n\n>>> matrix = [ ... [ 1 , 2 , 3 , 4 ], ... [ 5 , 6 , 7 , 8 ], ... [ 9 , 10 , 11 , 12 ], ... ]\n\nThe following list comprehension will transpose rows and columns:",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 2.741059425988645,
+            "strategy": "bm25"
+          },
+          {
+            "id": "440cfa01280fe304345b53ea",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 1,
+            "text": "The optional arguments start and end are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the start argument.\n\nReturn the number of times x appears in the list.\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted() for their explanation).\n\nReverse the elements of the list in place.\n\nReturn a shallow copy of the list. Similar to a[:] .\n\nAn example that uses most of the list methods:",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 2.707905596217489,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[4ba6f596d5c96f1d7f1373c1 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 1]\nRemove the first item from the list whose value is equal to x . It raises a ValueError if there is no such item.\n\nRemove the item at the given position in the list, and return it. If no index\nis specified, a.pop() removes and returns the last item in the list.\nIt raises an IndexError if the list is empty or the index is\noutside the list range.\n\nRemove all items from the list. Similar to del a[:] .\n\nReturn zero-based index in the list of the first item whose value is equal to x .\nRaises a ValueError if there is no such item.\n\n[0b7accbd02f6a04d9f215563 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 4]\nList comprehensions can contain complex expressions and nested functions:\n\n>>> from math import pi >>> [ str ( round ( pi , i )) for i in range ( 1 , 6 )] ['3.1', '3.14', '3.142', '3.1416', '3.14159']\n\n5.1.4. Nested List Comprehensions ¶\n\nThe initial expression in a list comprehension can be any arbitrary expression,\nincluding another list comprehension.\n\nConsider the following example of a 3x4 matrix implemented as a list of\n3 lists of length 4:\n\n>>> matrix = [ ... [ 1 , 2 , 3 , 4 ], ... [ 5 , 6 , 7 , 8 ], ... [ 9 , 10 , 11 , 12 ], ... ]\n\nThe following list comprehension will transpose rows and columns:\n\n[440cfa01280fe304345b53ea | https://docs.python.org/3.12/tutorial/datastructures.html | unit 1]\nThe optional arguments start and end are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the start argument.\n\nReturn the number of times x appears in the list.\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted() for their explanation).\n\nReverse the elements of the list in place.\n\nReturn a shallow copy of the list. Similar to a[:] .\n\nAn example that uses most of the list methods:",
+        "context_ids": [
+          "4ba6f596d5c96f1d7f1373c1",
+          "0b7accbd02f6a04d9f215563",
+          "440cfa01280fe304345b53ea"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "4ba6f596d5c96f1d7f1373c1"
+        ],
+        "proposal": {
+          "margin": 0.3467073440551758,
+          "start": 180,
+          "end": 204,
+          "chunk_id": "4ba6f596d5c96f1d7f1373c1",
+          "answer": "If no index\nis specified"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "If no index\nis specified"
+      }
+    ],
+    "elapsed_ms": 762.36
+  },
+  {
+    "query_id": "q11",
+    "split": "dev",
+    "question": "Can a set contain duplicate elements?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "duplicates have been removed [6bc4756ae1a3df0e5075e168]",
+    "citations": [
+      "6bc4756ae1a3df0e5075e168"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "set contains duplicates",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "6bc4756ae1a3df0e5075e168",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 6,
+            "text": ">>> basket = { 'apple' , 'orange' , 'apple' , 'pear' , 'orange' , 'banana' } >>> print ( basket ) # show that duplicates have been removed {'orange', 'banana', 'pear', 'apple'} >>> 'orange' in basket # fast membership testing True >>> 'crabgrass' in basket False >>> # Demonstrate set operations on unique letters from two words >>> >>> a = set ( 'abracadabra' ) >>> b = set ( 'alacazam' ) >>> a # unique letters in a {'a', 'r', 'b', 'c', 'd'} >>> a - b # letters in a but not in b {'r', 'd', 'b'} >>> a | b # letters in a or b or both {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'} >>> a & b # letters in both a and b {'a', 'c'} >>> a ^ b # letters in a",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 8.859646955176501,
+            "strategy": "bm25"
+          },
+          {
+            "id": "f65b8067b3d00f6fe2f5de49",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 6,
+            "text": "Curly braces or the set() function can be used to create sets. Note: to\ncreate an empty set you have to use set() , not {} ; the latter creates an\nempty dictionary, a data structure that we discuss in the next section.\n\nHere is a brief demonstration:",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 4.774596318841902,
+            "strategy": "bm25"
+          },
+          {
+            "id": "49a081cc00898b45befd71bd",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 7,
+            "text": "The first line contains a multiple assignment : the variables a and b simultaneously get the new values 0 and 1. On the last line this is used again,\ndemonstrating that the expressions on the right-hand side are all evaluated\nfirst before any of the assignments take place. The right-hand side expressions\nare evaluated from the left to the right.",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 3.985576679679756,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[6bc4756ae1a3df0e5075e168 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 6]\n>>> basket = { 'apple' , 'orange' , 'apple' , 'pear' , 'orange' , 'banana' } >>> print ( basket ) # show that duplicates have been removed {'orange', 'banana', 'pear', 'apple'} >>> 'orange' in basket # fast membership testing True >>> 'crabgrass' in basket False >>> # Demonstrate set operations on unique letters from two words >>> >>> a = set ( 'abracadabra' ) >>> b = set ( 'alacazam' ) >>> a # unique letters in a {'a', 'r', 'b', 'c', 'd'} >>> a - b # letters in a but not in b {'r', 'd', 'b'} >>> a | b # letters in a or b or both {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'} >>> a & b # letters in both a and b {'a', 'c'} >>> a ^ b # letters in a\n\n[f65b8067b3d00f6fe2f5de49 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 6]\nCurly braces or the set() function can be used to create sets. Note: to\ncreate an empty set you have to use set() , not {} ; the latter creates an\nempty dictionary, a data structure that we discuss in the next section.\n\nHere is a brief demonstration:\n\n[49a081cc00898b45befd71bd | https://docs.python.org/3.12/tutorial/introduction.html | unit 7]\nThe first line contains a multiple assignment : the variables a and b simultaneously get the new values 0 and 1. On the last line this is used again,\ndemonstrating that the expressions on the right-hand side are all evaluated\nfirst before any of the assignments take place. The right-hand side expressions\nare evaluated from the left to the right.",
+        "context_ids": [
+          "6bc4756ae1a3df0e5075e168",
+          "f65b8067b3d00f6fe2f5de49",
+          "49a081cc00898b45befd71bd"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "6bc4756ae1a3df0e5075e168"
+        ],
+        "proposal": {
+          "margin": 4.553831100463867,
+          "start": 110,
+          "end": 138,
+          "chunk_id": "6bc4756ae1a3df0e5075e168",
+          "answer": "duplicates have been removed"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "duplicates have been removed"
+      }
+    ],
+    "elapsed_ms": 1050.92
+  },
+  {
+    "query_id": "q12",
+    "split": "dev",
+    "question": "Must dictionary keys be unique within one dictionary?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "can be any immutable type [67e550a00127230ffdd91d8d]",
+    "citations": [
+      "67e550a00127230ffdd91d8d"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "dictionary keys must be unique",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "801aa8c75b4da8c629dd9e64",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 7,
+            "text": "It is best to think of a dictionary as a set of key: value pairs,\nwith the requirement that the keys are unique (within one dictionary). A pair of\nbraces creates an empty dictionary: {} . Placing a comma-separated list of\nkey:value pairs within the braces adds initial key:value pairs to the\ndictionary; this is also the way dictionaries are written on output.",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 14.38881631815164,
+            "strategy": "bm25"
+          },
+          {
+            "id": "67e550a00127230ffdd91d8d",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 6,
+            "text": "Another useful data type built into Python is the dictionary (see Mapping Types — dict ). Dictionaries are sometimes found in other languages as\n“associative memories” or “associative arrays”. Unlike sequences, which are\nindexed by a range of numbers, dictionaries are indexed by keys , which can be\nany immutable type; strings and numbers can always be keys. Tuples can be used\nas keys if they contain only strings, numbers, or tuples; if a tuple contains\nany mutable object either directly or indirectly, it cannot be used as a key.\nYou can’t use lists as keys, since lists can be modified in place using index\nassignments, slice assignments, or",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 9.906990096796461,
+            "strategy": "bm25"
+          },
+          {
+            "id": "53e91ed20994f4b670ad701c",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 7,
+            "text": "The main operations on a dictionary are storing a value with some key and\nextracting the value given the key. It is also possible to delete a key:value\npair with del . If you store using a key that is already in use, the old\nvalue associated with that key is forgotten. It is an error to extract a value\nusing a non-existent key.\n\nPerforming list(d) on a dictionary returns a list of all the keys\nused in the dictionary, in insertion order (if you want it sorted, just use sorted(d) instead). To check whether a single key is in the\ndictionary, use the in keyword.\n\nHere is a small example using a dictionary:",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 8.450386216637927,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[801aa8c75b4da8c629dd9e64 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 7]\nIt is best to think of a dictionary as a set of key: value pairs,\nwith the requirement that the keys are unique (within one dictionary). A pair of\nbraces creates an empty dictionary: {} . Placing a comma-separated list of\nkey:value pairs within the braces adds initial key:value pairs to the\ndictionary; this is also the way dictionaries are written on output.\n\n[67e550a00127230ffdd91d8d | https://docs.python.org/3.12/tutorial/datastructures.html | unit 6]\nAnother useful data type built into Python is the dictionary (see Mapping Types — dict ). Dictionaries are sometimes found in other languages as\n“associative memories” or “associative arrays”. Unlike sequences, which are\nindexed by a range of numbers, dictionaries are indexed by keys , which can be\nany immutable type; strings and numbers can always be keys. Tuples can be used\nas keys if they contain only strings, numbers, or tuples; if a tuple contains\nany mutable object either directly or indirectly, it cannot be used as a key.\nYou can’t use lists as keys, since lists can be modified in place using index\nassignments, slice assignments, or\n\n[53e91ed20994f4b670ad701c | https://docs.python.org/3.12/tutorial/datastructures.html | unit 7]\nThe main operations on a dictionary are storing a value with some key and\nextracting the value given the key. It is also possible to delete a key:value\npair with del . If you store using a key that is already in use, the old\nvalue associated with that key is forgotten. It is an error to extract a value\nusing a non-existent key.\n\nPerforming list(d) on a dictionary returns a list of all the keys\nused in the dictionary, in insertion order (if you want it sorted, just use sorted(d) instead). To check whether a single key is in the\ndictionary, use the in keyword.\n\nHere is a small example using a dictionary:",
+        "context_ids": [
+          "801aa8c75b4da8c629dd9e64",
+          "67e550a00127230ffdd91d8d",
+          "53e91ed20994f4b670ad701c"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "801aa8c75b4da8c629dd9e64",
+          "67e550a00127230ffdd91d8d",
+          "53e91ed20994f4b670ad701c"
+        ],
+        "proposal": {
+          "margin": 0.8466172218322754,
+          "start": 293,
+          "end": 318,
+          "chunk_id": "67e550a00127230ffdd91d8d",
+          "answer": "can be\nany immutable type"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "can be\nany immutable type"
+      }
+    ],
+    "elapsed_ms": 1352.57
+  },
+  {
+    "query_id": "q13",
+    "split": "dev",
+    "question": "What is a Python module?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "a file containing Python definitions and statements [5e63d2cf6e12d6faaa45a2bb]",
+    "citations": [
+      "5e63d2cf6e12d6faaa45a2bb"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "Python module",
+        "filter": {
+          "chapter": "modules"
+        },
+        "top_k": 3,
+        "results": [
+          {
+            "id": "0a6d7a46c0078e7b4d67cf25",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 4,
+            "text": "To speed up loading modules, Python caches the compiled version of each module\nin the __pycache__ directory under the name module. version .pyc ,\nwhere the version encodes the format of the compiled file; it generally contains\nthe Python version number. For example, in CPython release 3.3 the compiled\nversion of spam.py would be cached as __pycache__/spam.cpython-33.pyc . This\nnaming convention allows compiled modules from different releases and different\nversions of Python to coexist.",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 4.713119953756581,
+            "strategy": "bm25"
+          },
+          {
+            "id": "1bd3e0641bb9bd212411bb22",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 3,
+            "text": "For efficiency reasons, each module is only imported once per interpreter\nsession. Therefore, if you change your modules, you must restart the\ninterpreter – or, if it’s just one module you want to test interactively,\nuse importlib.reload() , e.g. import importlib; importlib.reload(modulename) .\n\n6.1.1. Executing modules as scripts ¶\n\nWhen you run a Python module with\n\npython fibo . py < arguments >\n\nthe code in the module will be executed, just as if you imported it, but with\nthe __name__ set to \"__main__\" . That means that by adding this code at\nthe end of your module:\n\nif __name__ == \"__main__\" : import sys fib ( int ( sys . argv [ 1 ]))",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 4.690769932049165,
+            "strategy": "bm25"
+          },
+          {
+            "id": "5e63d2cf6e12d6faaa45a2bb",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 1,
+            "text": "A module is a file containing Python definitions and statements. The file name\nis the module name with the suffix .py appended. Within a module, the\nmodule’s name (as a string) is available as the value of the global variable __name__ . For instance, use your favorite text editor to create a file\ncalled fibo.py in the current directory with the following contents:",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 4.526127529790736,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[0a6d7a46c0078e7b4d67cf25 | https://docs.python.org/3.12/tutorial/modules.html | unit 4]\nTo speed up loading modules, Python caches the compiled version of each module\nin the __pycache__ directory under the name module. version .pyc ,\nwhere the version encodes the format of the compiled file; it generally contains\nthe Python version number. For example, in CPython release 3.3 the compiled\nversion of spam.py would be cached as __pycache__/spam.cpython-33.pyc . This\nnaming convention allows compiled modules from different releases and different\nversions of Python to coexist.\n\n[1bd3e0641bb9bd212411bb22 | https://docs.python.org/3.12/tutorial/modules.html | unit 3]\nFor efficiency reasons, each module is only imported once per interpreter\nsession. Therefore, if you change your modules, you must restart the\ninterpreter – or, if it’s just one module you want to test interactively,\nuse importlib.reload() , e.g. import importlib; importlib.reload(modulename) .\n\n6.1.1. Executing modules as scripts ¶\n\nWhen you run a Python module with\n\npython fibo . py < arguments >\n\nthe code in the module will be executed, just as if you imported it, but with\nthe __name__ set to \"__main__\" . That means that by adding this code at\nthe end of your module:\n\nif __name__ == \"__main__\" : import sys fib ( int ( sys . argv [ 1 ]))\n\n[5e63d2cf6e12d6faaa45a2bb | https://docs.python.org/3.12/tutorial/modules.html | unit 1]\nA module is a file containing Python definitions and statements. The file name\nis the module name with the suffix .py appended. Within a module, the\nmodule’s name (as a string) is available as the value of the global variable __name__ . For instance, use your favorite text editor to create a file\ncalled fibo.py in the current directory with the following contents:",
+        "context_ids": [
+          "0a6d7a46c0078e7b4d67cf25",
+          "1bd3e0641bb9bd212411bb22",
+          "5e63d2cf6e12d6faaa45a2bb"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "0a6d7a46c0078e7b4d67cf25",
+          "1bd3e0641bb9bd212411bb22",
+          "5e63d2cf6e12d6faaa45a2bb"
+        ],
+        "proposal": {
+          "margin": 8.368120670318604,
+          "start": 12,
+          "end": 63,
+          "chunk_id": "5e63d2cf6e12d6faaa45a2bb",
+          "answer": "a file containing Python definitions and statements"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "a file containing Python definitions and statements"
+      }
+    ],
+    "elapsed_ms": 954.2
+  },
+  {
+    "query_id": "q14",
+    "split": "dev",
+    "question": "When are initialization statements in a module executed during import?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "module initialization execution",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "231ffd1fb2e7a4165e4ad246",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 4,
+            "text": "The installation-dependent default (by convention including a site-packages directory, handled by the site module).\n\nMore details are at The initialization of the sys.path module search path .\n\nOn file systems which support symlinks, the directory containing the input\nscript is calculated after the symlink is followed. In other words the\ndirectory containing the symlink is not added to the module search path.",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 7.100816017284766,
+            "strategy": "bm25"
+          },
+          {
+            "id": "2bdb6d996256c3fcdcb92b69",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 10,
+            "text": "While this feature is not often needed, it can be used to extend the set of\nmodules found in a package.\n\nIn fact function definitions are also ‘statements’ that are ‘executed’; the\nexecution of a module-level function definition adds the function name to\nthe module’s global namespace.",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 6.46445176619711,
+            "strategy": "bm25"
+          },
+          {
+            "id": "d00fe3c93c1603e204802615",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 7,
+            "text": "The __init__.py files are required to make Python treat directories\ncontaining the file as packages (unless using a namespace package , a\nrelatively advanced feature). This prevents directories with a common name,\nsuch as string , from unintentionally hiding valid modules that occur later\non the module search path. In the simplest case, __init__.py can just be\nan empty file, but it can also execute initialization code for the package or\nset the __all__ variable, described later.",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 5.795517456445307,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[231ffd1fb2e7a4165e4ad246 | https://docs.python.org/3.12/tutorial/modules.html | unit 4]\nThe installation-dependent default (by convention including a site-packages directory, handled by the site module).\n\nMore details are at The initialization of the sys.path module search path .\n\nOn file systems which support symlinks, the directory containing the input\nscript is calculated after the symlink is followed. In other words the\ndirectory containing the symlink is not added to the module search path.\n\n[2bdb6d996256c3fcdcb92b69 | https://docs.python.org/3.12/tutorial/modules.html | unit 10]\nWhile this feature is not often needed, it can be used to extend the set of\nmodules found in a package.\n\nIn fact function definitions are also ‘statements’ that are ‘executed’; the\nexecution of a module-level function definition adds the function name to\nthe module’s global namespace.\n\n[d00fe3c93c1603e204802615 | https://docs.python.org/3.12/tutorial/modules.html | unit 7]\nThe __init__.py files are required to make Python treat directories\ncontaining the file as packages (unless using a namespace package , a\nrelatively advanced feature). This prevents directories with a common name,\nsuch as string , from unintentionally hiding valid modules that occur later\non the module search path. In the simplest case, __init__.py can just be\nan empty file, but it can also execute initialization code for the package or\nset the __all__ variable, described later.",
+        "context_ids": [
+          "231ffd1fb2e7a4165e4ad246",
+          "2bdb6d996256c3fcdcb92b69",
+          "d00fe3c93c1603e204802615"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "231ffd1fb2e7a4165e4ad246",
+          "2bdb6d996256c3fcdcb92b69",
+          "d00fe3c93c1603e204802615"
+        ],
+        "proposal": null
+      },
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "module initialization statement execution",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "2228646633f0a27028e154ab",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 2,
+            "text": "First, the try clause (the statement(s) between the try and except keywords) is executed.\n\nIf no exception occurs, the except clause is skipped and execution of the try statement is finished.\n\nIf an exception occurs during execution of the try clause, the rest of the\nclause is skipped. Then, if its type matches the exception named after the except keyword, the except clause is executed, and then execution\ncontinues after the try/except block.",
+            "metadata": {
+              "chapter": "errors",
+              "title": "8-errors-and-exceptions",
+              "python_version": "3.12"
+            },
+            "score": 7.904438631986396,
+            "strategy": "bm25"
+          },
+          {
+            "id": "44a6f4ecf8fc78ebb61a2763",
+            "source_id": "errors",
+            "source": "https://docs.python.org/3.12/tutorial/errors.html",
+            "page": 6,
+            "text": "An exception could occur during execution of an except or else clause. Again, the exception is re-raised after\nthe finally clause has been executed.\n\nIf the finally clause executes a break , continue or return statement, exceptions are not\nre-raised.\n\nIf the try statement reaches a break , continue or return statement, the finally clause will execute just prior to the break , continue or return statement’s execution.\n\nIf a finally clause includes a return statement, the returned value will be the one from the finally clause’s return statement, not the\nvalue from the try clause’s return statement.",
+            "metadata": {
+              "chapter": "errors",
+              "title": "8-errors-and-exceptions",
+              "python_version": "3.12"
+            },
+            "score": 7.647359303451214,
+            "strategy": "bm25"
+          },
+          {
+            "id": "231ffd1fb2e7a4165e4ad246",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 4,
+            "text": "The installation-dependent default (by convention including a site-packages directory, handled by the site module).\n\nMore details are at The initialization of the sys.path module search path .\n\nOn file systems which support symlinks, the directory containing the input\nscript is calculated after the symlink is followed. In other words the\ndirectory containing the symlink is not added to the module search path.",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 7.100816017284766,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[2228646633f0a27028e154ab | https://docs.python.org/3.12/tutorial/errors.html | unit 2]\nFirst, the try clause (the statement(s) between the try and except keywords) is executed.\n\nIf no exception occurs, the except clause is skipped and execution of the try statement is finished.\n\nIf an exception occurs during execution of the try clause, the rest of the\nclause is skipped. Then, if its type matches the exception named after the except keyword, the except clause is executed, and then execution\ncontinues after the try/except block.\n\n[44a6f4ecf8fc78ebb61a2763 | https://docs.python.org/3.12/tutorial/errors.html | unit 6]\nAn exception could occur during execution of an except or else clause. Again, the exception is re-raised after\nthe finally clause has been executed.\n\nIf the finally clause executes a break , continue or return statement, exceptions are not\nre-raised.\n\nIf the try statement reaches a break , continue or return statement, the finally clause will execute just prior to the break , continue or return statement’s execution.\n\nIf a finally clause includes a return statement, the returned value will be the one from the finally clause’s return statement, not the\nvalue from the try clause’s return statement.\n\n[231ffd1fb2e7a4165e4ad246 | https://docs.python.org/3.12/tutorial/modules.html | unit 4]\nThe installation-dependent default (by convention including a site-packages directory, handled by the site module).\n\nMore details are at The initialization of the sys.path module search path .\n\nOn file systems which support symlinks, the directory containing the input\nscript is calculated after the symlink is followed. In other words the\ndirectory containing the symlink is not added to the module search path.\n\n[2bdb6d996256c3fcdcb92b69 | https://docs.python.org/3.12/tutorial/modules.html | unit 10]\nWhile this feature is not often needed, it can be used to extend the set of\nmodules found in a package.\n\nIn fact function definitions are also ‘statements’ that are ‘executed’; the\nexecution of a module-level function definition adds the function name to\nthe module’s global namespace.",
+        "context_ids": [
+          "2228646633f0a27028e154ab",
+          "44a6f4ecf8fc78ebb61a2763",
+          "231ffd1fb2e7a4165e4ad246",
+          "2bdb6d996256c3fcdcb92b69"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "2228646633f0a27028e154ab",
+          "44a6f4ecf8fc78ebb61a2763",
+          "231ffd1fb2e7a4165e4ad246",
+          "2bdb6d996256c3fcdcb92b69"
+        ],
+        "proposal": null
+      },
+      {
+        "event": "abstain",
+        "raw": ""
+      }
+    ],
+    "elapsed_ms": 2435.38
+  },
+  {
+    "query_id": "q15",
+    "split": "dev",
+    "question": "Does reading a .pyc file make the program run faster?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "A program doesn’t run any faster [d7bbf85b139b4c0fbe6b2d05]",
+    "citations": [
+      "d7bbf85b139b4c0fbe6b2d05"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "reading .pyc files",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "d7bbf85b139b4c0fbe6b2d05",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 5,
+            "text": "A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only thing that’s faster\nabout .pyc files is the speed with which they are loaded.\n\nThe module compileall can create .pyc files for all modules in a\ndirectory.\n\nThere is more detail on this process, including a flow chart of the\ndecisions, in PEP 3147 .\n\n6.2. Standard Modules ¶",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 11.504514400539382,
+            "strategy": "bm25"
+          },
+          {
+            "id": "bdb0aa3b44ba083ad84b32b7",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 5,
+            "text": "In text mode, the default when reading is to convert platform-specific line\nendings ( \\n on Unix, \\r\\n on Windows) to just \\n . When writing in\ntext mode, the default is to convert occurrences of \\n back to\nplatform-specific line endings. This behind-the-scenes modification\nto file data is fine for text files, but will corrupt binary data like that in JPEG or EXE files. Be very careful to use binary mode when\nreading and writing such files.",
+            "metadata": {
+              "chapter": "inputoutput",
+              "title": "7-input-and-output",
+              "python_version": "3.12"
+            },
+            "score": 9.860358797181135,
+            "strategy": "bm25"
+          },
+          {
+            "id": "7596b59d6649f8575201d66e",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 8,
+            "text": "To decode the object again, if f is a binary file or text file object which has been opened for reading:\n\nx = json . load ( f )\n\nJSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening\nJSON file as a text file for both of reading and writing.\n\nThis simple serialization technique can handle lists and dictionaries, but\nserializing arbitrary class instances in JSON requires a bit of extra effort.\nThe reference for the json module contains an explanation of this.\n\npickle - the pickle module",
+            "metadata": {
+              "chapter": "inputoutput",
+              "title": "7-input-and-output",
+              "python_version": "3.12"
+            },
+            "score": 7.9869424289134585,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[d7bbf85b139b4c0fbe6b2d05 | https://docs.python.org/3.12/tutorial/modules.html | unit 5]\nA program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only thing that’s faster\nabout .pyc files is the speed with which they are loaded.\n\nThe module compileall can create .pyc files for all modules in a\ndirectory.\n\nThere is more detail on this process, including a flow chart of the\ndecisions, in PEP 3147 .\n\n6.2. Standard Modules ¶\n\n[bdb0aa3b44ba083ad84b32b7 | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 5]\nIn text mode, the default when reading is to convert platform-specific line\nendings ( \\n on Unix, \\r\\n on Windows) to just \\n . When writing in\ntext mode, the default is to convert occurrences of \\n back to\nplatform-specific line endings. This behind-the-scenes modification\nto file data is fine for text files, but will corrupt binary data like that in JPEG or EXE files. Be very careful to use binary mode when\nreading and writing such files.\n\n[7596b59d6649f8575201d66e | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 8]\nTo decode the object again, if f is a binary file or text file object which has been opened for reading:\n\nx = json . load ( f )\n\nJSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening\nJSON file as a text file for both of reading and writing.\n\nThis simple serialization technique can handle lists and dictionaries, but\nserializing arbitrary class instances in JSON requires a bit of extra effort.\nThe reference for the json module contains an explanation of this.\n\npickle - the pickle module",
+        "context_ids": [
+          "d7bbf85b139b4c0fbe6b2d05",
+          "bdb0aa3b44ba083ad84b32b7",
+          "7596b59d6649f8575201d66e"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "d7bbf85b139b4c0fbe6b2d05",
+          "bdb0aa3b44ba083ad84b32b7",
+          "7596b59d6649f8575201d66e"
+        ],
+        "proposal": {
+          "margin": 8.871465682983398,
+          "start": 0,
+          "end": 32,
+          "chunk_id": "d7bbf85b139b4c0fbe6b2d05",
+          "answer": "A program doesn’t run any faster"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "A program doesn’t run any faster"
+      }
+    ],
+    "elapsed_ms": 1267.42
+  },
+  {
+    "query_id": "q16",
+    "split": "dev",
+    "question": "How do packages structure Python's module namespace?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "dotted module names [fada12db48249c27be011024]",
+    "citations": [
+      "fada12db48249c27be011024"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "Python package structure",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "78e0347fdb881505df129ef1",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 7,
+            "text": "a possible structure for\nyour package (expressed in terms of a hierarchical filesystem):\n\nsound/ Top-level package\n__init__.py Initialize the sound package\nformats/ Subpackage for file format conversions\n__init__.py\nwavread.py\nwavwrite.py\naiffread.py\naiffwrite.py\nauread.py\nauwrite.py\n...\neffects/ Subpackage for sound effects\n__init__.py\necho.py\nsurround.py\nreverse.py\n...\nfilters/ Subpackage for filters\n__init__.py\nequalizer.py\nvocoder.py\nkaraoke.py\n...\n\nWhen importing the package, Python searches through the directories on sys.path looking for the package subdirectory.",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 10.735837298146407,
+            "strategy": "bm25"
+          },
+          {
+            "id": "d00fe3c93c1603e204802615",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 7,
+            "text": "The __init__.py files are required to make Python treat directories\ncontaining the file as packages (unless using a namespace package , a\nrelatively advanced feature). This prevents directories with a common name,\nsuch as string , from unintentionally hiding valid modules that occur later\non the module search path. In the simplest case, __init__.py can just be\nan empty file, but it can also execute initialization code for the package or\nset the __all__ variable, described later.",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 5.512008147705274,
+            "strategy": "bm25"
+          },
+          {
+            "id": "f65b8067b3d00f6fe2f5de49",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 6,
+            "text": "Curly braces or the set() function can be used to create sets. Note: to\ncreate an empty set you have to use set() , not {} ; the latter creates an\nempty dictionary, a data structure that we discuss in the next section.\n\nHere is a brief demonstration:",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 5.311109355856218,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[78e0347fdb881505df129ef1 | https://docs.python.org/3.12/tutorial/modules.html | unit 7]\na possible structure for\nyour package (expressed in terms of a hierarchical filesystem):\n\nsound/ Top-level package\n__init__.py Initialize the sound package\nformats/ Subpackage for file format conversions\n__init__.py\nwavread.py\nwavwrite.py\naiffread.py\naiffwrite.py\nauread.py\nauwrite.py\n...\neffects/ Subpackage for sound effects\n__init__.py\necho.py\nsurround.py\nreverse.py\n...\nfilters/ Subpackage for filters\n__init__.py\nequalizer.py\nvocoder.py\nkaraoke.py\n...\n\nWhen importing the package, Python searches through the directories on sys.path looking for the package subdirectory.\n\n[d00fe3c93c1603e204802615 | https://docs.python.org/3.12/tutorial/modules.html | unit 7]\nThe __init__.py files are required to make Python treat directories\ncontaining the file as packages (unless using a namespace package , a\nrelatively advanced feature). This prevents directories with a common name,\nsuch as string , from unintentionally hiding valid modules that occur later\non the module search path. In the simplest case, __init__.py can just be\nan empty file, but it can also execute initialization code for the package or\nset the __all__ variable, described later.\n\n[f65b8067b3d00f6fe2f5de49 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 6]\nCurly braces or the set() function can be used to create sets. Note: to\ncreate an empty set you have to use set() , not {} ; the latter creates an\nempty dictionary, a data structure that we discuss in the next section.\n\nHere is a brief demonstration:",
+        "context_ids": [
+          "78e0347fdb881505df129ef1",
+          "d00fe3c93c1603e204802615",
+          "f65b8067b3d00f6fe2f5de49"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "78e0347fdb881505df129ef1",
+          "d00fe3c93c1603e204802615"
+        ],
+        "proposal": null
+      },
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "Python package module namespace",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "fada12db48249c27be011024",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 7,
+            "text": "Packages are a way of structuring Python’s module namespace by using “dotted\nmodule names”. For example, the module name A.B designates a submodule\nnamed B in a package named A . Just like the use of modules saves the\nauthors of different modules from having to worry about each other’s global\nvariable names, the use of dotted module names saves the authors of multi-module\npackages like NumPy or Pillow from having to worry about\neach other’s module names.",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 10.597656339522036,
+            "strategy": "bm25"
+          },
+          {
+            "id": "d00fe3c93c1603e204802615",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 7,
+            "text": "The __init__.py files are required to make Python treat directories\ncontaining the file as packages (unless using a namespace package , a\nrelatively advanced feature). This prevents directories with a common name,\nsuch as string , from unintentionally hiding valid modules that occur later\non the module search path. In the simplest case, __init__.py can just be\nan empty file, but it can also execute initialization code for the package or\nset the __all__ variable, described later.",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 10.549529433618153,
+            "strategy": "bm25"
+          },
+          {
+            "id": "2bdb6d996256c3fcdcb92b69",
+            "source_id": "modules",
+            "source": "https://docs.python.org/3.12/tutorial/modules.html",
+            "page": 10,
+            "text": "While this feature is not often needed, it can be used to extend the set of\nmodules found in a package.\n\nIn fact function definitions are also ‘statements’ that are ‘executed’; the\nexecution of a module-level function definition adds the function name to\nthe module’s global namespace.",
+            "metadata": {
+              "chapter": "modules",
+              "title": "6-modules",
+              "python_version": "3.12"
+            },
+            "score": 9.805048751373707,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[fada12db48249c27be011024 | https://docs.python.org/3.12/tutorial/modules.html | unit 7]\nPackages are a way of structuring Python’s module namespace by using “dotted\nmodule names”. For example, the module name A.B designates a submodule\nnamed B in a package named A . Just like the use of modules saves the\nauthors of different modules from having to worry about each other’s global\nvariable names, the use of dotted module names saves the authors of multi-module\npackages like NumPy or Pillow from having to worry about\neach other’s module names.\n\n[d00fe3c93c1603e204802615 | https://docs.python.org/3.12/tutorial/modules.html | unit 7]\nThe __init__.py files are required to make Python treat directories\ncontaining the file as packages (unless using a namespace package , a\nrelatively advanced feature). This prevents directories with a common name,\nsuch as string , from unintentionally hiding valid modules that occur later\non the module search path. In the simplest case, __init__.py can just be\nan empty file, but it can also execute initialization code for the package or\nset the __all__ variable, described later.\n\n[2bdb6d996256c3fcdcb92b69 | https://docs.python.org/3.12/tutorial/modules.html | unit 10]\nWhile this feature is not often needed, it can be used to extend the set of\nmodules found in a package.\n\nIn fact function definitions are also ‘statements’ that are ‘executed’; the\nexecution of a module-level function definition adds the function name to\nthe module’s global namespace.\n\n[78e0347fdb881505df129ef1 | https://docs.python.org/3.12/tutorial/modules.html | unit 7]\na possible structure for\nyour package (expressed in terms of a hierarchical filesystem):\n\nsound/ Top-level package\n__init__.py Initialize the sound package\nformats/ Subpackage for file format conversions\n__init__.py\nwavread.py\nwavwrite.py\naiffread.py\naiffwrite.py\nauread.py\nauwrite.py\n...\neffects/ Subpackage for sound effects\n__init__.py\necho.py\nsurround.py\nreverse.py\n...\nfilters/ Subpackage for filters\n__init__.py\nequalizer.py\nvocoder.py\nkaraoke.py\n...\n\nWhen importing the package, Python searches through the directories on sys.path looking for the package subdirectory.",
+        "context_ids": [
+          "fada12db48249c27be011024",
+          "d00fe3c93c1603e204802615",
+          "2bdb6d996256c3fcdcb92b69",
+          "78e0347fdb881505df129ef1"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "fada12db48249c27be011024",
+          "d00fe3c93c1603e204802615",
+          "2bdb6d996256c3fcdcb92b69",
+          "78e0347fdb881505df129ef1"
+        ],
+        "proposal": {
+          "margin": 7.663320064544678,
+          "start": 70,
+          "end": 89,
+          "chunk_id": "fada12db48249c27be011024",
+          "answer": "dotted\nmodule names"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "dotted\nmodule names"
+      }
+    ],
+    "elapsed_ms": 3079.38
+  },
+  {
+    "query_id": "q17",
+    "split": "dev",
+    "question": "How are expressions inserted into an f-string?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "by prefixing the string with f or F and writing expressions as {expression} . [5841c75e5db0327d52a76a35]",
+    "citations": [
+      "5841c75e5db0327d52a76a35"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "f-strings insert expression",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "5841c75e5db0327d52a76a35",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 2,
+            "text": "The string module contains a Template class that offers\nyet another way to substitute values into strings, using placeholders like $x and replacing them with values from a dictionary, but offers much less\ncontrol of the formatting.\n\n7.1.1. Formatted String Literals ¶\n\nFormatted string literals (also called f-strings for\nshort) let you include the value of Python expressions inside a string by\nprefixing the string with f or F and writing expressions as {expression} .",
+            "metadata": {
+              "chapter": "inputoutput",
+              "title": "7-input-and-output",
+              "python_version": "3.12"
+            },
+            "score": 8.536481642453515,
+            "strategy": "bm25"
+          },
+          {
+            "id": "c285c572161bd68e715f5e5a",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 1,
+            "text": "5. Data Structures ¶\n\nThis chapter describes some things you’ve learned about already in more detail,\nand adds some new things as well.\n\n5.1. More on Lists ¶\n\nThe list data type has some more methods. Here are all of the methods of list\nobjects:\n\nAdd an item to the end of the list. Similar to a[len(a):] = [x] .\n\nExtend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable .\n\nInsert an item at a given position. The first argument is the index of the\nelement before which to insert, so a.insert(0, x) inserts at the front of\nthe list, and a.insert(len(a), x) is equivalent to a.append(x) .",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 6.778908722173764,
+            "strategy": "bm25"
+          },
+          {
+            "id": "9fbc26de45aa5359b74027ed",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 3,
+            "text": "Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii() , '!s' applies str() , and '!r' applies repr() :\n\n>>> animals = 'eels' >>> print ( f 'My hovercraft is full of { animals } .' ) My hovercraft is full of eels. >>> print ( f 'My hovercraft is full of { animals !r} .' ) My hovercraft is full of 'eels'.\n\nThe = specifier can be used to expand an expression to the text of the\nexpression, an equal sign, then the representation of the evaluated expression:",
+            "metadata": {
+              "chapter": "inputoutput",
+              "title": "7-input-and-output",
+              "python_version": "3.12"
+            },
+            "score": 6.516395278896395,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[5841c75e5db0327d52a76a35 | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 2]\nThe string module contains a Template class that offers\nyet another way to substitute values into strings, using placeholders like $x and replacing them with values from a dictionary, but offers much less\ncontrol of the formatting.\n\n7.1.1. Formatted String Literals ¶\n\nFormatted string literals (also called f-strings for\nshort) let you include the value of Python expressions inside a string by\nprefixing the string with f or F and writing expressions as {expression} .\n\n[c285c572161bd68e715f5e5a | https://docs.python.org/3.12/tutorial/datastructures.html | unit 1]\n5. Data Structures ¶\n\nThis chapter describes some things you’ve learned about already in more detail,\nand adds some new things as well.\n\n5.1. More on Lists ¶\n\nThe list data type has some more methods. Here are all of the methods of list\nobjects:\n\nAdd an item to the end of the list. Similar to a[len(a):] = [x] .\n\nExtend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable .\n\nInsert an item at a given position. The first argument is the index of the\nelement before which to insert, so a.insert(0, x) inserts at the front of\nthe list, and a.insert(len(a), x) is equivalent to a.append(x) .\n\n[9fbc26de45aa5359b74027ed | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 3]\nOther modifiers can be used to convert the value before it is formatted. '!a' applies ascii() , '!s' applies str() , and '!r' applies repr() :\n\n>>> animals = 'eels' >>> print ( f 'My hovercraft is full of { animals } .' ) My hovercraft is full of eels. >>> print ( f 'My hovercraft is full of { animals !r} .' ) My hovercraft is full of 'eels'.\n\nThe = specifier can be used to expand an expression to the text of the\nexpression, an equal sign, then the representation of the evaluated expression:",
+        "context_ids": [
+          "5841c75e5db0327d52a76a35",
+          "c285c572161bd68e715f5e5a",
+          "9fbc26de45aa5359b74027ed"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "5841c75e5db0327d52a76a35"
+        ],
+        "proposal": {
+          "margin": -0.5269560813903809,
+          "start": 393,
+          "end": 470,
+          "chunk_id": "5841c75e5db0327d52a76a35",
+          "answer": "by\nprefixing the string with f or F and writing expressions as {expression} ."
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "by\nprefixing the string with f or F and writing expressions as {expression} ."
+      }
+    ],
+    "elapsed_ms": 1080.16
+  },
+  {
+    "query_id": "q18",
+    "split": "dev",
+    "question": "Why is the with keyword recommended when working with files?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "answered",
+    "answer": "the file is properly closed after its suite finishes [78243efa6a6c50eeb79a2b49]",
+    "citations": [
+      "78243efa6a6c50eeb79a2b49"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "with keyword recommendation file",
+        "filter": {
+          "chapter": "inputoutput"
+        },
+        "top_k": 3,
+        "results": [
+          {
+            "id": "78243efa6a6c50eeb79a2b49",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 6,
+            "text": "It is good practice to use the with keyword when dealing\nwith file objects. The advantage is that the file is properly closed\nafter its suite finishes, even if an exception is raised at some\npoint. Using with is also much shorter than writing\nequivalent try - finally blocks:\n\n>>> with open ( 'workfile' , encoding = \"utf-8\" ) as f : ... read_data = f . read () >>> # We can check that the file has been automatically closed. >>> f . closed True\n\nIf you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any system\nresources used by it.",
+            "metadata": {
+              "chapter": "inputoutput",
+              "title": "7-input-and-output",
+              "python_version": "3.12"
+            },
+            "score": 7.0278266939101695,
+            "strategy": "bm25"
+          },
+          {
+            "id": "fd6d9bfe4ee867ef0c76cea1",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 6,
+            "text": "Calling f.write() without using the with keyword or calling f.close() might result in the arguments\nof f.write() not being completely written to the disk, even if the\nprogram exits successfully.\n\nAfter a file object is closed, either by a with statement\nor by calling f.close() , attempts to use the file object will\nautomatically fail.\n\n>>> f . close () >>> f . read () Traceback (most recent call last): File \"<stdin>\" , line 1 , in <module> ValueError : I/O operation on closed file.\n\n7.2.1. Methods of File Objects ¶\n\nThe rest of the examples in this section will assume that a file object called f has already been created.",
+            "metadata": {
+              "chapter": "inputoutput",
+              "title": "7-input-and-output",
+              "python_version": "3.12"
+            },
+            "score": 5.832320751206488,
+            "strategy": "bm25"
+          },
+          {
+            "id": "4648c71d32e792ca96fdd7ac",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 5,
+            "text": ">>> import math >>> print ( 'The value of pi is approximately %5.3f .' % math . pi ) The value of pi is approximately 3.142.\n\nMore information can be found in the printf-style String Formatting section.\n\n7.2. Reading and Writing Files ¶\n\nopen() returns a file object , and is most commonly used with\ntwo positional arguments and one keyword argument: open(filename, mode, encoding=None)\n\n>>> f = open ( 'workfile' , 'w' , encoding = \"utf-8\" )",
+            "metadata": {
+              "chapter": "inputoutput",
+              "title": "7-input-and-output",
+              "python_version": "3.12"
+            },
+            "score": 5.000299370541468,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[78243efa6a6c50eeb79a2b49 | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 6]\nIt is good practice to use the with keyword when dealing\nwith file objects. The advantage is that the file is properly closed\nafter its suite finishes, even if an exception is raised at some\npoint. Using with is also much shorter than writing\nequivalent try - finally blocks:\n\n>>> with open ( 'workfile' , encoding = \"utf-8\" ) as f : ... read_data = f . read () >>> # We can check that the file has been automatically closed. >>> f . closed True\n\nIf you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any system\nresources used by it.\n\n[fd6d9bfe4ee867ef0c76cea1 | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 6]\nCalling f.write() without using the with keyword or calling f.close() might result in the arguments\nof f.write() not being completely written to the disk, even if the\nprogram exits successfully.\n\nAfter a file object is closed, either by a with statement\nor by calling f.close() , attempts to use the file object will\nautomatically fail.\n\n>>> f . close () >>> f . read () Traceback (most recent call last): File \"<stdin>\" , line 1 , in <module> ValueError : I/O operation on closed file.\n\n7.2.1. Methods of File Objects ¶\n\nThe rest of the examples in this section will assume that a file object called f has already been created.\n\n[4648c71d32e792ca96fdd7ac | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 5]\n>>> import math >>> print ( 'The value of pi is approximately %5.3f .' % math . pi ) The value of pi is approximately 3.142.\n\nMore information can be found in the printf-style String Formatting section.\n\n7.2. Reading and Writing Files ¶\n\nopen() returns a file object , and is most commonly used with\ntwo positional arguments and one keyword argument: open(filename, mode, encoding=None)\n\n>>> f = open ( 'workfile' , 'w' , encoding = \"utf-8\" )",
+        "context_ids": [
+          "78243efa6a6c50eeb79a2b49",
+          "fd6d9bfe4ee867ef0c76cea1",
+          "4648c71d32e792ca96fdd7ac"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "78243efa6a6c50eeb79a2b49",
+          "fd6d9bfe4ee867ef0c76cea1",
+          "4648c71d32e792ca96fdd7ac"
+        ],
+        "proposal": {
+          "margin": 4.825460910797119,
+          "start": 98,
+          "end": 150,
+          "chunk_id": "78243efa6a6c50eeb79a2b49",
+          "answer": "the file is properly closed\nafter its suite finishes"
+        }
+      },
+      {
+        "event": "answer",
+        "evidence_quote": "the file is properly closed\nafter its suite finishes"
+      }
+    ],
+    "elapsed_ms": 1272.99
+  },
+  {
+    "query_id": "d_abs01",
+    "split": "dev",
+    "question": "What exact memory limit does the tutorial set for every Python list?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "tutorial memory limit",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "8f445bd7addd7c205a43a9e0",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 1,
+            "text": "The integer numbers (e.g. 2 , 4 , 20 ) have type int ,\nthe ones with a fractional part (e.g. 5.0 , 1.6 ) have type float . We will see more about numeric types later in the tutorial.\n\nDivision ( / ) always returns a float. To do floor division and\nget an integer result you can use the // operator; to calculate\nthe remainder you can use % :",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 5.142858889815964,
+            "strategy": "bm25"
+          },
+          {
+            "id": "440cfa01280fe304345b53ea",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 1,
+            "text": "The optional arguments start and end are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the start argument.\n\nReturn the number of times x appears in the list.\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted() for their explanation).\n\nReverse the elements of the list in place.\n\nReturn a shallow copy of the list. Similar to a[:] .\n\nAn example that uses most of the list methods:",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 4.656662019345629,
+            "strategy": "bm25"
+          },
+          {
+            "id": "3d69d7e63a59bc317cf305a4",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 6,
+            "text": "Patterns may use named constants. These must be dotted names\nto prevent them from being interpreted as capture variable:\n\nfrom enum import Enum class Color ( Enum ): RED = 'red' GREEN = 'green' BLUE = 'blue' color = Color ( input ( \"Enter your choice of 'red', 'blue' or 'green': \" )) match color : case Color . RED : print ( \"I see red!\" ) case Color . GREEN : print ( \"Grass is green\" ) case Color . BLUE : print ( \"I'm feeling the blues :(\" )\n\nFor a more detailed explanation and additional examples, you can look into PEP 636 which is written in a tutorial format.\n\n4.8. Defining Functions ¶",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 4.4019151152905875,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[8f445bd7addd7c205a43a9e0 | https://docs.python.org/3.12/tutorial/introduction.html | unit 1]\nThe integer numbers (e.g. 2 , 4 , 20 ) have type int ,\nthe ones with a fractional part (e.g. 5.0 , 1.6 ) have type float . We will see more about numeric types later in the tutorial.\n\nDivision ( / ) always returns a float. To do floor division and\nget an integer result you can use the // operator; to calculate\nthe remainder you can use % :\n\n[440cfa01280fe304345b53ea | https://docs.python.org/3.12/tutorial/datastructures.html | unit 1]\nThe optional arguments start and end are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the start argument.\n\nReturn the number of times x appears in the list.\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted() for their explanation).\n\nReverse the elements of the list in place.\n\nReturn a shallow copy of the list. Similar to a[:] .\n\nAn example that uses most of the list methods:\n\n[3d69d7e63a59bc317cf305a4 | https://docs.python.org/3.12/tutorial/controlflow.html | unit 6]\nPatterns may use named constants. These must be dotted names\nto prevent them from being interpreted as capture variable:\n\nfrom enum import Enum class Color ( Enum ): RED = 'red' GREEN = 'green' BLUE = 'blue' color = Color ( input ( \"Enter your choice of 'red', 'blue' or 'green': \" )) match color : case Color . RED : print ( \"I see red!\" ) case Color . GREEN : print ( \"Grass is green\" ) case Color . BLUE : print ( \"I'm feeling the blues :(\" )\n\nFor a more detailed explanation and additional examples, you can look into PEP 636 which is written in a tutorial format.\n\n4.8. Defining Functions ¶",
+        "context_ids": [
+          "8f445bd7addd7c205a43a9e0",
+          "440cfa01280fe304345b53ea",
+          "3d69d7e63a59bc317cf305a4"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "440cfa01280fe304345b53ea"
+        ],
+        "proposal": null
+      },
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "tutorial python list memory limit",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "440cfa01280fe304345b53ea",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 1,
+            "text": "The optional arguments start and end are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the start argument.\n\nReturn the number of times x appears in the list.\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted() for their explanation).\n\nReverse the elements of the list in place.\n\nReturn a shallow copy of the list. Similar to a[:] .\n\nAn example that uses most of the list methods:",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 7.364567615563118,
+            "strategy": "bm25"
+          },
+          {
+            "id": "6a13245c255b3849024ad070",
+            "source_id": "inputoutput",
+            "source": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+            "page": 7,
+            "text": ">>> f . readline () 'This is the first line of the file.\\n' >>> f . readline () 'Second line of the file\\n' >>> f . readline () ''\n\nFor reading lines from a file, you can loop over the file object. This is memory\nefficient, fast, and leads to simple code:\n\n>>> for line in f : ... print ( line , end = '' ) ... This is the first line of the file. Second line of the file\n\nIf you want to read all the lines of a file in a list you can also use list(f) or f.readlines() .\n\nf.write(string) writes the contents of string to the file, returning\nthe number of characters written.\n\n>>> f . write ( 'This is a test \\n ' ) 15",
+            "metadata": {
+              "chapter": "inputoutput",
+              "title": "7-input-and-output",
+              "python_version": "3.12"
+            },
+            "score": 5.923939763394082,
+            "strategy": "bm25"
+          },
+          {
+            "id": "8f445bd7addd7c205a43a9e0",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 1,
+            "text": "The integer numbers (e.g. 2 , 4 , 20 ) have type int ,\nthe ones with a fractional part (e.g. 5.0 , 1.6 ) have type float . We will see more about numeric types later in the tutorial.\n\nDivision ( / ) always returns a float. To do floor division and\nget an integer result you can use the // operator; to calculate\nthe remainder you can use % :",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 5.142858889815964,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[440cfa01280fe304345b53ea | https://docs.python.org/3.12/tutorial/datastructures.html | unit 1]\nThe optional arguments start and end are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the start argument.\n\nReturn the number of times x appears in the list.\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted() for their explanation).\n\nReverse the elements of the list in place.\n\nReturn a shallow copy of the list. Similar to a[:] .\n\nAn example that uses most of the list methods:\n\n[6a13245c255b3849024ad070 | https://docs.python.org/3.12/tutorial/inputoutput.html | unit 7]\n>>> f . readline () 'This is the first line of the file.\\n' >>> f . readline () 'Second line of the file\\n' >>> f . readline () ''\n\nFor reading lines from a file, you can loop over the file object. This is memory\nefficient, fast, and leads to simple code:\n\n>>> for line in f : ... print ( line , end = '' ) ... This is the first line of the file. Second line of the file\n\nIf you want to read all the lines of a file in a list you can also use list(f) or f.readlines() .\n\nf.write(string) writes the contents of string to the file, returning\nthe number of characters written.\n\n>>> f . write ( 'This is a test \\n ' ) 15\n\n[8f445bd7addd7c205a43a9e0 | https://docs.python.org/3.12/tutorial/introduction.html | unit 1]\nThe integer numbers (e.g. 2 , 4 , 20 ) have type int ,\nthe ones with a fractional part (e.g. 5.0 , 1.6 ) have type float . We will see more about numeric types later in the tutorial.\n\nDivision ( / ) always returns a float. To do floor division and\nget an integer result you can use the // operator; to calculate\nthe remainder you can use % :",
+        "context_ids": [
+          "440cfa01280fe304345b53ea",
+          "6a13245c255b3849024ad070",
+          "8f445bd7addd7c205a43a9e0"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [
+          "440cfa01280fe304345b53ea",
+          "6a13245c255b3849024ad070"
+        ],
+        "proposal": null
+      },
+      {
+        "event": "abstain",
+        "raw": ""
+      }
+    ],
+    "elapsed_ms": 2313.92
+  },
+  {
+    "query_id": "d_abs02",
+    "split": "dev",
+    "question": "What guaranteed speedup does Python 3.12 give every program?",
+    "configuration": "bm25_base",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "reader_model": "deepset/roberta-base-squad2",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "Python 3.12 guaranteed speedup",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "687f3fb1a5cac4405c5c6509",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 2,
+            "text": ">>> tax = 12.5 / 100 >>> price = 100.50 >>> price * tax 12.5625 >>> price + _ 113.0625 >>> round ( _ , 2 ) 113.06\n\nThis variable should be treated as read-only by the user. Don’t explicitly\nassign a value to it — you would create an independent local variable with the\nsame name masking the built-in variable with its magic behavior.\n\nIn addition to int and float , Python supports other types of\nnumbers, such as Decimal and Fraction .\nPython also has built-in support for complex numbers ,\nand uses the j or J suffix to indicate the imaginary part\n(e.g. 3+5j ).",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 8.005244798642668,
+            "strategy": "bm25"
+          },
+          {
+            "id": "8916e455b0a7ae3eb12c617a",
+            "source_id": "controlflow",
+            "source": "https://docs.python.org/3.12/tutorial/controlflow.html",
+            "page": 11,
+            "text": "Note that the order in which the keyword arguments are printed is guaranteed\nto match the order in which they were provided in the function call.\n\n4.9.3. Special parameters ¶\n\nBy default, arguments may be passed to a Python function either by position\nor explicitly by keyword. For readability and performance, it makes sense to\nrestrict the way arguments can be passed so that a developer need only look\nat the function definition to determine if items are passed by position, by\nposition or keyword, or by keyword.\n\nA function definition may look like:",
+            "metadata": {
+              "chapter": "controlflow",
+              "title": "4-control-flow",
+              "python_version": "3.12"
+            },
+            "score": 7.52569691535282,
+            "strategy": "bm25"
+          },
+          {
+            "id": "b4a00af897544a5ecf814d69",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 4,
+            "text": ">>> [[ row [ i ] for row in matrix ] for i in range ( 4 )] [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\nAs we saw in the previous section, the inner list comprehension is evaluated in\nthe context of the for that follows it, so this example is\nequivalent to:\n\n>>> transposed = [] >>> for i in range ( 4 ): ... transposed . append ([ row [ i ] for row in matrix ]) ... >>> transposed [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\nwhich, in turn, is the same as:",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 6.83763652421421,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[687f3fb1a5cac4405c5c6509 | https://docs.python.org/3.12/tutorial/introduction.html | unit 2]\n>>> tax = 12.5 / 100 >>> price = 100.50 >>> price * tax 12.5625 >>> price + _ 113.0625 >>> round ( _ , 2 ) 113.06\n\nThis variable should be treated as read-only by the user. Don’t explicitly\nassign a value to it — you would create an independent local variable with the\nsame name masking the built-in variable with its magic behavior.\n\nIn addition to int and float , Python supports other types of\nnumbers, such as Decimal and Fraction .\nPython also has built-in support for complex numbers ,\nand uses the j or J suffix to indicate the imaginary part\n(e.g. 3+5j ).\n\n[8916e455b0a7ae3eb12c617a | https://docs.python.org/3.12/tutorial/controlflow.html | unit 11]\nNote that the order in which the keyword arguments are printed is guaranteed\nto match the order in which they were provided in the function call.\n\n4.9.3. Special parameters ¶\n\nBy default, arguments may be passed to a Python function either by position\nor explicitly by keyword. For readability and performance, it makes sense to\nrestrict the way arguments can be passed so that a developer need only look\nat the function definition to determine if items are passed by position, by\nposition or keyword, or by keyword.\n\nA function definition may look like:\n\n[b4a00af897544a5ecf814d69 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 4]\n>>> [[ row [ i ] for row in matrix ] for i in range ( 4 )] [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\nAs we saw in the previous section, the inner list comprehension is evaluated in\nthe context of the for that follows it, so this example is\nequivalent to:\n\n>>> transposed = [] >>> for i in range ( 4 ): ... transposed . append ([ row [ i ] for row in matrix ]) ... >>> transposed [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\nwhich, in turn, is the same as:",
+        "context_ids": [
+          "687f3fb1a5cac4405c5c6509",
+          "8916e455b0a7ae3eb12c617a",
+          "b4a00af897544a5ecf814d69"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [],
+        "proposal": null
+      },
+      {
+        "event": "search",
+        "method": "bm25",
+        "query": "Python 3.12 speedup",
+        "filter": null,
+        "top_k": 3,
+        "results": [
+          {
+            "id": "687f3fb1a5cac4405c5c6509",
+            "source_id": "introduction",
+            "source": "https://docs.python.org/3.12/tutorial/introduction.html",
+            "page": 2,
+            "text": ">>> tax = 12.5 / 100 >>> price = 100.50 >>> price * tax 12.5625 >>> price + _ 113.0625 >>> round ( _ , 2 ) 113.06\n\nThis variable should be treated as read-only by the user. Don’t explicitly\nassign a value to it — you would create an independent local variable with the\nsame name masking the built-in variable with its magic behavior.\n\nIn addition to int and float , Python supports other types of\nnumbers, such as Decimal and Fraction .\nPython also has built-in support for complex numbers ,\nand uses the j or J suffix to indicate the imaginary part\n(e.g. 3+5j ).",
+            "metadata": {
+              "chapter": "introduction",
+              "title": "3-informal-introduction",
+              "python_version": "3.12"
+            },
+            "score": 8.005244798642668,
+            "strategy": "bm25"
+          },
+          {
+            "id": "b4a00af897544a5ecf814d69",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 4,
+            "text": ">>> [[ row [ i ] for row in matrix ] for i in range ( 4 )] [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\nAs we saw in the previous section, the inner list comprehension is evaluated in\nthe context of the for that follows it, so this example is\nequivalent to:\n\n>>> transposed = [] >>> for i in range ( 4 ): ... transposed . append ([ row [ i ] for row in matrix ]) ... >>> transposed [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\nwhich, in turn, is the same as:",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 6.83763652421421,
+            "strategy": "bm25"
+          },
+          {
+            "id": "704b8d48906efedf5ad574bc",
+            "source_id": "datastructures",
+            "source": "https://docs.python.org/3.12/tutorial/datastructures.html",
+            "page": 4,
+            "text": ">>> transposed = [] >>> for i in range ( 4 ): ... # the following 3 lines implement the nested listcomp ... transposed_row = [] ... for row in matrix : ... transposed_row . append ( row [ i ]) ... transposed . append ( transposed_row ) ... >>> transposed [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\nIn the real world, you should prefer built-in functions to complex flow statements.\nThe zip() function would do a great job for this use case:\n\n>>> list ( zip ( * matrix )) [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\nSee Unpacking Argument Lists for details on the asterisk in this line.\n\n5.2. The del statement ¶",
+            "metadata": {
+              "chapter": "datastructures",
+              "title": "5-data-structures",
+              "python_version": "3.12"
+            },
+            "score": 6.836279518957828,
+            "strategy": "bm25"
+          }
+        ],
+        "context": "[687f3fb1a5cac4405c5c6509 | https://docs.python.org/3.12/tutorial/introduction.html | unit 2]\n>>> tax = 12.5 / 100 >>> price = 100.50 >>> price * tax 12.5625 >>> price + _ 113.0625 >>> round ( _ , 2 ) 113.06\n\nThis variable should be treated as read-only by the user. Don’t explicitly\nassign a value to it — you would create an independent local variable with the\nsame name masking the built-in variable with its magic behavior.\n\nIn addition to int and float , Python supports other types of\nnumbers, such as Decimal and Fraction .\nPython also has built-in support for complex numbers ,\nand uses the j or J suffix to indicate the imaginary part\n(e.g. 3+5j ).\n\n[b4a00af897544a5ecf814d69 | https://docs.python.org/3.12/tutorial/datastructures.html | unit 4]\n>>> [[ row [ i ] for row in matrix ] for i in range ( 4 )] [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\nAs we saw in the previous section, the inner list comprehension is evaluated in\nthe context of the for that follows it, so this example is\nequivalent to:\n\n>>> transposed = [] >>> for i in range ( 4 ): ... transposed . append ([ row [ i ] for row in matrix ]) ... >>> transposed [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\nwhich, in turn, is the same as:\n\n[704b8d48906efedf5ad574bc | https://docs.python.org/3.12/tutorial/datastructures.html | unit 4]\n>>> transposed = [] >>> for i in range ( 4 ): ... # the following 3 lines implement the nested listcomp ... transposed_row = [] ... for row in matrix : ... transposed_row . append ( row [ i ]) ... transposed . append ( transposed_row ) ... >>> transposed [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\nIn the real world, you should prefer built-in functions to complex flow statements.\nThe zip() function would do a great job for this use case:\n\n>>> list ( zip ( * matrix )) [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\nSee Unpacking Argument Lists for details on the asterisk in this line.\n\n5.2. The del statement ¶",
+        "context_ids": [
+          "687f3fb1a5cac4405c5c6509",
+          "b4a00af897544a5ecf814d69",
+          "704b8d48906efedf5ad574bc"
+        ]
+      },
+      {
+        "event": "reader",
+        "model": "deepset/roberta-base-squad2",
+        "candidate_ids": [],
+        "proposal": null
+      },
+      {
+        "event": "abstain",
+        "raw": ""
+      }
+    ],
+    "elapsed_ms": 2316.36
+  }
+]
